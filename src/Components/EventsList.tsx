@@ -22,7 +22,7 @@ export const EventsList = () => {
     <>
       <h2 style={{ textAlign: "center", fontSize: "42px" }}>Events</h2>
 
-      <table>
+      <div>
         {allEvents
           .toSorted(
             (a: { date: Date }, b: { date: Date }) =>
@@ -35,7 +35,7 @@ export const EventsList = () => {
               details={event.details}
             />
           ))}
-      </table>
+      </div>
 
       {display === "submission_form" && (
         <EventSubmissionForm setAllEvents={setAllEvents} />

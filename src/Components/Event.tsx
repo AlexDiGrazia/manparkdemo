@@ -17,30 +17,30 @@ export const Event = ({ date, title, details }: TEvent) => {
 
   return (
     <>
-      <tr
+      <div
         onMouseOver={() => setCarrotVisible(true)}
         onMouseOut={() => setCarrotVisible(false)}
         className="upcoming_event"
       >
-        <td style={{ width: "40%" }} className="event_date">
+        <div className="event_date first_column">
           {new Date(date).toLocaleDateString("en-US")}
-        </td>
-        <td
+        </div>
+        <div
           className="event_title"
           style={{ display: "inline-block", position: "relative" }}
         >
           {carrotVisible && (
             <span onClick={() => toggleAccordion()}>&#9660;</span>
           )}
-          <p style={{ margin: "10px 0", position: "relative" }}>{title} </p>
-        </td>
-      </tr>
-      <tr className="event_details">
-        <td></td>
+          <p style={{ margin: "0", position: "relative" }}>{title} </p>
+        </div>
+      </div>
+      <div className="event_details">
+        <div className="first_column"></div>
         <div className={`${accordionPosition} event_details_container`}>
           {details}
         </div>
-      </tr>
+      </div>
     </>
   );
 };

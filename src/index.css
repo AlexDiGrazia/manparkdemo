@@ -329,26 +329,32 @@ input[type="radio"] {
   background-color: blue;
 }
 
-tr.upcoming_event {
+div.upcoming_event {
   padding: 10px 0;
   font-size: 24px;
-  margin: 20px 0;
+  display: flex;
+  align-items: center;
 }
 
-td.event_title {
+div.event_title {
   position: relative;
   cursor: pointer;
 }
 
-td.event_title span {
+div.event_title span {
   position: absolute;
   left: -30px;
-  top: 18%;
+  top: 2%;
   cursor: pointer;
 }
 
-td.event_date {
+.first_column {
   padding: 0px 20px 0 0;
+  width: 12%;
+}
+
+.event_details {
+  display: flex;
 }
 
 .event_details_container {
