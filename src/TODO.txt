@@ -1,0 +1,1 @@
+Create CommunityPostsProvider so both community posts and comments can share state, this way comment has access to userInput state for when a user is editing a comment.

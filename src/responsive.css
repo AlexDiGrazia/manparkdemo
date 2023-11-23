@@ -1,0 +1,11 @@
+@media screen and (max-width: 1113px) {
+  .tab {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .tab {
+    font-size: 1.6rem;
+  }
+}

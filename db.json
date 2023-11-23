@@ -1,0 +1,311 @@
+{
+  "users": [
+    {
+      "username": "Alex DiGrazia",
+      "password": "assassins-creed-origins",
+      "id": 1
+    },
+    {
+      "username": "Matt Babb",
+      "password": "huberman-pod",
+      "id": 2
+    },
+    {
+      "username": "Dan Canella",
+      "password": "danny-boy",
+      "id": 3
+    },
+    {
+      "username": "Elliot Kwong",
+      "password": "Mee Hung Lo",
+      "id": 4
+    },
+    {
+      "username": "Jake Wing",
+      "password": "K-man",
+      "id": 5
+    },
+    {
+      "username": "Jimmie Spiegal",
+      "password": "backpacking-always",
+      "id": 6
+    },
+    {
+      "username": "James Lester",
+      "password": "DJ",
+      "id": 7
+    },
+    {
+      "username": "Mark Gibson",
+      "password": "stoicism",
+      "id": 8
+    },
+    {
+      "username": "Gabe Gonzolas",
+      "password": "floatOm",
+      "id": 7
+    },
+    {
+      "username": "bob",
+      "password": "password1",
+      "id": 9
+    },
+    {
+      "username": "Frank Sinatra",
+      "password": "That's-Life",
+      "id": 10
+    },
+    {
+      "username": "Paco Boy",
+      "password": "toll-road-doggie",
+      "id": 11
+    },
+    {
+      "username": "Draco Malfoy",
+      "password": "IDidn'tKnowYouCouldRead",
+      "id": 12
+    },
+    {
+      "username": "Steve Fry",
+      "password": "futurama",
+      "id": 13
+    },
+    {
+      "username": "Billie Eilish",
+      "password": "bellyache",
+      "id": 14
+    },
+    {
+      "username": "Reptaur",
+      "password": "dinopower",
+      "id": 15
+    }
+  ],
+  "profiles": [
+    {
+      "user": "Alex DiGrazia",
+      "path": "/alex.digrazia"
+    },
+    {
+      "user": "Matt Babb",
+      "path": "/matt.babb"
+    }
+  ],
+  "friends": [
+    {
+      "user": "Matt Babb",
+      "id": "2"
+    },
+    {
+      "user": "Dan Canella",
+      "id": "3"
+    },
+    {
+      "user": "Elliot Kwong",
+      "id": "4"
+    }
+  ],
+  "friendships": [
+    {
+      "friend1": "Alex DiGrazia",
+      "friend2": "Matt Babb",
+      "id": 1
+    },
+    {
+      "friend1": "Alex DiGrazia",
+      "friend2": "Dan Canella",
+      "id": 2
+    },
+    {
+      "friend1": "Alex DiGrazia",
+      "friend2": "Elliot Kwong",
+      "id": 3
+    },
+    {
+      "friend1": "Alex DiGrazia",
+      "friend2": "Jake Wing",
+      "id": 4
+    },
+    {
+      "friend1": "Alex DiGrazia",
+      "friend2": "Jimmie Spiegal",
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "user": "Alex DiGrazia",
+      "post": "I love dogs so much",
+      "id": 1
+    },
+    {
+      "user": "Dan Canella",
+      "post": "Bout to go see Oppenheimer what uuuuuup!",
+      "id": 2
+    },
+    {
+      "user": "James Lester",
+      "post": "Surf today was gnar bro",
+      "id": 3
+    },
+    {
+      "user": "Alex DiGrazia",
+      "post": "Hope the new season of Rick and Morty doesn't suck, lol",
+      "id": 4
+    }
+  ],
+  "community_posts": [
+    {
+      "user": "James Lester",
+      "text": "I love these bomb ass tacos so much",
+      "id": 1
+    },
+    {
+      "user": "Jake Wing",
+      "text": "Oh and Jenkins, apparently your mother died this morning. Nobody expects the Spanish Inquisition! Stwike him, Centuwion! Stwike him vewy wuffly! I told you to lay off the beans, you whore! What's wrong with a kiss, boy? Hmm? Why not start her off with a nice kiss? You don't have to go leaping straight for the clitoris like a bull at a gate. Give her a kiss, boy. Oh, oh, I see! Running away, eh? You yellow bastards! Come back here and take what's coming to you! I'll bite your legs off!",
+      "id": 2
+    },
+    {
+      "user": "Dan Canella",
+      "text": "Hegel is arguing that the reality is merely an a priori adjunct of non-naturalistic ethics, Kant via the categorical imperative is holding that ontologically it exists only in the imagination, and Marx claims it was offside.",
+      "id": 3
+    },
+    {
+      "user": "Dan Canella",
+      "text": "I'm Brian, and so's my wife! What is the capital of Assyria? Are you suggesting coconuts migrate? Oh, king eh? Very nice. And how'd you get that, eh? By exploiting the workers. By hanging on to outdated imperialist dogma which perpetuates the economic and social differences in our society. The Lady of the Lake, her arm clad in the purest shimmering samite held aloft Excalibur from the bosom of the water, signifying by divine providence that I, Arthur, was to carry Excalibur. THAT is why I am your king.",
+      "id": 4
+    },
+    {
+      "user": "Alex DiGrazia",
+      "text": "Life of Brian freak bitches!! coconuts\n",
+      "id": 5
+    },
+    {
+      "user": "Alex DiGrazia",
+      "text": "I love this comment section so much dude!!!!!!!",
+      "id": 6
+    },
+    {
+      "user": "Alex DiGrazia",
+      "text": "Tired of coding this events section bro",
+      "id": 7
+    }
+  ],
+  "schedules": [
+    {
+      "username": "Alex DiGrazia",
+      "Monday": "work 9-5",
+      "Tuesday": "work 9-5",
+      "Wednesday": "work 9-5",
+      "Thursday": "work 9-5",
+      "Friday": "work 9-5",
+      "Saturday": "surfing",
+      "Sunday": "surfing",
+      "id": 1
+    },
+    {
+      "username": "Matt Babb",
+      "Monday": "day off",
+      "Tuesday": "day off",
+      "Wednesday": "school 8-3",
+      "Thursday": "school 2-6",
+      "Friday": "work 11-4",
+      "Saturday": "studying all day",
+      "Sunday": "day off",
+      "id": 2
+    }
+  ],
+  "bios": [
+    {
+      "user": "Alex DiGrazia",
+      "bio": "Surfing, skatig, playing guitar, and coding!",
+      "id": 1
+    },
+    {
+      "user": "Matt Babb",
+      "bio": "Currently in school for Psychology at Cal Poly",
+      "id": 2
+    }
+  ],
+  "events": [
+    {
+      "date": "2024-01-01T00:36:49.000Z",
+      "title": "bowling trip this Tuesday",
+      "details": "none",
+      "id": 1
+    },
+    {
+      "date": "2024-01-01T00:36:49.000Z",
+      "title": "Pub Crawl",
+      "details": "Starting at Frog and Peach 7pm sand crawling all the way to Black Sheep",
+      "id": 2
+    },
+    {
+      "date": "2023-11-10T00:33:27.127Z",
+      "title": "hello World",
+      "details": "Please come to my birthday party",
+      "id": 3
+    },
+    {
+      "date": "2022-01-01T00:36:49.000Z",
+      "title": "NEW YEARS BITCHES!!!!!",
+      "details": "Grand Slam New Years Eve party with yours Truly",
+      "id": 4
+    },
+    {
+      "date": "2023-12-13T22:08:04.000Z",
+      "title": "Taco Tuesday",
+      "details": "blah blah blah",
+      "id": 5
+    },
+    {
+      "date": "2023-11-16T22:25:18.000Z",
+      "title": "qwe",
+      "details": "kwer;wkejr;qwrqwe",
+      "id": 6
+    },
+    {
+      "date": "2024-01-22T23:00:21.000Z",
+      "title": "new event",
+      "details": "never",
+      "id": 7
+    },
+    {
+      "date": "2023-09-05T22:00:35.000Z",
+      "title": "blag",
+      "details": "",
+      "id": 8
+    },
+    {
+      "date": "2022-10-12T22:01:01.000Z",
+      "title": "october 12, 2022",
+      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quas, vel iusto asperiores alias quisquam tenetur quaerat et odit vitae velit. Obcaecati beatae expedita, voluptatum quos atque molestias ad quasi et molestiae sapiente a ab dolor error eius soluta culpa omnis, doloremque voluptas ex quisquam unde ratione magnam quaerat? Error dolor nostrum iusto itaque totam dignissimos aliquid consequatur voluptate aspernatur nesciunt? Voluptas, repellat nulla veritatis quia qui unde. Totam, accusantium nostrum ratione molestias enim beatae suscipit nobis consequatur ex at explicabo itaque dicta qui nemo amet corrupti officia accusamus nisi recusandae dolore illum odio asperiores excepturi distinctio! Adipisci, fuga. Rem.",
+      "id": 9
+    },
+    {
+      "date": "2023-10-11T22:01:43.000Z",
+      "title": "oct 11, 2023",
+      "details": "",
+      "id": 10
+    },
+    {
+      "date": "2025-02-14T23:01:59.000Z",
+      "title": "v day",
+      "details": "",
+      "id": 11
+    },
+    {
+      "date": "2024-01-02T23:02:20.000Z",
+      "title": "day after new year",
+      "details": "",
+      "id": 12
+    }
+  ],
+  "groupThread": [
+    {
+      "date": "10/3/23",
+      "user": "Alex DiGrazia",
+      "post": "let's all discuss what is the best kind of taco next week"
+    }
+  ]
+}

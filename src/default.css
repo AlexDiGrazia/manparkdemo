@@ -1,0 +1,38 @@
+h1 {
+  font-size: 3em;
+  margin-top: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.align_items_start {
+  align-items: flex-start;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.max-width-container {
+  width: 100%;
+  max-width: 83%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+input {
+  cursor: pointer;
+}
