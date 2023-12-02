@@ -1,15 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Layout } from "../Components/Layout";
-import { SelectorBar } from "../Components/SelectorBar";
+import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
 import { useNavigate } from "react-router-dom";
 import { CommunityPosts } from "../Components/CommunityPosts";
 import { EventsList } from "../Components/EventsList";
+import { ConfirmationDialog } from "../Components/ConfirmationDialog";
+import { useHomeContext } from "../Providers/HomeProvider";
+import { EventSubmissionForm } from "../Components/EventSubmissionForm";
 
 export const Home = () => {
-  const [selected, setSelected] = useState<string>("posts");
   const { currentUser, setCurrentUser } = useUserContext();
+  const { dialogVisible, eventSubmissionFormVisible, tab } = useHomeContext();
+
   const navigate = useNavigate();
 
   const logout = () => {
@@ -42,10 +46,16 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <SelectorBar selected={selected} setSelected={setSelected} />
+        <TabSlider />
         <div className="content_layout">
-          {selected === "posts" && <CommunityPosts />}
-          {selected === "events" && <EventsList />}
+          <div className="confirmation_dialog_container">
+            {dialogVisible && <ConfirmationDialog />}
+            {eventSubmissionFormVisible && <EventSubmissionForm />}
+          </div>
+          <div className="home_content_container">
+            {tab === "posts" && <CommunityPosts />}
+            {tab === "events" && <EventsList />}
+          </div>
         </div>
       </Layout>
     </>

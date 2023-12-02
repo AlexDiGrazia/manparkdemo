@@ -176,19 +176,14 @@
       "id": 4
     },
     {
-      "user": "Alex DiGrazia",
-      "text": "Life of Brian freak bitches!! coconuts\n",
-      "id": 5
+      "user": "Matt Babb",
+      "text": "comment from matt",
+      "id": 10
     },
     {
       "user": "Alex DiGrazia",
-      "text": "I love this comment section so much dude!!!!!!!",
-      "id": 6
-    },
-    {
-      "user": "Alex DiGrazia",
-      "text": "Tired of coding this events section bro",
-      "id": 7
+      "text": "lkjn",
+      "id": 11
     }
   ],
   "schedules": [
@@ -229,76 +224,102 @@
   ],
   "events": [
     {
+      "user": "Matt Babb",
       "date": "2024-01-01T00:36:49.000Z",
       "title": "bowling trip this Tuesday",
       "details": "none",
       "id": 1
     },
     {
-      "date": "2024-01-01T00:36:49.000Z",
-      "title": "Pub Crawl",
-      "details": "Starting at Frog and Peach 7pm sand crawling all the way to Black Sheep",
+      "user": "Jake Wing",
+      "date": "2023-11-10T00:33:27.127Z",
+      "title": "hello World",
+      "details": "Please come to my birthday party. now.",
       "id": 2
     },
     {
-      "date": "2023-11-10T00:33:27.127Z",
-      "title": "hello World",
-      "details": "Please come to my birthday party",
+      "user": "Dan Canella",
+      "date": "2023-12-13T22:08:04.000Z",
+      "title": "Taco Tuesday",
+      "details": "blah blah blah. trying Again.  At least spaces work now though??",
       "id": 3
     },
     {
-      "date": "2022-01-01T00:36:49.000Z",
-      "title": "NEW YEARS BITCHES!!!!!",
-      "details": "Grand Slam New Years Eve party with yours Truly",
-      "id": 4
-    },
-    {
-      "date": "2023-12-13T22:08:04.000Z",
-      "title": "Taco Tuesday",
-      "details": "blah blah blah",
-      "id": 5
-    },
-    {
-      "date": "2023-11-16T22:25:18.000Z",
-      "title": "qwe",
-      "details": "kwer;wkejr;qwrqwe",
-      "id": 6
-    },
-    {
+      "user": "Elliot Kwong",
       "date": "2024-01-22T23:00:21.000Z",
       "title": "new event",
       "details": "never",
-      "id": 7
+      "id": 4
     },
     {
-      "date": "2023-09-05T22:00:35.000Z",
-      "title": "blag",
-      "details": "",
-      "id": 8
-    },
-    {
-      "date": "2022-10-12T22:01:01.000Z",
-      "title": "october 12, 2022",
-      "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quas, vel iusto asperiores alias quisquam tenetur quaerat et odit vitae velit. Obcaecati beatae expedita, voluptatum quos atque molestias ad quasi et molestiae sapiente a ab dolor error eius soluta culpa omnis, doloremque voluptas ex quisquam unde ratione magnam quaerat? Error dolor nostrum iusto itaque totam dignissimos aliquid consequatur voluptate aspernatur nesciunt? Voluptas, repellat nulla veritatis quia qui unde. Totam, accusantium nostrum ratione molestias enim beatae suscipit nobis consequatur ex at explicabo itaque dicta qui nemo amet corrupti officia accusamus nisi recusandae dolore illum odio asperiores excepturi distinctio! Adipisci, fuga. Rem.",
-      "id": 9
-    },
-    {
+      "user": "Dan Canella",
       "date": "2023-10-11T22:01:43.000Z",
       "title": "oct 11, 2023",
-      "details": "",
-      "id": 10
+      "details": "Finally a comment worth reading.\n\nspaces \n\nDueces",
+      "id": 5
     },
     {
-      "date": "2025-02-14T23:01:59.000Z",
-      "title": "v day",
-      "details": "",
-      "id": 11
-    },
-    {
-      "date": "2024-01-02T23:02:20.000Z",
-      "title": "day after new year",
-      "details": "",
+      "user": "Alex DiGrazia",
+      "date": "2022-08-30T20:07:41.000Z",
+      "title": "First Event of the Season Boys",
+      "details": "Now all new and improved, a completely wacky wild world that is sure to fill your world with goo filled dreams and slime covered seams.  Don't miss out on the fun gentlemen!",
       "id": 12
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-11-30T23:16:55.318Z",
+      "title": "Hike Bishops Peak with the Girls from Spark",
+      "details": "\nEmbark on a transformative journey at the Radiant Yoga Event, where serenity meets strength. Join a vibrant community of individuals eager to embrace wellness and flexibility in a captivating atmosphere. Engage in rejuvenating yoga sessions guided by seasoned instrund the yoga mat.",
+      "id": 13
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-12-08T00:16:47.000Z",
+      "title": "Going to Portland",
+      "details": "Taking off at 1:23pm\n\nGate: 18C\n\nFlight 25332\n\nArrival: 3:14pm\n\nBring an umbrella, snacks, and a good playlist.",
+      "id": 14
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2024-01-01T00:36:54.000Z",
+      "title": "NYE Party",
+      "details": "Starting at Matt's house 7:30\n\nMaking our way to Bang the Drum around 9pm.\n\nMark is paying for everyone's drinks to make up for being a Nazi\n\nending with a special midnight float at Central Coast Floats 11:30pm\n\nAddress there is 1945 S Higuera, SLO.\n\nBe there or be square!!!",
+      "id": 15
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-12-01T01:24:45.897Z",
+      "title": "Please Come to my Birthday Party 😢",
+      "details": "My event is going to be soooo mother fucking cool I just absolutely cannot fucking wait to do this oh my god fuck yes lets goooooo!!!! yay :)",
+      "id": 16
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-12-01T01:27:22.830Z",
+      "title": "Add a new eventasd flaskdjfa;sldkfja;sdklkjsadflkj",
+      "details": "asdflaskdjfal;sdjf",
+      "id": 17
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-12-20T02:42:14.000Z",
+      "title": "date",
+      "details": "adfasdfasdf",
+      "id": 18
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-11-02T01:44:09.000Z",
+      "title": "past date",
+      "details": "not on the list",
+      "id": 19
+    },
+    {
+      "user": "Matt Babb",
+      "date": "2023-12-01T02:44:23.000Z",
+      "title": "today's date",
+      "details": "will it show",
+      "id": 20
     }
   ],
   "groupThread": [

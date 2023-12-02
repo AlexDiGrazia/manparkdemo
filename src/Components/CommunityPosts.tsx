@@ -3,31 +3,29 @@ import { Requests } from "../api/postsApi";
 import { Comment } from "./Comment";
 import { TComment } from "../types";
 import { useUserContext } from "../Providers/UserProvider";
+import { useHomeContext } from "../Providers/HomeProvider";
 
 export const CommunityPosts = () => {
-  const [allComments, setAllComments] = useState<TComment[]>([]);
   const [commentInput, setCommentInput] = useState<string>("");
 
   const { currentUser } = useUserContext();
+  const { allComments, refetchAllComments } = useHomeContext();
 
   const newComment = {
     user: currentUser,
     text: commentInput,
   };
 
-  const fetchComments = () =>
-    Requests.getAllCommunityPosts().then(setAllComments);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (commentInput !== "") {
-      Requests.postNewComment(newComment).then(() => fetchComments());
+      Requests.postNewComment(newComment).then(() => refetchAllComments());
       setCommentInput("");
     }
   };
 
   useEffect(() => {
-    Requests.getAllCommunityPosts().then(setAllComments);
+    refetchAllComments();
   }, []);
 
   return (
@@ -57,7 +55,6 @@ export const CommunityPosts = () => {
                 commentText={comment.text}
                 user={comment.user}
                 id={comment.id}
-                setAllComments={setAllComments}
               />
             ))}
       </div>

@@ -11,6 +11,7 @@ import { Profile } from "./Routes/Profile";
 import { Toaster } from "react-hot-toast";
 import { Home } from "./Routes/Home";
 import { UserProvider } from "./Providers/UserProvider";
+import { HomeProvider } from "./Providers/HomeProvider";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "home",
-        element: <Home />,
+        element: (
+          <HomeProvider>
+            <Home />
+          </HomeProvider>
+        ),
       },
     ],
   },

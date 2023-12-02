@@ -75,6 +75,11 @@ body {
   color: white;
 }
 
+.text_inputs:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px black inset;
+  -webkit-text-fill-color: white;
+}
+
 .text_inputs:focus {
   outline: none;
 }
@@ -199,11 +204,70 @@ input[type="radio"] {
 .content_layout {
   background-color: #1d1d1ff7;
   color: white;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 8px;
   border: 2px solid #978080;
-  overflow: scroll;
+  /* overflow: scroll; */
   height: 63%;
+  position: relative;
+}
+
+.confirmation_dialog_container {
+  width: 100%;
+  height: 100%;
+  background: #1d1d1ff7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.confirmation_dialog {
+  padding: 50px 75px;
+  background: #2a2a2b;
+  border: 2px solid white;
+  z-index: 1;
+  box-shadow: 0 18px 28px -45px white;
+  border-radius: 3px;
+}
+
+.confirmation_dialog p {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+.confirmation_dialog input {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 34px;
+  border-radius: 3px;
+  border: none;
+  letter-spacing: 1.3px;
+}
+
+.confirmation_dialog input:hover {
+  /* transform: scale(1.02); */
+  transition: all 0.1s linear;
+  box-shadow: 0 0 1px 1px rgb(81, 81, 84) inset;
+}
+
+.confirmation_dialog form input:first-of-type {
+  margin-right: 20px;
+}
+
+.confirmation_dialog form input:nth-of-type(2) {
+  background-color: #d93223;
+}
+
+.home_content_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  overflow: scroll;
+  padding: 20px;
 }
 
 .community_posts textarea {
@@ -244,7 +308,7 @@ input[type="radio"] {
 }
 
 .comment_text {
-  background-color: #3e3e3f18;
+  white-space: pre-wrap;
 }
 
 .comment img {
@@ -273,7 +337,7 @@ input[type="radio"] {
 }
 
 .event_ellipsis {
-  margin: 0;
+  margin: 0 0 0 20px;
 }
 
 .edit_delete_dropdown_container {
@@ -320,13 +384,97 @@ input[type="radio"] {
   border-left: none;
 }
 
+.submit_new_event_btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.submit_new_event_btn input {
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  padding: 10px 20px 10px 35px;
+}
+
+.submit_new_event_btn input:hover {
+  /* box-shadow: 0 6px 31px -7px #38437a; */
+  background-color: #efefef;
+}
+
+.submit_new_event_btn .plus_icon {
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: black;
+}
+
 .new_event_form {
   display: flex;
   flex-direction: column;
-  max-width: 40%;
+  /* max-width: 40%; */
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: #2a2a2b;
+  z-index: 1;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.new_event_form input,
+.new_event_form textarea {
+  margin: 10px 0;
+  width: 400px;
+  height: 32px;
+  font-size: 16px;
+  background-color: #1d1d1f;
+  color: white;
+}
+
+.new_event_form input:focus,
+.new_event_form textarea:focus {
+  outline: none;
+}
+
+#event_details {
+  box-sizing: border-box;
+  resize: none;
+}
+
+.new_event_form .event_form_submission_btn {
+  width: fit-content;
+  font-size: 20px;
+  padding: 6px 20px;
+  height: fit-content;
+  font-weight: 500;
+}
+
+.new_event_form .event_form_submission_btn:hover {
+  background-color: #242427;
+}
+
+.Xmark_icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.Xmark_icon:hover {
+  cursor: pointer;
+}
+
+.event_title_input_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.event_title_input_container span {
+  position: absolute;
+  color: white;
+  right: 5px;
 }
 
 div.upcoming_event {
@@ -339,6 +487,7 @@ div.upcoming_event {
 div.event_title {
   position: relative;
   cursor: pointer;
+  display: flex;
 }
 
 div.event_title span {
@@ -353,12 +502,47 @@ div.event_title span {
   width: 12%;
 }
 
+.second_column {
+  position: relative;
+}
+
 .event_details {
   display: flex;
 }
 
 .event_details_container {
   width: 500px;
+}
+
+.details_edit_box {
+  white-space: pre-wrap;
+}
+
+.details_edit_box:focus {
+  outline: none;
+}
+
+.event_details_btns {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.event_details_btns input {
+  margin: 0 2px;
+  /* background: transparent;
+  color: white;
+  border: 1px solid white; */
+}
+
+.event_details_btns input:hover {
+  background-color: white;
+  color: black;
+}
+
+.edit_details_save_btn {
+  position: absolute;
+  bottom: 0px;
 }
 
 /* Accordion positions for Event Details */
@@ -370,9 +554,18 @@ div.event_title span {
 }
 
 .open {
-  max-height: 200px;
+  max-height: 193px;
   overflow: scroll;
   transition: all 0.3s linear;
+}
+
+.second_column_padding_bottom {
+  padding-bottom: 30px;
+}
+
+.event_details_container_border_bottom {
+  border-bottom: 1px solid #6b676785;
+  box-sizing: border-box;
 }
 
 /* ^ ^ ^ */

@@ -1,3 +1,33 @@
+@media screen and (max-width: 1600px) {
+  .first_column {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .first_column {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  .first_column {
+    width: 22%;
+  }
+}
+
+@media screen and (max-width: 938px) {
+  .first_column {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .first_column {
+    width: 34%;
+  }
+}
+
 @media screen and (max-width: 1113px) {
   .tab {
     font-size: 1.7rem;

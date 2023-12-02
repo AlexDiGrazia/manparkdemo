@@ -17,7 +17,7 @@ export const LoginGate = () => {
 
     if (passwordInput === "Sadie") {
       setDisplay("UserLogin");
-      localStorage.setItem("gate", "unlocked");
+      localStorage.setItem("gatecode", "Sadie");
     } else {
       toast.error("Only fools attempt to enter where they don't belong", {
         style: {

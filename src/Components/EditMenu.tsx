@@ -1,23 +1,23 @@
 import { Dispatch, SetStateAction } from "react";
-import { TComment } from "../types";
 import { useDetectClickOutside } from "react-detect-click-outside";
-import { Requests } from "../api/postsApi";
+import { useHomeContext } from "../Providers/HomeProvider";
 
 type TEditMenuProps = {
-  setUserInput: Dispatch<SetStateAction<string>>;
+  setDisplay: Dispatch<SetStateAction<"text" | "editBox">>;
   setMenuVisible: Dispatch<SetStateAction<boolean>>;
   id: number;
-  setAllComments: Dispatch<SetStateAction<TComment[]>>;
 };
 
 export const EditMenu = ({
-  setUserInput,
+  setDisplay,
   setMenuVisible,
   id,
-  setAllComments,
 }: TEditMenuProps) => {
   const closeDropDown = () => setMenuVisible(false);
   const ref = useDetectClickOutside({ onTriggered: closeDropDown });
+
+  const { setCurrentComment, setDialogVisible } = useHomeContext();
+
   return (
     <>
       <div className="edit_delete_dropdown_container">
@@ -25,7 +25,7 @@ export const EditMenu = ({
           <ul>
             <li
               onClick={() => {
-                setUserInput("editBox");
+                setDisplay("editBox");
                 setMenuVisible(false);
               }}
             >
@@ -33,9 +33,9 @@ export const EditMenu = ({
             </li>
             <li
               onClick={() => {
-                Requests.deleteComment(id).then(() =>
-                  Requests.getAllCommunityPosts().then(setAllComments)
-                );
+                setCurrentComment(id);
+                setMenuVisible(false);
+                setDialogVisible(true);
               }}
             >
               Delete

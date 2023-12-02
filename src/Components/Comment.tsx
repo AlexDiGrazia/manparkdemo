@@ -1,37 +1,32 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { Requests } from "../api/postsApi";
-import { TComment } from "../types";
 import { useUserContext } from "../Providers/UserProvider";
 import { Ellipsis } from "./Ellipsis";
 import { EditMenu } from "./EditMenu";
+import { useHomeContext } from "../Providers/HomeProvider";
 
 type TCommentProps = {
   commentText: string;
   user: string;
   id: number;
-  setAllComments: Dispatch<SetStateAction<TComment[]>>;
 };
 
-export const Comment = ({
-  commentText,
-  user,
-  id,
-  setAllComments,
-}: TCommentProps) => {
+export const Comment = ({ commentText, user, id }: TCommentProps) => {
   const [ellipsisVisible, setEllipsisVisible] = useState<boolean>(false);
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
-  const [commentDisplay, setCommentDisplay] = useState<string>("text");
-  const [commentEdit, setCommentEdit] = useState<string>(commentText);
+  const [display, setDisplay] = useState<"text" | "editBox">("text");
+  const [commentUpdate, setCommentUpdate] = useState<string>(commentText);
 
   const updateComment = (e: React.FormEvent) => {
     e.preventDefault();
-    Requests.updateComment(id, { text: commentEdit }).then(() => {
-      setCommentDisplay("text");
-      Requests.getAllCommunityPosts().then(setAllComments);
+    Requests.updateComment(id, { text: commentUpdate }).then(() => {
+      setDisplay("text");
+      refetchAllComments();
     });
   };
 
   const { currentUser } = useUserContext();
+  const { refetchAllComments } = useHomeContext();
 
   return (
     <>
@@ -47,17 +42,21 @@ export const Comment = ({
         />
         <div className="comment_content">
           <h2>@{user}</h2>
-          {commentDisplay === "text" && (
-            <p className="comment_text">{commentText}</p>
-          )}
-          {commentDisplay === "editBox" && (
+
+          {display === "text" && <p className="comment_text">{commentText}</p>}
+
+          {display === "editBox" && (
             <form onSubmit={updateComment}>
               <textarea
-                value={commentEdit}
+                value={commentUpdate}
                 className="edit_comment_textarea"
-                onChange={(e) => setCommentEdit(e.target.value)}
+                onChange={(e) => setCommentUpdate(e.target.value)}
               ></textarea>
-              <input type="submit" value="Save" />
+              <input
+                type="submit"
+                value="Save"
+                style={{ position: "absolute", bottom: "0" }}
+              />
             </form>
           )}
         </div>
@@ -69,10 +68,9 @@ export const Comment = ({
         )}
         {menuVisible && (
           <EditMenu
-            setUserInput={setCommentDisplay}
+            setDisplay={setDisplay}
             setMenuVisible={setMenuVisible}
             id={id}
-            setAllComments={setAllComments}
           />
         )}
       </div>

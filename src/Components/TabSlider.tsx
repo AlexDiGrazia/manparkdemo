@@ -1,11 +1,8 @@
-import { Dispatch, SetStateAction } from "react";
+import { useHomeContext } from "../Providers/HomeProvider";
 
-type TSelectorBarProps = {
-  selected: string;
-  setSelected: Dispatch<SetStateAction<string>>;
-};
+export const TabSlider = () => {
+  const { tab: selected, setTab: setSelected } = useHomeContext();
 
-export const SelectorBar = ({ selected, setSelected }: TSelectorBarProps) => {
   return (
     <>
       <div className="selector_bar">

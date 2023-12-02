@@ -9,7 +9,7 @@ export const Root = () => {
   const { display, setDisplay } = useUserContext();
 
   useEffect(() => {
-    if (localStorage.getItem("gate") === "unlocked") {
+    if (localStorage.getItem("gatecode") === "Sadie") {
       setDisplay("UserLogin");
     }
   }, []);
