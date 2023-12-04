@@ -53,8 +53,8 @@ export const Home = () => {
             {eventSubmissionFormVisible && <EventSubmissionForm />}
           </div>
           <div className="home_content_container">
-            {tab === "posts" && <CommunityPosts />}
-            {tab === "events" && <EventsList />}
+            {tab === "posts-tab" && <CommunityPosts />}
+            {tab === "events-tab" && <EventsList />}
           </div>
         </div>
       </Layout>

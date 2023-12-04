@@ -1,7 +1,7 @@
 import { useHomeContext } from "../Providers/HomeProvider";
 
 export const TabSlider = () => {
-  const { tab: selected, setTab: setSelected } = useHomeContext();
+  const { tab, setTab } = useHomeContext();
 
   return (
     <>
@@ -11,7 +11,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-posts"
             name="tabs"
-            onChange={() => setSelected("posts")}
+            onChange={() => setTab("posts-tab")}
             defaultChecked
           />
           Posts
@@ -21,7 +21,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-events"
             name="tabs"
-            onChange={() => setSelected("events")}
+            onChange={() => setTab("events-tab")}
           />
           Events
         </label>
@@ -30,7 +30,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-friends"
             name="tabs"
-            onChange={() => setSelected("friends")}
+            onChange={() => setTab("friends-tab")}
           />
           Friends
         </label>
@@ -39,11 +39,11 @@ export const TabSlider = () => {
             type="radio"
             id="radio-photos"
             name="tabs"
-            onChange={() => setSelected("photos")}
+            onChange={() => setTab("photos-tab")}
           />
           Photos
         </label>
-        <span className={`glider ${selected}`}></span>
+        <span className={`glider ${tab}`}></span>
       </div>
     </>
   );

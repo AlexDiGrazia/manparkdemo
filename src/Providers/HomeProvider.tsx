@@ -36,7 +36,7 @@ const HomeContext = createContext({} as THomeContext);
 export const HomeProvider = ({ children }: { children: ReactNode }) => {
   const [allEvents, setAllEvents] = useState<TEvent[]>([]);
   const [allComments, setAllComments] = useState<TComment[]>([]);
-  const [tab, setTab] = useState<string>("posts");
+  const [tab, setTab] = useState<string>("posts-tab");
   const [currentEvent, setCurrentEvent] = useState<number | null>(null);
   const [currentComment, setCurrentComment] = useState<number | null>(null);
   const [dialogVisible, setDialogVisible] = useState<boolean>(false);

@@ -184,6 +184,11 @@
       "user": "Alex DiGrazia",
       "text": "lkjn",
       "id": 11
+    },
+    {
+      "user": "Alex DiGrazia",
+      "text": "elfkjs;fla;sdf",
+      "id": 12
     }
   ],
   "schedules": [
@@ -276,7 +281,7 @@
       "user": "Matt Babb",
       "date": "2023-12-08T00:16:47.000Z",
       "title": "Going to Portland",
-      "details": "Taking off at 1:23pm\n\nGate: 18C\n\nFlight 25332\n\nArrival: 3:14pm\n\nBring an umbrella, snacks, and a good playlist.",
+      "details": "Taking off at 1:23pm\n\nGate: 18C\n\nFlight 25332\n\nArrival: 3:14pm\n\nanasdf;lkasjdf;\n\nBring an umbrella, snacks, and a good playlist.",
       "id": 14
     },
     {
