@@ -14,10 +14,10 @@ export const ConfirmationDialog = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (tab === "events") {
+    if (tab === "events-tab") {
       EventRequests.deleteEvent(currentEvent).then(() => refetchAllEvents());
     }
-    if (tab === "posts") {
+    if (tab === "posts-tab") {
       currentComment !== null &&
         PostRequests.deleteComment(currentComment).then(() =>
           refetchAllComments()
