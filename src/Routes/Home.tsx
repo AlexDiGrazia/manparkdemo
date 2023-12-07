@@ -9,6 +9,8 @@ import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
 import { useHomeContext } from "../Providers/HomeProvider";
 import { EventSubmissionForm } from "../Components/EventSubmissionForm";
+import { Friends } from "../Components/Friends";
+import { Photos } from "../Components/Photos";
 
 export const Home = () => {
   const { currentUser, setCurrentUser } = useUserContext();
@@ -37,7 +39,7 @@ export const Home = () => {
           <div className="flex column center profile-buttons">
             <img
               className="profile-picture"
-              src="src/assets/Alex.jpeg"
+              src="public/assets/Alex.jpeg"
               alt="portrait of user"
             />
             <div className="flex side_by_side">
@@ -55,6 +57,8 @@ export const Home = () => {
           <div className="home_content_container">
             {tab === "posts-tab" && <CommunityPosts />}
             {tab === "events-tab" && <EventsList />}
+            {tab === "friends-tab" && <Friends />}
+            {tab === "photos-tab" && <Photos />}
           </div>
         </div>
       </Layout>

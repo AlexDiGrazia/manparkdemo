@@ -36,3 +36,8 @@ h1 {
 input {
   cursor: pointer;
 }
+
+.react_router_link {
+  text-decoration: none;
+  color: white;
+}

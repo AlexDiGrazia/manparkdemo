@@ -37,7 +37,7 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
       >
         <img
           className="comment_user_thumbnail"
-          src="src/assets/Alex.jpeg"
+          src="public/assets/Alex.jpeg"
           alt="profile picture thumbnail"
         />
         <div className="comment_content">

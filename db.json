@@ -36,100 +36,61 @@
       "id": 7
     },
     {
-      "username": "Mark Gibson",
-      "password": "stoicism",
+      "username": "John Bullock",
+      "password": "Priyanca",
       "id": 8
     },
     {
-      "username": "Gabe Gonzolas",
-      "password": "floatOm",
-      "id": 7
-    },
-    {
-      "username": "bob",
-      "password": "password1",
+      "username": "Gurpreet Singh",
+      "password": "Rugby-guy",
       "id": 9
-    },
-    {
-      "username": "Frank Sinatra",
-      "password": "That's-Life",
-      "id": 10
-    },
-    {
-      "username": "Paco Boy",
-      "password": "toll-road-doggie",
-      "id": 11
-    },
-    {
-      "username": "Draco Malfoy",
-      "password": "IDidn'tKnowYouCouldRead",
-      "id": 12
-    },
-    {
-      "username": "Steve Fry",
-      "password": "futurama",
-      "id": 13
-    },
-    {
-      "username": "Billie Eilish",
-      "password": "bellyache",
-      "id": 14
-    },
-    {
-      "username": "Reptaur",
-      "password": "dinopower",
-      "id": 15
     }
   ],
   "profiles": [
     {
       "user": "Alex DiGrazia",
-      "path": "/alex.digrazia"
-    },
-    {
-      "user": "Matt Babb",
-      "path": "/matt.babb"
-    }
-  ],
-  "friends": [
-    {
-      "user": "Matt Babb",
-      "id": "2"
-    },
-    {
-      "user": "Dan Canella",
-      "id": "3"
-    },
-    {
-      "user": "Elliot Kwong",
-      "id": "4"
-    }
-  ],
-  "friendships": [
-    {
-      "friend1": "Alex DiGrazia",
-      "friend2": "Matt Babb",
+      "picture": "assets/Alex.jpeg",
       "id": 1
     },
     {
-      "friend1": "Alex DiGrazia",
-      "friend2": "Dan Canella",
+      "user": "Matt Babb",
+      "picture": "assets/Matt.jpeg",
       "id": 2
     },
     {
-      "friend1": "Alex DiGrazia",
-      "friend2": "Elliot Kwong",
+      "user": "Dan Canella",
+      "picture": "assets/Dan.jpeg",
       "id": 3
     },
     {
-      "friend1": "Alex DiGrazia",
-      "friend2": "Jake Wing",
+      "user": "Elliot Kwong",
+      "picture": "assets/Elliot.jpeg",
       "id": 4
     },
     {
-      "friend1": "Alex DiGrazia",
-      "friend2": "Jimmie Spiegal",
+      "user": "Jake Wing",
+      "picture": "assets/Jake.jpeg",
       "id": 5
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "picture": "assets/Jimmie.jpeg",
+      "id": 6
+    },
+    {
+      "user": "James Lester",
+      "picture": "assets/James.jpeg",
+      "id": 7
+    },
+    {
+      "user": "John Bullock",
+      "picture": "assets/Blank.webp",
+      "id": 8
+    },
+    {
+      "user": "Gurpreet Singh",
+      "picture": "assets/Gurpreet.jpeg",
+      "id": 9
     }
   ],
   "posts": [
@@ -208,7 +169,7 @@
   "bios": [
     {
       "user": "Alex DiGrazia",
-      "bio": "Surfing, skatig, playing guitar, and coding!",
+      "bio": "Surfing, skating, playing guitar, and coding!",
       "id": 1
     },
     {
@@ -322,13 +283,310 @@
       "title": "asdf",
       "details": "asdf",
       "id": 21
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-01-01T00:12:43.000Z",
+      "title": "NYE Party",
+      "details": "gonna be lit AF yo",
+      "id": 22
     }
   ],
-  "groupThread": [
+  "photos": [
     {
-      "date": "10/3/23",
-      "user": "Alex DiGrazia",
-      "post": "let's all discuss what is the best kind of taco next week"
+      "image": "public/assets/photo_album_compressed/alex_selfie_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 1
+    },
+    {
+      "image": "public/assets/photo_album_compressed/alex_with_sadie_compressed.jpeg",
+      "date": "07/24/2022",
+      "id": 2
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_1_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 3
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_2_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 4
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_3_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 5
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_4_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 6
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_5_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 7
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_6_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 8
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_7_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 9
+    },
+    {
+      "image": "public/assets/photo_album_compressed/bang_the_drum_8_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 10
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_1_compressed.jpg",
+      "date": "07/24/2022",
+      "id": 11
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_2_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 12
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_3_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 13
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_4_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 14
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_5_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 15
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit_ziplining_6_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 16
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit-1_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 17
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit-2_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 18
+    },
+    {
+      "image": "public/assets/photo_album_compressed/benoit-3_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 19
+    },
+    {
+      "image": "public/assets/photo_album_compressed/BishopsPeak_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 20
+    },
+    {
+      "image": "public/assets/photo_album_compressed/Charlie_compressed.jpg",
+      "date": "08/24/2022",
+      "id": 21
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_with_sadie_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 22
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_zipling_0_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 23
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_1_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 24
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_2_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 25
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_3_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 26
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_4_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 27
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_5_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 28
+    },
+    {
+      "image": "public/assets/photo_album_compressed/dan_ziplining_6_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 29
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_1_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 30
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_2_compressed.jpg",
+      "date": "09/24/2022",
+      "id": 31
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_3_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 32
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_4_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 33
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_5_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 34
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_6_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 35
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_7_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 36
+    },
+    {
+      "image": "public/assets/photo_album_compressed/group_ziplining_8_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 37
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_1_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 38
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_2_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 39
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_3_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 40
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_4_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 41
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_5_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 42
+    },
+    {
+      "image": "public/assets/photo_album_compressed/mark_ziplining_6_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 43
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_0_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 44
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_1_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 45
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_2_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 46
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_3_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 47
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_4_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 48
+    },
+    {
+      "image": "public/assets/photo_album_compressed/matt_ziplining_5_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 49
+    },
+    {
+      "image": "public/assets/photo_album_compressed/scenery-1_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 50
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-1_compressed.jpg",
+      "date": "10/24/2022",
+      "id": 51
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-2_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 52
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-3_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 53
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-4_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 54
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-5_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 55
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-6_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 56
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-7_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 57
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-8_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 58
+    },
+    {
+      "image": "public/assets/photo_album_compressed/ziplining-9_compressed.jpg",
+      "date": "11/24/2022",
+      "id": 59
     }
   ]
 }
