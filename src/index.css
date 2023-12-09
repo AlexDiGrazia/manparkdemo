@@ -603,6 +603,28 @@ div.event_title span {
   margin-bottom: 0;
 }
 
+.profile_back_btn {
+  position: absolute;
+  text-decoration: underline;
+  right: 10%;
+  display: inline-flex;
+  align-items: center;
+}
+
+table.schedule {
+  border: 1px solid white;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.schedule th {
+  border: 1px solid white;
+}
+
+table.schedule td {
+  border: 1px solid white;
+}
+
 .friends_list_thumbnail_image {
   width: 100%;
   height: 100%;

@@ -7,7 +7,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Root } from "./Routes/Root";
 import { SignUp } from "./SignUp";
 import { ErrorPage } from "./ErrorPage";
-import { Profile } from "./Routes/Profile";
 import { Toaster } from "react-hot-toast";
 import { Home } from "./Routes/Home";
 import { UserProvider } from "./Providers/UserProvider";
@@ -26,8 +25,12 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "user/:userId",
-        element: <Profile />,
+        path: "home/user/:userId",
+        element: (
+          <HomeProvider>
+            <Home />
+          </HomeProvider>
+        ),
       },
       {
         path: "home",
