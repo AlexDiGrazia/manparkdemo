@@ -609,6 +609,7 @@ div.event_title span {
   right: 10%;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 
 table.schedule {

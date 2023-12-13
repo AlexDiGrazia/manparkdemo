@@ -1,7 +1,16 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import { useHomeContext } from "../Providers/HomeProvider";
 
 export const TabSlider = () => {
   const { tab, setTab } = useHomeContext();
+
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const handleTabChange = (tab: string) => {
+    pathname !== "/home" && navigate("/home", { replace: true });
+    setTab(tab);
+  };
 
   return (
     <>
@@ -11,7 +20,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-posts"
             name="tabs"
-            onChange={() => setTab("posts-tab")}
+            onChange={() => handleTabChange("posts-tab")}
             defaultChecked
           />
           Posts
@@ -21,7 +30,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-events"
             name="tabs"
-            onChange={() => setTab("events-tab")}
+            onChange={() => handleTabChange("events-tab")}
           />
           Events
         </label>
@@ -30,7 +39,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-friends"
             name="tabs"
-            onChange={() => setTab("friends-tab")}
+            onChange={() => handleTabChange("friends-tab")}
           />
           Friends
         </label>
@@ -39,7 +48,7 @@ export const TabSlider = () => {
             type="radio"
             id="radio-photos"
             name="tabs"
-            onChange={() => setTab("photos-tab")}
+            onChange={() => handleTabChange("photos-tab")}
           />
           Photos
         </label>

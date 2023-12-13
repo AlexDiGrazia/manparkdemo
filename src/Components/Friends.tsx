@@ -42,7 +42,7 @@ export const Friends = () => {
           ))}
         </div>
       )}
-      {display === "profile" && <Profile />}
+      {display === "profile" && <Profile setDisplay={setDisplay} />}
     </>
   );
 };

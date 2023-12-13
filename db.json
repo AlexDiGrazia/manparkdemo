@@ -149,30 +149,103 @@
       "user": "Matt Babb",
       "text": "comment from matt",
       "id": 10
+    },
+    {
+      "user": "Alex DiGrazia",
+      "text": "New comment brothers in Christ",
+      "id": 11
     }
   ],
   "schedules": [
     {
-      "username": "Alex DiGrazia",
-      "Monday": "work 9-5",
-      "Tuesday": "work 9-5",
-      "Wednesday": "work 9-5",
-      "Thursday": "work 9-5",
-      "Friday": "work 9-5",
-      "Saturday": "surfing",
-      "Sunday": "surfing",
+      "user": "Alex DiGrazia",
+      "day": 1,
+      "event": "work 9-5",
       "id": 1
     },
     {
-      "username": "Matt Babb",
-      "Monday": "day off",
-      "Tuesday": "day off",
-      "Wednesday": "school 8-3",
-      "Thursday": "school 2-6",
-      "Friday": "work 11-4",
-      "Saturday": "studying all day",
-      "Sunday": "day off",
+      "user": "Alex DiGrazia",
+      "day": 2,
+      "event": "work 9-5",
       "id": 2
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 3,
+      "event": "work 9-5",
+      "id": 3
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 4,
+      "event": "work 9-5",
+      "id": 4
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 5,
+      "event": "work 9-5",
+      "id": 5
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 6,
+      "event": "Date day with Jenny",
+      "id": 6
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 0,
+      "event": "the Lords day yo",
+      "id": 7
+    },
+    {
+      "user": "Dan Canella",
+      "day": 1,
+      "event": "work 9-6",
+      "id": 8
+    },
+    {
+      "user": "Dan Canella",
+      "day": 2,
+      "event": "work 9-6",
+      "id": 9
+    },
+    {
+      "user": "Dan Canella",
+      "day": 3,
+      "event": "work 9-6",
+      "id": 10
+    },
+    {
+      "user": "Dan Canella",
+      "day": 4,
+      "event": "work 9-6",
+      "id": 11
+    },
+    {
+      "user": "Dan Canella",
+      "day": 5,
+      "event": "Surfing with Alex 8am",
+      "id": 12
+    },
+    {
+      "user": "Dan Canella",
+      "day": 5,
+      "event": "Jiu Jitsu 6pm",
+      "id": 13
+    },
+    {
+      "user": "Dan Canella",
+      "day": 6,
+      "event": "Yoga 10am",
+      "id": 14
+    },
+    {
+      "user": "Dan Canella",
+      "day": 0,
+      "event": "Jiu Jitsu 10am",
+      "id": 15
     }
   ],
   "bios": [
@@ -299,6 +372,13 @@
       "title": "NYE Party",
       "details": "gonna be lit AF yo",
       "id": 22
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2023-12-19T18:42:57.000Z",
+      "title": "Matt's Birthday Party",
+      "details": "Gonna watch a movie on the projector at Matt's house yo!",
+      "id": 23
     }
   ],
   "photos": [
