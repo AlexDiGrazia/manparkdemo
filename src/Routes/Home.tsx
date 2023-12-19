@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
@@ -9,41 +9,65 @@ import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
 import { useHomeContext } from "../Providers/HomeProvider";
 import { EventSubmissionForm } from "../Components/EventSubmissionForm";
-import { Friends } from "../Components/Friends";
+import { Friends, TProfile } from "../Components/Friends";
 import { Photos } from "../Components/Photos";
+import { Requests } from "../api/usersApi";
+import { Requests as ProfileRequests } from "../api/profilesApi";
+import { TUserObject } from "../Components/UserLogin";
 
 export const Home = () => {
+  const [currentProfile, setCurrentProfile] = useState<TProfile>(
+    {} as TProfile
+  );
+
   const { currentUser, setCurrentUser } = useUserContext();
-  const { dialogVisible, eventSubmissionFormVisible, tab } = useHomeContext();
+  const {
+    dialogVisible,
+    eventSubmissionFormVisible,
+    tab,
+    setTab,
+    setFriendsListDisplay,
+  } = useHomeContext();
 
   const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem("user");
-    setCurrentUser("");
+    setCurrentUser({} as TUserObject);
     navigate("/", { replace: true });
   };
 
   useEffect(() => {
     const user = localStorage.getItem("user");
     if (user) {
-      setCurrentUser(user);
+      Requests.getSingleUser(user).then(setCurrentUser);
     }
+    ProfileRequests.getAllProfiles()
+      .then((res) => res.find((profile: TProfile) => profile.user === user))
+      .then(setCurrentProfile);
   }, []);
 
   return (
     <>
       <Layout image="sunset">
         <div className="flex space-between">
-          <h1>{`Welcome, ${currentUser}!`}</h1>
+          <h1>{`Welcome, ${currentUser.username}!`}</h1>
           <div className="flex column center profile-buttons">
             <img
               className="profile-picture"
-              src="public/assets/Alex.jpeg"
+              src={`public/${currentProfile.picture}`}
               alt="portrait of user"
             />
             <div className="flex side_by_side">
-              <span>Profile</span>
+              <span
+                onClick={() => {
+                  setTab("friends-tab");
+                  setFriendsListDisplay("profile");
+                  navigate(`user/${currentUser.id}`);
+                }}
+              >
+                Profile
+              </span>
               <span onClick={logout}>Logout</span>
             </div>
           </div>

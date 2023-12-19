@@ -152,8 +152,13 @@
     },
     {
       "user": "Alex DiGrazia",
-      "text": "New comment brothers in Christ",
+      "text": "This is my first comment ever now with the new and improved feature of having PROFILE PICTURES show up on the comment in accordance with whichever user account is making the comment~!!\n\nYay! 😃",
       "id": 11
+    },
+    {
+      "user": "Gurpreet Singh",
+      "text": "Hey guys!! This is the first time I've used Gurpreet's profile to make a comment! Yaaay!!  Now that I have all the comments being populated with the correct user profile image, I'm excited to make comments from every body's account so I can see everybody's beautiful faces all in one place!!",
+      "id": 12
     }
   ],
   "schedules": [
@@ -246,6 +251,18 @@
       "day": 0,
       "event": "Jiu Jitsu 10am",
       "id": 15
+    },
+    {
+      "user": "Elliot Kwong",
+      "day": 2,
+      "event": "work 2-5pm",
+      "id": 16
+    },
+    {
+      "user": "Matt Babb",
+      "day": 6,
+      "event": "Relaxing day off all day",
+      "id": 17
     }
   ],
   "bios": [
@@ -374,11 +391,15 @@
       "id": 22
     },
     {
-      "user": "Alex DiGrazia",
-      "date": "2023-12-19T18:42:57.000Z",
-      "title": "Matt's Birthday Party",
-      "details": "Gonna watch a movie on the projector at Matt's house yo!",
-      "id": 23
+      "user": {
+        "username": "Alex DiGrazia",
+        "password": "assassins-creed-origins",
+        "id": 1
+      },
+      "date": "2023-12-13T23:26:31.855Z",
+      "title": "adsf",
+      "details": "asdf",
+      "id": 24
     }
   ],
   "photos": [

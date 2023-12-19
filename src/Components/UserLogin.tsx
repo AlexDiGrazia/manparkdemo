@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Providers/UserProvider";
 
-type TUserObject = {
+export type TUserObject = {
   username: string;
   password: string;
   id: number;
@@ -37,7 +37,8 @@ export const UserLogin = () => {
           res.find((obj: TUserObject) => obj.username === username).password ===
           password
         ) {
-          localStorage.setItem("user", username), setCurrentUser(username);
+          localStorage.setItem("user", username);
+          Requests.getSingleUser(username).then(setCurrentUser);
           navigate("home");
           setUsername("");
           setPassword("");

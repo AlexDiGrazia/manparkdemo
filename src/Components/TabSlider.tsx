@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useHomeContext } from "../Providers/HomeProvider";
 
 export const TabSlider = () => {
-  const { tab, setTab } = useHomeContext();
+  const { tab, setTab, setFriendsListDisplay } = useHomeContext();
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -10,6 +10,7 @@ export const TabSlider = () => {
   const handleTabChange = (tab: string) => {
     pathname !== "/home" && navigate("/home", { replace: true });
     setTab(tab);
+    setFriendsListDisplay("friends-list");
   };
 
   return (

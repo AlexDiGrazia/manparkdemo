@@ -12,7 +12,7 @@ export const CommunityPosts = () => {
   const { allComments, refetchAllComments } = useHomeContext();
 
   const newComment = {
-    user: currentUser,
+    user: currentUser.username,
     text: commentInput,
   };
 

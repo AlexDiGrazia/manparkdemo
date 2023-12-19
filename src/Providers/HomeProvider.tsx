@@ -29,6 +29,8 @@ type THomeContext = {
   setDialogVisible: Dispatch<SetStateAction<boolean>>;
   eventSubmissionFormVisible: boolean;
   setEventSubmissionFormVisible: Dispatch<SetStateAction<boolean>>;
+  friendsListDisplay: "friends-list" | "profile";
+  setFriendsListDisplay: Dispatch<SetStateAction<"friends-list" | "profile">>;
 };
 
 const HomeContext = createContext({} as THomeContext);
@@ -42,6 +44,9 @@ export const HomeProvider = ({ children }: { children: ReactNode }) => {
   const [dialogVisible, setDialogVisible] = useState<boolean>(false);
   const [eventSubmissionFormVisible, setEventSubmissionFormVisible] =
     useState<boolean>(false);
+  const [friendsListDisplay, setFriendsListDisplay] = useState<
+    "friends-list" | "profile"
+  >("friends-list");
 
   const refetchAllEvents = () => {
     EventRequests.getAllEvents().then(setAllEvents);
@@ -70,6 +75,8 @@ export const HomeProvider = ({ children }: { children: ReactNode }) => {
           setDialogVisible,
           eventSubmissionFormVisible,
           setEventSubmissionFormVisible,
+          friendsListDisplay,
+          setFriendsListDisplay,
         }}
       >
         {children}

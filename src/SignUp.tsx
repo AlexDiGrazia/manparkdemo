@@ -27,9 +27,10 @@ export const SignUp = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === confirmation) {
-      Requests.createNewUser(newUser);
-      localStorage.setItem("user", username), setCurrentUser(username);
-      setCurrentUser("username");
+      Requests.createNewUser(newUser)
+        .then(() => Requests.getSingleUser(username))
+        .then(setCurrentUser);
+      localStorage.setItem("user", username);
       navigate("home");
       setUsername("");
       setPassword("");

@@ -98,7 +98,7 @@ export const Event = ({ user, date, title, details, id }: TEvent) => {
                 value="Edit"
                 onClick={() => setDisplay("editBox")}
               />
-              {currentUser === user && (
+              {currentUser.username === user && (
                 <input
                   type="button"
                   value="Delete"

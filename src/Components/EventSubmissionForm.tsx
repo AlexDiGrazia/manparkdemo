@@ -25,7 +25,7 @@ export const EventSubmissionForm = () => {
   const { currentUser } = useUserContext();
 
   const newEvent = {
-    user: currentUser,
+    user: currentUser.username,
     date,
     title,
     details,

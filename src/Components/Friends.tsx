@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Requests } from "../api/profilesApi";
 import { Link } from "react-router-dom";
 import { Profile } from "../Routes/Profile";
+import { useHomeContext } from "../Providers/HomeProvider";
 
 export type TProfile = {
   user: string;
@@ -12,9 +13,8 @@ export type TProfile = {
 
 export const Friends = () => {
   const [allProfiles, setAllProfiles] = useState<TProfile[]>([]);
-  const [display, setDisplay] = useState<"friends-list" | "profile">(
-    "friends-list"
-  );
+
+  const { friendsListDisplay, setFriendsListDisplay } = useHomeContext();
 
   useEffect(() => {
     Requests.getAllProfiles().then(setAllProfiles);
@@ -22,14 +22,14 @@ export const Friends = () => {
 
   return (
     <>
-      {display === "friends-list" && (
+      {friendsListDisplay === "friends-list" && (
         <div className="friends_list_container">
           {allProfiles.map((profile) => (
             <Link
               to={`user/${profile.id}`}
               key={`profile_${profile.id}`}
               className="react_router_link"
-              onClick={() => setDisplay("profile")}
+              onClick={() => setFriendsListDisplay("profile")}
             >
               <div className="profile_thumbnail">
                 <div
@@ -42,7 +42,9 @@ export const Friends = () => {
           ))}
         </div>
       )}
-      {display === "profile" && <Profile setDisplay={setDisplay} />}
+      {friendsListDisplay === "profile" && (
+        <Profile setFriendsListDisplay={setFriendsListDisplay} />
+      )}
     </>
   );
 };
