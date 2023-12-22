@@ -44,7 +44,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
       </span>
       <p>{profile.user}</p>
       <p>{profile.bio ? profile.bio : "User has not yet submitted a bio"}</p>
-      <Schedule />
+      <Schedule profile={profile} />
     </div>
   );
 };

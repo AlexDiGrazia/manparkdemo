@@ -624,6 +624,56 @@ table.schedule th {
 
 table.schedule td {
   border: 1px solid white;
+  position: relative;
+}
+
+table.schedule td input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+}
+
+table.schedule td button.schedule_trashcan_btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 5px;
+}
+
+table.schedule td input.appointment_deletion_checkbox {
+  position: static;
+}
+
+table.schedule td div.delete_or_cancel_btn_container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 5px;
+}
+
+table.schedule td div.delete_or_cancel_btn_container input {
+  position: static;
+}
+
+table.schedule td ul li.underline {
+  border-bottom: 1px solid white;
+  width: 90%;
+}
+
+table.schedule td ul li.no_underline {
+  border-bottom: none;
+}
+
+table.schedule td ul li .new_appointment:focus {
+  outline: none;
+}
+
+table.schedule td input.new_schedule_item_save_btn {
+  position: static;
+  right: 0;
+  bottom: 0;
+  margin: 5px 0 0 0;
 }
 
 .friends_list_thumbnail_image {

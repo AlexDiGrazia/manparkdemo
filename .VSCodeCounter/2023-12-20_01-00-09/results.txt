@@ -1,0 +1,92 @@
+Date : 2023-12-20 01:00:09
+Directory : /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project
+Total : 50 files,  128364 codes, 201 comments, 330 blanks, all 128895 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          5 |    126,079 |          0 |          3 |    126,082 |
+| TypeScript JSX     |         27 |      1,476 |        176 |        158 |      1,810 |
+| CSS                |          3 |        606 |         21 |        124 |        751 |
+| TypeScript         |          9 |        126 |          2 |         31 |        159 |
+| JSON with Comments |          1 |         21 |          2 |          3 |         26 |
+| Markdown           |          1 |         19 |          0 |          9 |         28 |
+| JavaScript         |          1 |         18 |          0 |          1 |         19 |
+| HTML               |          1 |         17 |          0 |          1 |         18 |
+| XML                |          2 |          2 |          0 |          0 |          2 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                      | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                         |         50 |    128,364 |        201 |        330 |    128,895 |
+| . (Files)                                                                                                                 |         10 |    126,159 |          3 |         19 |    126,181 |
+| public                                                                                                                    |          2 |          2 |          0 |          0 |          2 |
+| public (Files)                                                                                                            |          1 |          1 |          0 |          0 |          1 |
+| public/assets                                                                                                             |          1 |          1 |          0 |          0 |          1 |
+| src                                                                                                                       |         38 |      2,203 |        198 |        311 |      2,712 |
+| src (Files)                                                                                                               |          9 |        840 |         22 |        146 |      1,008 |
+| src/Components                                                                                                            |         16 |        943 |          0 |         98 |      1,041 |
+| src/Providers                                                                                                             |          3 |        151 |          2 |         20 |        173 |
+| src/Routes                                                                                                                |          4 |        157 |        174 |         21 |        352 |
+| src/api                                                                                                                   |          6 |        112 |          0 |         26 |        138 |
++---------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                  | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/.eslintrc.cjs                          | JavaScript         |         18 |          0 |          1 |         19 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/README.md                              | Markdown           |         19 |          0 |          9 |         28 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/db.json                                | JSON               |        702 |          0 |          0 |        702 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/index.html                             | HTML               |         17 |          0 |          1 |         18 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/package-lock.json                      | JSON               |      9,463 |          0 |          1 |      9,464 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/package.json                           | JSON               |         40 |          0 |          1 |         41 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/public/assets/react.svg                | XML                |          1 |          0 |          0 |          1 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/public/vite.svg                        | XML                |          1 |          0 |          0 |          1 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Comment.tsx             | TypeScript JSX     |         82 |          0 |          9 |         91 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/CommunityPosts.tsx      | TypeScript JSX     |         57 |          0 |          7 |         64 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/ConfirmationDialog.tsx  | TypeScript JSX     |         41 |          0 |          4 |         45 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EditMenu.tsx            | TypeScript JSX     |         44 |          0 |          5 |         49 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Ellipsis.tsx            | TypeScript JSX     |         21 |          0 |          3 |         24 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Event.tsx               | TypeScript JSX     |        115 |          0 |          9 |        124 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EventSubmissionForm.tsx | TypeScript JSX     |         85 |          0 |          9 |         94 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EventsList.tsx          | TypeScript JSX     |         55 |          0 |          6 |         61 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Friends.tsx             | TypeScript JSX     |         45 |          0 |          6 |         51 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Layout.tsx              | TypeScript JSX     |         13 |          0 |          2 |         15 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/LoginGate.tsx           | TypeScript JSX     |         54 |          0 |          8 |         62 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Photos.tsx              | TypeScript JSX     |         55 |          0 |          5 |         60 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Schedule.tsx            | TypeScript JSX     |         60 |          0 |          7 |         67 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/ScheduleTD.tsx          | TypeScript JSX     |         68 |          0 |          6 |         74 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/TabSlider.tsx           | TypeScript JSX     |         56 |          0 |          5 |         61 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/UserLogin.tsx           | TypeScript JSX     |         92 |          0 |          7 |         99 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/ErrorPage.tsx                      | TypeScript JSX     |         26 |          0 |          3 |         29 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/HeroSection.tsx                    | TypeScript JSX     |         43 |          0 |          5 |         48 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/AppProvider.tsx          | TypeScript JSX     |         34 |          1 |          6 |         41 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/HomeProvider.tsx         | TypeScript JSX     |         80 |          1 |          8 |         89 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/UserProvider.tsx         | TypeScript JSX     |         37 |          0 |          6 |         43 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Home.tsx                    | TypeScript JSX     |         84 |          1 |          7 |         92 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Profile.tsx                 | TypeScript JSX     |         45 |          0 |          6 |         51 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Root.tsx                    | TypeScript JSX     |         28 |          0 |          4 |         32 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/scratch.tsx                 | TypeScript JSX     |          0 |        173 |          4 |        177 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/SignUp.tsx                         | TypeScript JSX     |        104 |          0 |          8 |        112 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/eventsApi.ts                   | TypeScript         |         36 |          0 |          6 |         42 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/photosApi.ts                   | TypeScript         |          4 |          0 |          2 |          6 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/postsApi.ts                    | TypeScript         |         32 |          0 |          6 |         38 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/profilesApi.ts                 | TypeScript         |          6 |          0 |          3 |          9 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/schedulesApi.ts                | TypeScript         |         16 |          0 |          4 |         20 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/usersApi.ts                    | TypeScript         |         18 |          0 |          5 |         23 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/default.css                        | CSS                |         34 |          0 |         10 |         44 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/index.css                          | CSS                |        537 |         21 |        107 |        665 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/main.tsx                           | TypeScript JSX     |         52 |          0 |          3 |         55 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/responsive.css                     | CSS                |         35 |          0 |          7 |         42 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/types.ts                           | TypeScript         |          9 |          0 |          2 |         11 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/vite-env.d.ts                      | TypeScript         |          0 |          1 |          1 |          2 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/storyboard.excalidraw                  | JSON               |    115,864 |          0 |          0 |    115,864 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/tsconfig.json                          | JSON with Comments |         21 |          2 |          3 |         26 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/tsconfig.node.json                     | JSON               |         10 |          0 |          1 |         11 |
+| /Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/vite.config.ts                         | TypeScript         |          5 |          1 |          2 |          8 |
+| Total                                                                                                                     |                    |    128,364 |        201 |        330 |    128,895 |
++---------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

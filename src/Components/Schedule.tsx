@@ -2,14 +2,21 @@ import { useEffect, useState } from "react";
 import { Requests } from "../api/schedulesApi";
 import { Requests as ProfileRequests } from "../api/profilesApi";
 import { useParams } from "react-router-dom";
+import { ScheduleTD } from "./ScheduleTD";
+import { TProfile } from "./Friends";
 
 export type TSchedules = {
   user: string;
   day: number;
   event: string;
+  id: number;
 };
 
-export const Schedule = () => {
+type TScheduleProps = {
+  profile: TProfile;
+};
+
+export const Schedule = ({ profile }: TScheduleProps) => {
   const [scheduleData, setScheduleData] = useState<TSchedules[]>([]);
   const { userId } = useParams();
   const daysOfWeekNumbers = [0, 1, 2, 3, 4, 5, 6];
@@ -50,19 +57,12 @@ export const Schedule = () => {
         <tbody>
           <tr>
             {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
-              <td key={`day-of-the-week-${dayOfWeekIndex}`}>
-                <ul>
-                  {day.length ? (
-                    day.map((obj, eventIndex) => (
-                      <li key={`day-${dayOfWeekIndex}-event-${eventIndex}`}>
-                        {obj.event}
-                      </li>
-                    ))
-                  ) : (
-                    <li>{"No Data"}</li>
-                  )}
-                </ul>
-              </td>
+              <ScheduleTD
+                profile={profile}
+                day={day}
+                dayOfWeekIndex={dayOfWeekIndex}
+                fetchUserScheduleData={fetchUserScheduleData}
+              />
             ))}
           </tr>
         </tbody>

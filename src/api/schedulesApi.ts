@@ -7,4 +7,21 @@ export const Requests = {
     fetch(`${BASE_URL}/schedules`)
       .then((res) => res.json())
       .then((res) => res.filter((obj: TSchedules) => obj.user === user)),
+
+  postNewScheduleData: (newData: Omit<TSchedules, "id">) =>
+    fetch(`${BASE_URL}/schedules`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newData),
+    }).then((res) => res.json()),
+
+  deleteScheduleAppointment: (id: number) =>
+    fetch(`${BASE_URL}/schedules/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json()),
 };

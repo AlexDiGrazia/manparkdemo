@@ -1,0 +1,52 @@
+"filename", "language", "TypeScript JSX", "TypeScript", "CSS", "JSON with Comments", "JSON", "XML", "Markdown", "HTML", "JavaScript", "comment", "blank", "total"
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/.eslintrc.cjs", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 1, 19
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/README.md", "Markdown", 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 9, 28
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/db.json", "JSON", 0, 0, 0, 0, 702, 0, 0, 0, 0, 0, 0, 702
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 1, 18
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/package-lock.json", "JSON", 0, 0, 0, 0, 9463, 0, 0, 0, 0, 0, 1, 9464
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/package.json", "JSON", 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 1, 41
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/public/assets/react.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/public/vite.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Comment.tsx", "TypeScript JSX", 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 91
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/CommunityPosts.tsx", "TypeScript JSX", 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 64
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/ConfirmationDialog.tsx", "TypeScript JSX", 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 45
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EditMenu.tsx", "TypeScript JSX", 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 49
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Ellipsis.tsx", "TypeScript JSX", 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 24
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Event.tsx", "TypeScript JSX", 115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 124
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EventSubmissionForm.tsx", "TypeScript JSX", 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 94
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/EventsList.tsx", "TypeScript JSX", 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 61
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Friends.tsx", "TypeScript JSX", 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 51
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Layout.tsx", "TypeScript JSX", 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 15
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/LoginGate.tsx", "TypeScript JSX", 54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 62
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Photos.tsx", "TypeScript JSX", 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 60
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/Schedule.tsx", "TypeScript JSX", 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 67
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/ScheduleTD.tsx", "TypeScript JSX", 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 74
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/TabSlider.tsx", "TypeScript JSX", 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 61
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Components/UserLogin.tsx", "TypeScript JSX", 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 99
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/ErrorPage.tsx", "TypeScript JSX", 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 29
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/HeroSection.tsx", "TypeScript JSX", 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 48
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/AppProvider.tsx", "TypeScript JSX", 34, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 41
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/HomeProvider.tsx", "TypeScript JSX", 80, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8, 89
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Providers/UserProvider.tsx", "TypeScript JSX", 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 43
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Home.tsx", "TypeScript JSX", 84, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7, 92
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Profile.tsx", "TypeScript JSX", 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 51
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/Root.tsx", "TypeScript JSX", 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 32
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/Routes/scratch.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 173, 4, 177
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/SignUp.tsx", "TypeScript JSX", 104, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 112
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/eventsApi.ts", "TypeScript", 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 6, 42
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/photosApi.ts", "TypeScript", 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/postsApi.ts", "TypeScript", 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 6, 38
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/profilesApi.ts", "TypeScript", 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 3, 9
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/schedulesApi.ts", "TypeScript", 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 4, 20
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/api/usersApi.ts", "TypeScript", 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 5, 23
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/default.css", "CSS", 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 10, 44
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/index.css", "CSS", 0, 0, 537, 0, 0, 0, 0, 0, 0, 21, 107, 665
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/main.tsx", "TypeScript JSX", 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 55
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/responsive.css", "CSS", 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 7, 42
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/types.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/storyboard.excalidraw", "JSON", 0, 0, 0, 0, 115864, 0, 0, 0, 0, 0, 0, 115864
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/tsconfig.json", "JSON with Comments", 0, 0, 0, 21, 0, 0, 0, 0, 0, 2, 3, 26
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/tsconfig.node.json", "JSON", 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 1, 11
+"/Users/alexdigrazia/Documents/devslopes-exercises/React by Jon/react-final-project/vite.config.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 2, 8
+"Total", "-", 1476, 126, 606, 21, 126079, 2, 19, 17, 18, 201, 330, 128895
