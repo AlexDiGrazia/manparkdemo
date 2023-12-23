@@ -67,7 +67,14 @@ export const ScheduleTD = ({
             )}
             {listItemView === "delete" && (
               <div className="delete_or_cancel_btn_container">
-                <input type="button" value="Cancel" />
+                <input
+                  type="button"
+                  value="Cancel"
+                  onClick={() => {
+                    setListItemView("display");
+                    deletionQueue = [];
+                  }}
+                />
                 <input
                   type="button"
                   value="Delete"
@@ -76,7 +83,12 @@ export const ScheduleTD = ({
                       deletionQueue.map((id: number) =>
                         Requests.deleteScheduleAppointment(id)
                       )
-                    )
+                    ).then(() => {
+                      fetchUserScheduleData(profile.user);
+                      setListItemView("display");
+                      console.log(deletionQueue);
+                      deletionQueue = [];
+                    })
                   }
                 />
               </div>
@@ -109,7 +121,9 @@ export const ScheduleTD = ({
                 >
                   <input
                     onChange={() => {
-                      deletionQueue.push(obj.id);
+                      deletionQueue.includes(obj.id)
+                        ? deletionQueue.splice(deletionQueue.indexOf(obj.id), 1)
+                        : deletionQueue.push(obj.id);
                     }}
                     type="checkbox"
                     className="appointment_deletion_checkbox"
