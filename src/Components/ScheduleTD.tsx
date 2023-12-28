@@ -86,7 +86,6 @@ export const ScheduleTD = ({
                     ).then(() => {
                       fetchUserScheduleData(profile.user);
                       setListItemView("display");
-                      console.log(deletionQueue);
                       deletionQueue = [];
                     })
                   }
@@ -104,42 +103,43 @@ export const ScheduleTD = ({
           </>
         )}
         <ul>
-          {day.length ? (
-            day.map((obj, eventIndex) =>
-              listItemView === "display" ? (
-                <li
-                  key={`day-${dayOfWeekIndex}-event-${eventIndex}`}
-                  suppressContentEditableWarning
-                  contentEditable={profile.user === currentUser.username}
-                >
-                  {obj.event}
-                </li>
-              ) : (
-                <div
-                  className="delete_queue_list_item"
-                  key={`deletion_item_day-${dayOfWeekIndex}-event-${eventIndex}`}
-                >
-                  <input
-                    onChange={() => {
-                      deletionQueue.includes(obj.id)
-                        ? deletionQueue.splice(deletionQueue.indexOf(obj.id), 1)
-                        : deletionQueue.push(obj.id);
+          {day.length
+            ? day.map((obj, eventIndex) =>
+                listItemView === "display" ? (
+                  <li
+                    key={`day-${dayOfWeekIndex}-event-${eventIndex}`}
+                    suppressContentEditableWarning
+                    contentEditable={profile.user === currentUser.username}
+                    onBlur={(e) => {
+                      Requests.updateScheduleAppointment(obj.id, {
+                        event: e.currentTarget.innerText,
+                      });
                     }}
-                    type="checkbox"
-                    className="appointment_deletion_checkbox"
-                  />
-                  <label>{obj.event}</label>
-                </div>
+                  >
+                    {obj.event}
+                  </li>
+                ) : (
+                  <div
+                    className="delete_queue_list_item"
+                    key={`deletion_item_day-${dayOfWeekIndex}-event-${eventIndex}`}
+                  >
+                    <input
+                      onChange={() => {
+                        deletionQueue.includes(obj.id)
+                          ? deletionQueue.splice(
+                              deletionQueue.indexOf(obj.id),
+                              1
+                            )
+                          : deletionQueue.push(obj.id);
+                      }}
+                      type="checkbox"
+                      className="appointment_deletion_checkbox"
+                    />
+                    <label>{obj.event}</label>
+                  </div>
+                )
               )
-            )
-          ) : (
-            <li
-              suppressContentEditableWarning
-              contentEditable={profile.user === currentUser.username}
-            >
-              {"No Data"}
-            </li>
-          )}
+            : null}
           {newListItemVisible && (
             <>
               <li className={saveButtonVisible ? "underline" : "no_underline"}>

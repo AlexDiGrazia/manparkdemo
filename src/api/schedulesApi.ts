@@ -24,4 +24,16 @@ export const Requests = {
         "Content-Type": "application/json",
       },
     }).then((res) => res.json()),
+
+  updateScheduleAppointment: (
+    id: number,
+    updateAppointment: { event: string }
+  ) =>
+    fetch(`${BASE_URL}/schedules/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateAppointment),
+    }),
 };

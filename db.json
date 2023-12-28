@@ -171,13 +171,13 @@
     {
       "user": "Alex DiGrazia",
       "day": 2,
-      "event": "work 9-5",
+      "event": "work 9-5 naaah man",
       "id": 2
     },
     {
       "user": "Alex DiGrazia",
       "day": 3,
-      "event": "work 9-5",
+      "event": "Nailed it dawg",
       "id": 3
     },
     {
@@ -195,7 +195,7 @@
     {
       "user": "Alex DiGrazia",
       "day": 6,
-      "event": "Date day with Jenny",
+      "event": "Free Day",
       "id": 6
     },
     {
@@ -211,12 +211,6 @@
       "id": 16
     },
     {
-      "user": "Matt Babb",
-      "day": 6,
-      "event": "Relaxing day off all day",
-      "id": 17
-    },
-    {
       "user": "Alex DiGrazia",
       "day": 2,
       "event": "New event with all the amazing things going on, fuck yea!!!!",
@@ -225,7 +219,7 @@
     {
       "user": "Alex DiGrazia",
       "day": 1,
-      "event": "first test event",
+      "event": "Updating comments is live",
       "id": 19
     },
     {
@@ -233,36 +227,6 @@
       "day": 2,
       "event": "Toss it up baby boy let's go",
       "id": 20
-    },
-    {
-      "user": "Matt Babb",
-      "day": 1,
-      "event": "No school til Aug 25th",
-      "id": 21
-    },
-    {
-      "user": "Matt Babb",
-      "day": 1,
-      "event": "No school til Aug 25th",
-      "id": 22
-    },
-    {
-      "user": "Matt Babb",
-      "day": 1,
-      "event": "No school til Aug 25th",
-      "id": 23
-    },
-    {
-      "user": "Matt Babb",
-      "day": 2,
-      "event": "test",
-      "id": 24
-    },
-    {
-      "user": "Matt Babb",
-      "day": 2,
-      "event": "nother one",
-      "id": 25
     },
     {
       "user": "Dan Canella",
@@ -295,22 +259,10 @@
       "id": 73
     },
     {
-      "user": "Dan Canella",
-      "day": 2,
-      "event": "drinks 4pm",
-      "id": 75
-    },
-    {
-      "user": "Dan Canella",
-      "day": 2,
-      "event": "movie 5pm",
-      "id": 76
-    },
-    {
-      "user": "Dan Canella",
-      "day": 2,
-      "event": "sex 6pm",
-      "id": 77
+      "user": "Matt Babb",
+      "day": 3,
+      "event": "asdfasdfasdfasdf",
+      "id": 74
     }
   ],
   "bios": [
