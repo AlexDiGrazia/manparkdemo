@@ -107,6 +107,7 @@ export const ScheduleTD = ({
             ? day.map((obj, eventIndex) =>
                 listItemView === "display" ? (
                   <li
+                    className="li_margin_bottom"
                     key={`day-${dayOfWeekIndex}-event-${eventIndex}`}
                     suppressContentEditableWarning
                     contentEditable={profile.user === currentUser.username}
@@ -142,7 +143,11 @@ export const ScheduleTD = ({
             : null}
           {newListItemVisible && (
             <>
-              <li className={saveButtonVisible ? "underline" : "no_underline"}>
+              <li
+                className={`li_margin_bottom ${
+                  saveButtonVisible ? "underline" : "no_underline"
+                }`}
+              >
                 <ContentEditable
                   className="new_appointment"
                   html={newListItemContent}
@@ -150,19 +155,30 @@ export const ScheduleTD = ({
                 />
               </li>
               {saveButtonVisible && (
-                <input
-                  type="button"
-                  value="save"
-                  className="new_schedule_item_save_btn"
-                  onClick={() => {
-                    Requests.postNewScheduleData(newScheduleData).then(() => {
+                <>
+                  <input
+                    type="button"
+                    value="cancel"
+                    className="new_schedule_item_save_btn"
+                    onClick={() => {
                       setSaveButtonVisible(false);
-                      fetchUserScheduleData(profile.user);
-                      setNewListItemContent("");
                       setNewListItemVisible(false);
-                    });
-                  }}
-                />
+                    }}
+                  />
+                  <input
+                    type="button"
+                    value="save"
+                    className="new_schedule_item_save_btn"
+                    onClick={() => {
+                      Requests.postNewScheduleData(newScheduleData).then(() => {
+                        setSaveButtonVisible(false);
+                        fetchUserScheduleData(profile.user);
+                        setNewListItemContent("");
+                        setNewListItemVisible(false);
+                      });
+                    }}
+                  />
+                </>
               )}
             </>
           )}

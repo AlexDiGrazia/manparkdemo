@@ -44,6 +44,12 @@ export const Schedule = ({ profile }: TScheduleProps) => {
     });
   }, []);
 
+  useEffect(() => {
+    ProfileRequests.getSingleProfile(Number(userId)).then((profileData) => {
+      fetchUserScheduleData(profileData.user);
+    });
+  }, [userId]);
+
   return (
     <>
       <table className="schedule">

@@ -26,6 +26,13 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
     Requests.getSingleProfile(Number(userId)).then(setProfile);
   }, []);
 
+  useEffect(() => {
+    Requests.getSingleProfile(Number(userId)).then((data) => {
+      setProfile(data);
+      console.log(data);
+    });
+  }, [userId]);
+
   return (
     <div style={{ color: "white" }}>
       <img

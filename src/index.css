@@ -26,12 +26,17 @@ body {
   justify-content: center;
 }
 
+h2.welcome_user {
+  font-size: 3em;
+  margin-top: 0px;
+}
+/* 
 .bkg h1.logo {
   font-size: 3em;
   margin-top: 0px;
   text-align: left;
   padding-left: 35px;
-}
+} */
 
 .bkg .gate-login {
   width: 25%;
@@ -667,6 +672,10 @@ table.schedule td ul li.no_underline {
 
 table.schedule td ul li .new_appointment:focus {
   outline: none;
+}
+
+li.li_margin_bottom {
+  margin-bottom: 10px;
 }
 
 table.schedule td input.new_schedule_item_save_btn {

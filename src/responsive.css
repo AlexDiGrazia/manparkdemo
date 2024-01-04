@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (max-width: 1113px) {
+  .tab {
+    font-size: 1.7rem;
+  }
+}
+
 @media screen and (max-width: 1088px) {
   .first_column {
     width: 22%;
@@ -20,22 +26,26 @@
   .first_column {
     width: 28%;
   }
-}
 
-@media screen and (max-width: 744px) {
-  .first_column {
-    width: 34%;
-  }
-}
-
-@media screen and (max-width: 1113px) {
-  .tab {
-    font-size: 1.7rem;
+  h2.welcome_user {
+    font-size: 2.5em;
   }
 }
 
 @media screen and (max-width: 880px) {
   .tab {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  h2.welcome_user {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .first_column {
+    width: 34%;
   }
 }

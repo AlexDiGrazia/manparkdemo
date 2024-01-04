@@ -152,7 +152,7 @@
     },
     {
       "user": "Alex DiGrazia",
-      "text": "This is my first comment ever now with the new and improved feature of having PROFILE PICTURES show up on the comment in accordance with whichever user account is making the comment~!!\n\nYay! 😃",
+      "text": "This is my first comment ever now with the new and improved feature of having PROFILE PICTURES show up on the comment in accordance with whichever user account is making the comment~!! surfing rocks\n\nYay! 😃",
       "id": 11
     },
     {
@@ -263,6 +263,18 @@
       "day": 3,
       "event": "asdfasdfasdfasdf",
       "id": 74
+    },
+    {
+      "user": "Alex DiGrazia",
+      "day": 2,
+      "event": "",
+      "id": 75
+    },
+    {
+      "user": "Dan Canella",
+      "day": 2,
+      "event": "buggy ass bullshit",
+      "id": 76
     }
   ],
   "bios": [
@@ -400,6 +412,34 @@
       "title": "adsf",
       "details": "asdf",
       "id": 24
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-01-20T23:53:15.000Z",
+      "title": "Concert with Dad",
+      "details": "Going to see Julian Lage in San Francisco",
+      "id": 25
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-02-06T23:53:42.000Z",
+      "title": "Early Valentines Day",
+      "details": "Just prep for all the lonely losers who don't have a date",
+      "id": 26
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-03-19T22:54:06.000Z",
+      "title": "March Madness",
+      "details": "Football and Handball bitches",
+      "id": 27
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-02-21T23:54:23.000Z",
+      "title": "Rick and Morty Marathon",
+      "details": "All gonna get together and watch Rick and Morty at Matt's house on his big ass projector broh",
+      "id": 28
     }
   ],
   "photos": [

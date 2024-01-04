@@ -51,7 +51,7 @@ export const Home = () => {
     <>
       <Layout image="sunset">
         <div className="flex space-between">
-          <h1>{`Welcome, ${currentUser.username}!`}</h1>
+          <h2 className="welcome_user">{`Welcome, ${currentUser.username}!`}</h2>
           <div className="flex column center profile-buttons">
             <img
               className="profile-picture"
@@ -63,7 +63,7 @@ export const Home = () => {
                 onClick={() => {
                   setTab("friends-tab");
                   setFriendsListDisplay("profile");
-                  navigate(`user/${currentUser.id}`);
+                  navigate(`/home/user/${currentUser.id}`);
                 }}
               >
                 Profile
