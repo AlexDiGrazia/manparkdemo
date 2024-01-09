@@ -608,6 +608,24 @@ div.event_title span {
   margin-bottom: 0;
 }
 
+.profile_user_basic_info p {
+  margin: 0;
+}
+
+.profile_user_basic_info p span.user_basic_info_span {
+  font-weight: 600;
+  font-size: 17px;
+  color: rgb(131, 82, 82);
+  margin-right: 5px;
+}
+
+.profile_birthday_date_picker {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 17px;
+}
+
 .profile_back_btn {
   position: absolute;
   text-decoration: underline;
@@ -615,20 +633,38 @@ div.event_title span {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  top: 10%;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.profile_back_btn svg {
+  margin-right: 1.3125em;
+  font-size: 18px;
+  color: rgb(131, 82, 82);
+}
+
+.profile_img_container {
+  display: flex;
+  gap: 15px;
+}
+
+.profile_bio {
+  white-space: pre-wrap;
 }
 
 table.schedule {
-  border: 1px solid white;
+  border: 1px solid rgb(131, 82, 82);
   width: 100%;
   border-collapse: collapse;
 }
 
 table.schedule th {
-  border: 1px solid white;
+  border: 1px solid rgb(131, 82, 82);
 }
 
 table.schedule td {
-  border: 1px solid white;
+  border: 1px solid rgb(131, 82, 82);
   position: relative;
 }
 

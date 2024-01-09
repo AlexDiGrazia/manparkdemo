@@ -20,10 +20,11 @@ export const ScheduleTD = ({
   profile,
   fetchUserScheduleData,
 }: TScheduleTDProps) => {
-  const [buttonVisible, setButtonVisible] = useState<boolean>(false);
+  const [tdButtonsVisible, setTdButtonsVisible] = useState<boolean>(false);
   const [newListItemVisible, setNewListItemVisible] = useState<boolean>(false);
   const [newListItemContent, setNewListItemContent] = useState<string>("");
-  const [saveButtonVisible, setSaveButtonVisible] = useState<boolean>(false);
+  const [newApptSaveButtonVisible, setNewApptSaveButtonVisible] =
+    useState<boolean>(false);
   const [listItemView, setListItemView] = useState<"display" | "delete">(
     "display"
   );
@@ -52,11 +53,12 @@ export const ScheduleTD = ({
     <>
       <td
         key={`day-of-the-week-${dayOfWeekIndex}`}
-        onMouseOver={() => setButtonVisible(true)}
-        onMouseLeave={() => setButtonVisible(false)}
+        onMouseOver={() => setTdButtonsVisible(true)}
+        onMouseLeave={() => setTdButtonsVisible(false)}
       >
-        {buttonVisible && profile.user === currentUser.username && (
+        {tdButtonsVisible && profile.user === currentUser.username && (
           <>
+            {/* Trashcan button */}
             {listItemView === "display" && (
               <button
                 className="schedule_trashcan_btn"
@@ -65,6 +67,8 @@ export const ScheduleTD = ({
                 {<FontAwesomeIcon icon={faTrashCan} />}
               </button>
             )}
+
+            {/* Cancel and Delete buttons */}
             {listItemView === "delete" && (
               <div className="delete_or_cancel_btn_container">
                 <input
@@ -92,17 +96,21 @@ export const ScheduleTD = ({
                 />
               </div>
             )}
+
+            {/* Add new list item button */}
             <input
               type="button"
               value="+"
               onClick={() => {
                 setNewListItemVisible(true);
-                setSaveButtonVisible(true);
+                setNewApptSaveButtonVisible(true);
               }}
             />
           </>
         )}
+
         <ul>
+          {/* Either displays appointments, or displays a list of checkboxes to select appointments to delete  */}
           {day.length
             ? day.map((obj, eventIndex) =>
                 listItemView === "display" ? (
@@ -141,11 +149,12 @@ export const ScheduleTD = ({
                 )
               )
             : null}
+
           {newListItemVisible && (
             <>
               <li
                 className={`li_margin_bottom ${
-                  saveButtonVisible ? "underline" : "no_underline"
+                  newApptSaveButtonVisible ? "underline" : "no_underline"
                 }`}
               >
                 <ContentEditable
@@ -154,14 +163,15 @@ export const ScheduleTD = ({
                   onChange={handleListItemContentChange}
                 />
               </li>
-              {saveButtonVisible && (
+
+              {newApptSaveButtonVisible && (
                 <>
                   <input
                     type="button"
                     value="cancel"
                     className="new_schedule_item_save_btn"
                     onClick={() => {
-                      setSaveButtonVisible(false);
+                      setNewApptSaveButtonVisible(false);
                       setNewListItemVisible(false);
                     }}
                   />
@@ -171,7 +181,7 @@ export const ScheduleTD = ({
                     className="new_schedule_item_save_btn"
                     onClick={() => {
                       Requests.postNewScheduleData(newScheduleData).then(() => {
-                        setSaveButtonVisible(false);
+                        setNewApptSaveButtonVisible(false);
                         fetchUserScheduleData(profile.user);
                         setNewListItemContent("");
                         setNewListItemVisible(false);

@@ -26,7 +26,7 @@
       "id": 5
     },
     {
-      "username": "Jimmie Spiegal",
+      "username": "Jimmie Spiegel",
       "password": "backpacking-always",
       "id": 6
     },
@@ -44,62 +44,145 @@
       "username": "Gurpreet Singh",
       "password": "Rugby-guy",
       "id": 9
+    },
+    {
+      "username": "Billy Joel",
+      "password": "Vienna2",
+      "id": 10
+    },
+    {
+      "username": "superman",
+      "password": "kryptonite",
+      "id": 11
+    },
+    {
+      "username": "blue",
+      "password": "clue",
+      "id": 12
+    },
+    {
+      "username": "bill frisell",
+      "password": "guitar",
+      "id": 13
     }
   ],
   "profiles": [
     {
       "user": "Alex DiGrazia",
       "picture": "assets/Alex.jpeg",
-      "bio": "",
+      "bio": "My name is Alex.  I love to Surf and go out at least once a week with Danny boy. \nI'm also a college trained musician - although I never finished my degree. \nI did two years at University of Oregon and a small stint at Cuesta.  I loves cats and dogs so much",
+      "home": "Atascadero ",
+      "occupation": "Massage Therapist",
+      "birthday": "7/24/1993",
       "id": 1
     },
     {
       "user": "Matt Babb",
       "picture": "assets/Matt.jpeg",
-      "bio": "",
+      "bio": "User has not yet submitted a bio",
+      "home": "SLO",
+      "occupation": "Student - BA. Psychology",
+      "birthday": "11/16/1992",
       "id": 2
     },
     {
       "user": "Dan Canella",
       "picture": "assets/Dan.jpeg",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.  \n \n   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.    ",
+      "home": "SLO",
+      "occupation": "Refusals Regional Manager",
+      "birthday": "1996-08-30T00:00:00.000Z",
       "id": 3
     },
     {
       "user": "Elliot Kwong",
       "picture": "assets/Elliot.jpeg",
       "bio": "",
+      "home": "SLO",
+      "occupation": "Assisted Living Care Giver",
+      "birthday": "1996-01-18T00:00:00.000Z",
       "id": 4
     },
     {
       "user": "Jake Wing",
       "picture": "assets/Jake.jpeg",
       "bio": "",
+      "home": "SLO",
+      "occupation": "Mattress Store Salesman",
+      "birthday": "1991-04-14T00:00:00.000Z",
       "id": 5
     },
     {
       "user": "Jimmie Spiegel",
       "picture": "assets/Jimmie.jpeg",
       "bio": "",
+      "home": "SLO",
+      "occupation": "Solar Sales Representative",
+      "birthday": "1997-04-02T00:00:00.000Z",
       "id": 6
     },
     {
       "user": "James Lester",
       "picture": "assets/James.jpeg",
       "bio": "",
+      "home": "SLO",
+      "occupation": "Wedding Photographer",
+      "birthday": "1993-11-30T00:00:00.000Z",
       "id": 7
     },
     {
       "user": "John Bullock",
       "picture": "assets/Blank.webp",
       "bio": "",
+      "home": "Arroy Grande",
+      "occupation": "Parks and Rec Maintenance",
+      "birthday": "1991-12-13T00:00:00.000Z",
       "id": 8
     },
     {
       "user": "Gurpreet Singh",
       "picture": "assets/Gurpreet.jpeg",
       "bio": "",
+      "home": "SLO",
+      "occupation": "LMFT",
+      "birthday": "1991-07-17T00:00:00.000Z",
       "id": 9
+    },
+    {
+      "user": "Billy Joel",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "",
+      "occupation": "",
+      "birthday": "1991-07-17T00:00:00.000Z",
+      "id": 10
+    },
+    {
+      "user": "superman",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "",
+      "occupation": "",
+      "birthday": "1991-07-17T00:00:00.000Z",
+      "id": 11
+    },
+    {
+      "user": "blue",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "",
+      "occupation": "",
+      "birthday": "1991-07-17T00:00:00.000Z",
+      "id": 12
+    },
+    {
+      "user": "bill frisell",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "",
+      "occupation": "",
+      "birthday": "1991-07-17T00:00:00.000Z",
+      "id": 13
     }
   ],
   "posts": [
@@ -189,7 +272,7 @@
     {
       "user": "Alex DiGrazia",
       "day": 5,
-      "event": "work 9-5",
+      "event": "Surfing with Dan 8am ",
       "id": 5
     },
     {
@@ -243,7 +326,7 @@
     {
       "user": "Dan Canella",
       "day": 5,
-      "event": "lkjhl",
+      "event": "Surfing with Alex 8am",
       "id": 64
     },
     {
@@ -275,6 +358,12 @@
       "day": 2,
       "event": "buggy ass bullshit",
       "id": 76
+    },
+    {
+      "user": "bill frisell",
+      "day": 2,
+      "event": "new schedule for me",
+      "id": 77
     }
   ],
   "bios": [

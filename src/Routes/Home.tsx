@@ -44,7 +44,9 @@ export const Home = () => {
     }
     ProfileRequests.getAllProfiles()
       .then((res) => res.find((profile: TProfile) => profile.user === user))
-      .then(setCurrentProfile);
+      .then((res) => {
+        setCurrentProfile(res);
+      });
   }, []);
 
   return (

@@ -4,6 +4,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import toast from "react-hot-toast";
 import { Requests } from "./api/usersApi";
+import { Requests as ProfileRequests } from "./api/profilesApi";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "./Providers/UserProvider";
 
@@ -24,6 +25,16 @@ export const SignUp = () => {
     password,
   };
 
+  const newProfile = {
+    user: username,
+    picture: "assets/Blank.webp",
+    bio: "",
+    home: "",
+    occupation: "",
+    birthday: "",
+    age: 21,
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === confirmation) {
@@ -31,6 +42,8 @@ export const SignUp = () => {
         .then(() => Requests.getSingleUser(username))
         .then(setCurrentUser);
       localStorage.setItem("user", username);
+      console.log(newProfile);
+      ProfileRequests.createNewProfile(newProfile);
       navigate("home");
       setUsername("");
       setPassword("");

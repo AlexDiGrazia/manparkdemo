@@ -8,6 +8,9 @@ export type TProfile = {
   user: string;
   picture: string;
   bio: string;
+  home: string;
+  occupation: string;
+  birthday: string;
   id: number;
 };
 
