@@ -28,6 +28,7 @@ export const ScheduleTD = ({
   const [listItemView, setListItemView] = useState<"display" | "delete">(
     "display"
   );
+  const [tdHover, setTdHover] = useState<boolean>(true);
 
   const { currentUser } = useUserContext();
 
@@ -53,8 +54,8 @@ export const ScheduleTD = ({
     <>
       <td
         key={`day-of-the-week-${dayOfWeekIndex}`}
-        onMouseOver={() => setTdButtonsVisible(true)}
-        onMouseLeave={() => setTdButtonsVisible(false)}
+        onMouseOver={() => tdHover && setTdButtonsVisible(true)}
+        onMouseLeave={() => tdHover && setTdButtonsVisible(false)}
       >
         {tdButtonsVisible && profile.user === currentUser.username && (
           <>
@@ -62,39 +63,14 @@ export const ScheduleTD = ({
             {listItemView === "display" && (
               <button
                 className="schedule_trashcan_btn"
-                onClick={() => setListItemView("delete")}
+                onClick={() => {
+                  setListItemView("delete");
+                  setTdHover(false);
+                  setTdButtonsVisible(false);
+                }}
               >
                 {<FontAwesomeIcon icon={faTrashCan} />}
               </button>
-            )}
-
-            {/* Cancel and Delete buttons */}
-            {listItemView === "delete" && (
-              <div className="delete_or_cancel_btn_container">
-                <input
-                  type="button"
-                  value="Cancel"
-                  onClick={() => {
-                    setListItemView("display");
-                    deletionQueue = [];
-                  }}
-                />
-                <input
-                  type="button"
-                  value="Delete"
-                  onClick={async () =>
-                    await Promise.all(
-                      deletionQueue.map((id: number) =>
-                        Requests.deleteScheduleAppointment(id)
-                      )
-                    ).then(() => {
-                      fetchUserScheduleData(profile.user);
-                      setListItemView("display");
-                      deletionQueue = [];
-                    })
-                  }
-                />
-              </div>
             )}
 
             {/* Add new list item button */}
@@ -104,9 +80,42 @@ export const ScheduleTD = ({
               onClick={() => {
                 setNewListItemVisible(true);
                 setNewApptSaveButtonVisible(true);
+                setTdHover(false);
+                setTdButtonsVisible(false);
               }}
             />
           </>
+        )}
+
+        {/* Cancel or Delete appointment buttons */}
+        {listItemView === "delete" && (
+          <div className="delete_or_cancel_btn_container">
+            <input
+              type="button"
+              value="Cancel"
+              onClick={() => {
+                setListItemView("display");
+                setTdHover(true);
+                deletionQueue = [];
+              }}
+            />
+            <input
+              type="button"
+              value="Delete"
+              onClick={async () =>
+                await Promise.all(
+                  deletionQueue.map((id: number) =>
+                    Requests.deleteScheduleAppointment(id)
+                  )
+                ).then(() => {
+                  fetchUserScheduleData(profile.user);
+                  setTdHover(true);
+                  setListItemView("display");
+                  deletionQueue = [];
+                })
+              }
+            />
+          </div>
         )}
 
         <ul>
@@ -150,6 +159,7 @@ export const ScheduleTD = ({
               )
             : null}
 
+          {/* New list item created in UI when user wants to input a new appointment */}
           {newListItemVisible && (
             <>
               <li
@@ -166,6 +176,7 @@ export const ScheduleTD = ({
 
               {newApptSaveButtonVisible && (
                 <>
+                  {/* Cancel or Save new appointment button */}
                   <input
                     type="button"
                     value="cancel"
@@ -173,6 +184,8 @@ export const ScheduleTD = ({
                     onClick={() => {
                       setNewApptSaveButtonVisible(false);
                       setNewListItemVisible(false);
+                      setNewListItemContent("");
+                      setTdHover(true);
                     }}
                   />
                   <input
@@ -185,6 +198,7 @@ export const ScheduleTD = ({
                         fetchUserScheduleData(profile.user);
                         setNewListItemContent("");
                         setNewListItemVisible(false);
+                        setTdHover(true);
                       });
                     }}
                   />

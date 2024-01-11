@@ -7,9 +7,13 @@ import { Requests } from "./api/usersApi";
 import { Requests as ProfileRequests } from "./api/profilesApi";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "./Providers/UserProvider";
+import ReactDatePicker from "react-datepicker";
 
 export const SignUp = () => {
   const [username, setUsername] = useState<string>("");
+  const [home, setHome] = useState<string>("");
+  const [occupation, setOccupation] = useState<string>("");
+  const [birthday, setBirthday] = useState<Date | undefined>(undefined);
   const [password, setPassword] = useState<string>("");
   const [confirmation, setConfirmation] = useState<string>("");
   const [inputType, setInputType] = useState<string>("password");
@@ -29,10 +33,9 @@ export const SignUp = () => {
     user: username,
     picture: "assets/Blank.webp",
     bio: "",
-    home: "",
-    occupation: "",
-    birthday: "",
-    age: 21,
+    home,
+    occupation,
+    birthday,
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,7 +45,7 @@ export const SignUp = () => {
         .then(() => Requests.getSingleUser(username))
         .then(setCurrentUser);
       localStorage.setItem("user", username);
-      console.log(newProfile);
+      localStorage.setItem("personal_profile", "first_ever_visit");
       ProfileRequests.createNewProfile(newProfile);
       navigate("home");
       setUsername("");
@@ -69,7 +72,7 @@ export const SignUp = () => {
 
   return (
     <>
-      <form className="login_form" onSubmit={handleSubmit}>
+      <form className="login_form sign_up_form" onSubmit={handleSubmit}>
         <label htmlFor="username"></label>
         <input
           className="text_inputs margin-bottom"
@@ -78,6 +81,33 @@ export const SignUp = () => {
           onChange={(e) => setUsername(e.target.value)}
           id="username"
           placeholder="Username"
+        />
+        <label htmlFor="home"></label>
+        <input
+          className="text_inputs margin-bottom"
+          type="text"
+          value={home}
+          onChange={(e) => setHome(e.target.value)}
+          id="home"
+          placeholder="Home"
+        />
+        <label htmlFor="occupation"></label>
+        <input
+          className="text_inputs margin-bottom"
+          type="text"
+          value={occupation}
+          onChange={(e) => setOccupation(e.target.value)}
+          id="occupation"
+          placeholder="Occupation"
+        />
+        <label htmlFor="birthday"></label>
+        <ReactDatePicker
+          className="text_inputs margin-bottom"
+          selected={birthday}
+          placeholderText={birthday ? `${birthday}` : "Birthday"}
+          onChange={(birthday: Date) => {
+            setBirthday(new Date(birthday));
+          }}
         />
         <label htmlFor="password"></label>
         <div className="password_input_container margin-bottom">

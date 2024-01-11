@@ -84,16 +84,18 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
                 className="profile_birthday_date_picker"
                 selected={birthday}
                 onChange={(birthday: Date) => {
+                  console.log(birthday);
                   setBirthday(birthday);
                   Requests.updateProfile(currentUser.id, {
-                    birthday: new Date(birthday).toLocaleDateString("en-US"),
+                    birthday: new Date(birthday),
                   });
                 }}
               />
             )}
             {profile.user !== currentUser.username && (
               <span>
-                {new Date(profile.birthday).toLocaleDateString("en-US")}
+                {profile.birthday /* makes sure birthday is defined */ &&
+                  new Date(profile.birthday).toLocaleDateString("en-US")}
               </span>
             )}
           </p>
@@ -102,13 +104,14 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
             <span>
               {" "}
               {/* Progammatic calculation of age - milliseconds from date of birth to today -> divided by milliseconds in one day */}
-              {Math.floor(
-                (Date.parse(new Date().toLocaleDateString("en-US")) -
-                  Date.parse(
-                    new Date(profile.birthday).toLocaleDateString("en-US")
-                  )) /
-                  (1000 * 60 * 60 * 24 * 365.25)
-              )}
+              {profile.birthday /* makes sure birthday is defined */ &&
+                Math.floor(
+                  (Date.parse(new Date().toLocaleDateString("en-US")) -
+                    Date.parse(
+                      new Date(profile.birthday).toLocaleDateString("en-US")
+                    )) /
+                    (1000 * 60 * 60 * 24 * 365.25)
+                )}
             </span>
           </p>
         </div>

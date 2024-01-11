@@ -14,12 +14,13 @@ import { Photos } from "../Components/Photos";
 import { Requests } from "../api/usersApi";
 import { Requests as ProfileRequests } from "../api/profilesApi";
 import { TUserObject } from "../Components/UserLogin";
+import toast from "react-hot-toast";
+import { EditProfilePrompt } from "./editProfilePrompt";
 
 export const Home = () => {
   const [currentProfile, setCurrentProfile] = useState<TProfile>(
     {} as TProfile
   );
-
   const { currentUser, setCurrentUser } = useUserContext();
   const {
     dialogVisible,
@@ -63,6 +64,13 @@ export const Home = () => {
             <div className="flex side_by_side">
               <span
                 onClick={() => {
+                  localStorage.getItem("personal_profile") ===
+                    "first_ever_visit" &&
+                    toast.custom((t) => <EditProfilePrompt t={t} />, {
+                      duration: Infinity,
+                      id: "editProfileToast",
+                    });
+                  localStorage.removeItem("personal_profile");
                   setTab("friends-tab");
                   setFriendsListDisplay("profile");
                   navigate(`/home/user/${currentUser.id}`);

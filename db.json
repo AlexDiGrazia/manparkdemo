@@ -64,6 +64,86 @@
       "username": "bill frisell",
       "password": "guitar",
       "id": 13
+    },
+    {
+      "username": "Bob Lazaar",
+      "password": "bizarre",
+      "id": 14
+    },
+    {
+      "username": "John Hernandez",
+      "password": "dogs",
+      "id": 15
+    },
+    {
+      "username": "Frankie Two Feet",
+      "password": "mummy",
+      "id": 16
+    },
+    {
+      "username": "Bob Frittos",
+      "password": "std",
+      "id": 17
+    },
+    {
+      "username": "Cat Dog",
+      "password": "ferret",
+      "id": 18
+    },
+    {
+      "username": "Lizard King",
+      "password": "Enjoi",
+      "id": 19
+    },
+    {
+      "username": "milk",
+      "password": "dogs",
+      "id": 20
+    },
+    {
+      "username": "Johnny Bravo",
+      "password": "hair",
+      "id": 21
+    },
+    {
+      "username": "leo",
+      "password": "turtle",
+      "id": 22
+    },
+    {
+      "username": "Paco",
+      "password": "bones",
+      "id": 23
+    },
+    {
+      "username": "Armando",
+      "password": "burrito",
+      "id": 24
+    },
+    {
+      "username": "Tony",
+      "password": "bells",
+      "id": 25
+    },
+    {
+      "username": "tomas",
+      "password": "dogs",
+      "id": 26
+    },
+    {
+      "username": "username",
+      "password": "dogs",
+      "id": 27
+    },
+    {
+      "username": "new",
+      "password": "pass",
+      "id": 28
+    },
+    {
+      "username": "dogs",
+      "password": "dogs",
+      "id": 29
     }
   ],
   "profiles": [
@@ -73,7 +153,7 @@
       "bio": "My name is Alex.  I love to Surf and go out at least once a week with Danny boy. \nI'm also a college trained musician - although I never finished my degree. \nI did two years at University of Oregon and a small stint at Cuesta.  I loves cats and dogs so much",
       "home": "Atascadero ",
       "occupation": "Massage Therapist",
-      "birthday": "7/24/1993",
+      "birthday": "1993-07-14T07:00:00.000Z",
       "id": 1
     },
     {
@@ -82,7 +162,7 @@
       "bio": "User has not yet submitted a bio",
       "home": "SLO",
       "occupation": "Student - BA. Psychology",
-      "birthday": "11/16/1992",
+      "birthday": "1996-08-30T00:00:00.000Z",
       "id": 2
     },
     {
@@ -115,7 +195,7 @@
     {
       "user": "Jimmie Spiegel",
       "picture": "assets/Jimmie.jpeg",
-      "bio": "",
+      "bio": "User has not yet submitted a bio",
       "home": "SLO",
       "occupation": "Solar Sales Representative",
       "birthday": "1997-04-02T00:00:00.000Z",
@@ -149,40 +229,49 @@
       "id": 9
     },
     {
-      "user": "Billy Joel",
+      "user": "Tony",
       "picture": "assets/Blank.webp",
       "bio": "",
-      "home": "",
-      "occupation": "",
-      "birthday": "1991-07-17T00:00:00.000Z",
+      "home": "Brooklyn, NY",
+      "occupation": "Trumpeter",
+      "birthday": "2023-10-03T07:00:00.000Z",
       "id": 10
     },
     {
-      "user": "superman",
+      "user": "tomas",
       "picture": "assets/Blank.webp",
       "bio": "",
-      "home": "",
-      "occupation": "",
-      "birthday": "1991-07-17T00:00:00.000Z",
+      "home": "atascadero",
+      "occupation": "guitar",
+      "birthday": "2024-01-01T08:00:00.000Z",
       "id": 11
     },
     {
-      "user": "blue",
+      "user": "username",
       "picture": "assets/Blank.webp",
       "bio": "",
-      "home": "",
-      "occupation": "",
-      "birthday": "1991-07-17T00:00:00.000Z",
+      "home": "Atascadero",
+      "occupation": "Guitar",
+      "birthday": "1970-01-01T00:00:00.000Z",
       "id": 12
     },
     {
-      "user": "bill frisell",
+      "user": "new",
       "picture": "assets/Blank.webp",
       "bio": "",
-      "home": "",
-      "occupation": "",
-      "birthday": "1991-07-17T00:00:00.000Z",
+      "home": "new",
+      "occupation": "asdfasdf",
+      "birthday": "2024-01-11T08:00:00.000Z",
       "id": 13
+    },
+    {
+      "user": "dogs",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "dogs",
+      "occupation": "dogs",
+      "birthday": "2024-01-01T08:00:00.000Z",
+      "id": 14
     }
   ],
   "posts": [
@@ -242,6 +331,11 @@
       "user": "Gurpreet Singh",
       "text": "Hey guys!! This is the first time I've used Gurpreet's profile to make a comment! Yaaay!!  Now that I have all the comments being populated with the correct user profile image, I'm excited to make comments from every body's account so I can see everybody's beautiful faces all in one place!!",
       "id": 12
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "text": "kuokoluliuhluj",
+      "id": 13
     }
   ],
   "schedules": [
@@ -348,12 +442,6 @@
       "id": 74
     },
     {
-      "user": "Alex DiGrazia",
-      "day": 2,
-      "event": "",
-      "id": 75
-    },
-    {
       "user": "Dan Canella",
       "day": 2,
       "event": "buggy ass bullshit",
@@ -364,6 +452,42 @@
       "day": 2,
       "event": "new schedule for me",
       "id": 77
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 2,
+      "event": "never knew what it was like dawg",
+      "id": 79
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 1,
+      "event": "never knew I knew i KNew i",
+      "id": 81
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 1,
+      "event": "asdfasdf",
+      "id": 82
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 2,
+      "event": "now we're cooking baby",
+      "id": 83
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 2,
+      "event": "New appointment",
+      "id": 84
+    },
+    {
+      "user": "Jimmie Spiegel",
+      "day": 1,
+      "event": "Ok, fine, 'nother new appt.",
+      "id": 85
     }
   ],
   "bios": [
@@ -529,6 +653,20 @@
       "title": "Rick and Morty Marathon",
       "details": "All gonna get together and watch Rick and Morty at Matt's house on his big ass projector broh",
       "id": 28
+    },
+    {
+      "user": "Lizard King",
+      "date": "2024-01-18T03:00:34.000Z",
+      "title": "Garun Lagon",
+      "details": "7pm Regal Cinemas in Santa Maria\n$15\nBad ass Anime, my favorite of all time, showing one time only in theaters",
+      "id": 29
+    },
+    {
+      "user": "Alex DiGrazia",
+      "date": "2024-01-11T06:14:48.269Z",
+      "title": "asfasf",
+      "details": "asdfasdfsd",
+      "id": 30
     }
   ],
   "photos": [
