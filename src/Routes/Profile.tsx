@@ -92,7 +92,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
                 }}
               />
             )}
-            {/* Span for all profiles not belonging to user so other's profiles can't be edited*/}
+            {/* Span for all profiles not belonging to current user so other's profiles can't be edited*/}
             {profile.user !== currentUser.username && (
               <span>
                 {profile.birthday /* makes sure birthday is defined */ &&

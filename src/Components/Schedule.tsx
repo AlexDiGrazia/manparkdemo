@@ -18,6 +18,7 @@ type TScheduleProps = {
 
 export const Schedule = ({ profile }: TScheduleProps) => {
   const [scheduleData, setScheduleData] = useState<TSchedules[]>([]);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const { userId } = useParams();
   const daysOfWeekNumbers = [0, 1, 2, 3, 4, 5, 6];
   const dayOfWeekNames = [
@@ -51,19 +52,18 @@ export const Schedule = ({ profile }: TScheduleProps) => {
     });
   }, [userId]);
 
+  window.addEventListener("resize", () => {
+    setWindowWidth(window.innerWidth);
+  });
+
   return (
     <>
-      <table className="schedule">
-        <thead>
-          <tr>
-            {dayOfWeekNames.map((day) => (
-              <th key={`day_of_the_week_header_${day}`}>{day}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
+      {/* Vertical Schedule */}
+      {windowWidth < 1200 && (
+        <table className="schedule">
+          {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
+            <tr>
+              <th>{dayOfWeekNames[dayOfWeekIndex]}</th>
               <ScheduleTD
                 key={`day_of_the_week_day_${dayOfWeekIndex}`}
                 profile={profile}
@@ -71,10 +71,36 @@ export const Schedule = ({ profile }: TScheduleProps) => {
                 dayOfWeekIndex={dayOfWeekIndex}
                 fetchUserScheduleData={fetchUserScheduleData}
               />
-            ))}
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          ))}
+        </table>
+      )}
+
+      {/* Horizontal Schedule  */}
+      {windowWidth > 1200 && (
+        <table className="schedule">
+          <thead>
+            <tr>
+              {dayOfWeekNames.map((day) => (
+                <th key={`day_of_the_week_header_${day}`}>{day}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
+                <ScheduleTD
+                  key={`day_of_the_week_day_${dayOfWeekIndex}`}
+                  profile={profile}
+                  day={day}
+                  dayOfWeekIndex={dayOfWeekIndex}
+                  fetchUserScheduleData={fetchUserScheduleData}
+                />
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      )}
     </>
   );
 };
