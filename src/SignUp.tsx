@@ -22,7 +22,7 @@ export const SignUp = () => {
   const [confirmationIcon, setConfirmationIcon] = useState<IconProp>(faEye);
 
   const navigate = useNavigate();
-  const { setCurrentUser } = useUserContext();
+  const { setCurrentUser, setDisplay } = useUserContext();
 
   const newUser = {
     username,
@@ -97,6 +97,12 @@ export const SignUp = () => {
   return (
     <>
       <form className="login_form sign_up_form" onSubmit={handleSubmit}>
+        <p className="CTA_create_account">
+          Back to{" "}
+          <strong className="CTA_link" onClick={() => setDisplay("UserLogin")}>
+            Login
+          </strong>
+        </p>
         <label htmlFor="username"></label>
         <input
           className="text_inputs margin-bottom"

@@ -5,7 +5,10 @@ import toast, { Toast } from "react-hot-toast";
 export const EditProfilePrompt = ({ t }: { t: Toast }) => {
   return (
     <>
-      <div className={`edit_profile_toast reveal_toast`}>
+      <div
+        id="edit_profile_toast"
+        className={`edit_profile_toast reveal_toast`}
+      >
         <p>
           <span>✏️</span> Click text to edit profile information
         </p>

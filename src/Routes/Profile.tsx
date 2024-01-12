@@ -125,7 +125,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
         }}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
-        Back
+        <span>Back</span>
       </span>
       <p
         className="profile_bio"

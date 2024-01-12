@@ -10,7 +10,7 @@ import { TUserObject } from "../Components/UserLogin";
 
 type TUserContext = {
   display: string;
-  setDisplay: Dispatch<SetStateAction<string>>;
+  setDisplay: Dispatch<SetStateAction<"SignUp" | "LoginGate" | "UserLogin">>;
   currentUser: TUserObject;
   setCurrentUser: Dispatch<SetStateAction<TUserObject>>;
 };
@@ -18,7 +18,9 @@ type TUserContext = {
 const UserContext = createContext<TUserContext>({} as TUserContext);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [display, setDisplay] = useState<string>("LoginGate");
+  const [display, setDisplay] = useState<"SignUp" | "LoginGate" | "UserLogin">(
+    "LoginGate"
+  );
   const [currentUser, setCurrentUser] = useState<TUserObject>(
     {} as TUserObject
   );

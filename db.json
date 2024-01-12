@@ -44,6 +44,11 @@
       "username": "Gurpreet Singh",
       "password": "Rugby-guy",
       "id": 9
+    },
+    {
+      "username": "Samurai Jack",
+      "password": "katana",
+      "id": 10
     }
   ],
   "profiles": [
@@ -127,28 +132,15 @@
       "occupation": "LMFT",
       "birthday": "1991-07-17T00:00:00.000Z",
       "id": 9
-    }
-  ],
-  "posts": [
-    {
-      "user": "Alex DiGrazia",
-      "post": "I love dogs so much",
-      "id": 1
     },
     {
-      "user": "Dan Canella",
-      "post": "Bout to go see Oppenheimer what uuuuuup!",
-      "id": 2
-    },
-    {
-      "user": "James Lester",
-      "post": "Surf today was gnar bro",
-      "id": 3
-    },
-    {
-      "user": "Alex DiGrazia",
-      "post": "Hope the new season of Rick and Morty doesn't suck, lol",
-      "id": 4
+      "user": "Samurai Jack",
+      "picture": "assets/Blank.webp",
+      "bio": "",
+      "home": "Canto",
+      "occupation": "Cuttin' people",
+      "birthday": "2022-08-02T07:00:00.000Z",
+      "id": 10
     }
   ],
   "community_posts": [
@@ -302,12 +294,7 @@
       "event": "buggy ass bullshit",
       "id": 76
     },
-    {
-      "user": "bill frisell",
-      "day": 2,
-      "event": "new schedule for me",
-      "id": 77
-    },
+
     {
       "user": "Jimmie Spiegel",
       "day": 2,
@@ -355,18 +342,12 @@
       "day": 4,
       "event": "new apopintment with sarah 3pm",
       "id": 87
-    }
-  ],
-  "bios": [
-    {
-      "user": "Alex DiGrazia",
-      "bio": "Surfing, skating, playing guitar, and coding!",
-      "id": 1
     },
     {
-      "user": "Matt Babb",
-      "bio": "Currently in school for Psychology at Cal Poly",
-      "id": 2
+      "user": "Dan Canella",
+      "day": 0,
+      "event": "Jazz 3pm",
+      "id": 88
     }
   ],
   "events": [
@@ -410,130 +391,120 @@
       "date": "2022-08-30T20:07:41.000Z",
       "title": "First Event of the Season Boys",
       "details": "Now all new and improved, a completely wacky wild world that is sure to fill your world with goo filled dreams and slime covered seams.  Don't miss out on the fun gentlemen!",
-      "id": 12
+      "id": 6
     },
     {
       "user": "Matt Babb",
       "date": "2023-11-30T23:16:55.318Z",
       "title": "Hike Bishops Peak with the Girls from Spark",
       "details": "\nEmbark on a transformative journey at the Radiant Yoga Event, where serenity meets strength. Join a vibrant community of individuals eager to embrace wellness and flexibility in a captivating atmosphere. Engage in rejuvenating yoga sessions guided by seasoned instrund the yoga mat.",
-      "id": 13
+      "id": 7
     },
     {
       "user": "Matt Babb",
       "date": "2023-12-08T00:16:47.000Z",
       "title": "Going to Portland",
       "details": "Taking off at 1:23pm\n\nGate: 18C\n\nFlight 25332\n\nArrival: 3:14pm\n\nanasdf;lkasjdf;\n\nBring an umbrella, snacks, and a good playlist.",
-      "id": 14
+      "id": 8
     },
     {
       "user": "Matt Babb",
       "date": "2024-01-01T00:36:54.000Z",
       "title": "NYE Party",
       "details": "Starting at Matt's house 7:30\n\nMaking our way to Bang the Drum around 9pm.\n\nMark is paying for everyone's drinks to make up for being a Nazi\n\nending with a special midnight float at Central Coast Floats 11:30pm\n\nAddress there is 1945 S Higuera, SLO.\n\nBe there or be square!!!",
-      "id": 15
+      "id": 9
     },
     {
       "user": "Matt Babb",
       "date": "2023-12-01T01:24:45.897Z",
       "title": "Please Come to my Birthday Party 😢",
       "details": "My event is going to be soooo mother fucking cool I just absolutely cannot fucking wait to do this oh my god fuck yes lets goooooo!!!! yay :)",
-      "id": 16
+      "id": 10
     },
     {
       "user": "Matt Babb",
       "date": "2023-12-01T01:27:22.830Z",
       "title": "Add a new eventasd flaskdjfa;sldkfja;sdklkjsadflkj",
       "details": "asdflaskdjfal;sdjf",
-      "id": 17
+      "id": 11
     },
     {
       "user": "Matt Babb",
       "date": "2023-12-20T02:42:14.000Z",
       "title": "date",
       "details": "adfasdfasdf",
-      "id": 18
+      "id": 12
     },
     {
       "user": "Matt Babb",
       "date": "2023-11-02T01:44:09.000Z",
       "title": "past date",
       "details": "not on the list",
-      "id": 19
+      "id": 13
     },
     {
       "user": "Matt Babb",
       "date": "2023-12-01T02:44:23.000Z",
       "title": "today's date",
       "details": "will it show",
-      "id": 20
+      "id": 14
     },
     {
       "user": "Alex DiGrazia",
       "date": "2023-12-04T19:33:01.723Z",
       "title": "asdf",
       "details": "asdf",
-      "id": 21
+      "id": 15
     },
     {
       "user": "Alex DiGrazia",
       "date": "2024-01-01T00:12:43.000Z",
       "title": "NYE Party",
       "details": "gonna be lit AF yo",
-      "id": 22
+      "id": 16
     },
-    {
-      "user": {
-        "username": "Alex DiGrazia",
-        "password": "assassins-creed-origins",
-        "id": 1
-      },
-      "date": "2023-12-13T23:26:31.855Z",
-      "title": "adsf",
-      "details": "asdf",
-      "id": 24
-    },
+
     {
       "user": "Alex DiGrazia",
       "date": "2024-01-20T23:53:15.000Z",
       "title": "Concert with Dad",
       "details": "Going to see Julian Lage in San Francisco",
-      "id": 25
+      "id": 17
     },
     {
       "user": "Alex DiGrazia",
       "date": "2024-02-06T23:53:42.000Z",
       "title": "Early Valentines Day",
       "details": "Just prep for all the lonely losers who don't have a date",
-      "id": 26
+      "id": 18
     },
     {
       "user": "Alex DiGrazia",
       "date": "2024-03-19T22:54:06.000Z",
       "title": "March Madness",
       "details": "Football and Handball bitches",
-      "id": 27
+      "id": 19
     },
     {
       "user": "Alex DiGrazia",
       "date": "2024-02-21T23:54:23.000Z",
       "title": "Rick and Morty Marathon",
       "details": "All gonna get together and watch Rick and Morty at Matt's house on his big ass projector broh",
-      "id": 28
+      "id": 20
     },
     {
       "user": "Lizard King",
       "date": "2024-01-18T03:00:34.000Z",
       "title": "Garun Lagon",
       "details": "7pm Regal Cinemas in Santa Maria\n$15\nBad ass Anime, my favorite of all time, showing one time only in theaters",
-      "id": 29
+      "id": 21
     },
     {
       "user": "Alex DiGrazia",
       "date": "2024-01-11T06:14:48.269Z",
       "title": "asfasf",
       "details": "asdfasdfsd",
-      "id": 30
+      "id": 22
     }
   ],
   "photos": [

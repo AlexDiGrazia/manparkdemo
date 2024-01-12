@@ -83,6 +83,7 @@ h2.welcome_user {
   border: none;
   background: black;
   color: white;
+  box-shadow: 0 0 36px -11px white;
 }
 
 .text_inputs:-webkit-autofill {
@@ -627,6 +628,10 @@ div.event_title span {
   transition: all 0.2s linear;
 }
 
+#edit_profile_toast.edit_profile_toast p {
+  font-size: 16px;
+}
+
 /* .hide_toast {
   transform: translateY(0px);
   opacity: 0;
@@ -660,6 +665,10 @@ div.event_title span {
 
 .profile_user_basic_info p {
   margin: 0;
+}
+
+.profile_user_basic_info h2 {
+  margin-top: 0;
 }
 
 .profile_user_basic_info p span.user_basic_info_span,
