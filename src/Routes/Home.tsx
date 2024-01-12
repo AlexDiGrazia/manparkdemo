@@ -15,7 +15,7 @@ import { Requests } from "../api/usersApi";
 import { Requests as ProfileRequests } from "../api/profilesApi";
 import { TUserObject } from "../Components/UserLogin";
 import toast from "react-hot-toast";
-import { EditProfilePrompt } from "./editProfilePrompt";
+import { EditProfilePrompt } from "../Components/EditProfilePrompt";
 
 export const Home = () => {
   const [currentProfile, setCurrentProfile] = useState<TProfile>(
@@ -73,7 +73,8 @@ export const Home = () => {
                   localStorage.removeItem("personal_profile");
                   setTab("friends-tab");
                   setFriendsListDisplay("profile");
-                  navigate(`/home/user/${currentUser.id}`);
+                  console.log(currentProfile.id);
+                  navigate(`/home/user/${currentProfile.id}`);
                 }}
               >
                 Profile

@@ -662,7 +662,8 @@ div.event_title span {
   margin: 0;
 }
 
-.profile_user_basic_info p span.user_basic_info_span {
+.profile_user_basic_info p span.user_basic_info_span,
+.profile_user_basic_info div span.user_basic_info_span {
   font-weight: 600;
   font-size: 17px;
   color: rgb(131, 82, 82);

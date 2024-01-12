@@ -38,9 +38,21 @@ export const SignUp = () => {
     birthday,
   };
 
+  const allFieldsComplete = () => {
+    let allFieldsComplete = true;
+    [username, home, occupation, birthday, password, confirmation].forEach(
+      (field) => {
+        field !== "" && field !== undefined
+          ? null
+          : (allFieldsComplete = false);
+      }
+    );
+    return allFieldsComplete;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === confirmation) {
+    if (password === confirmation && allFieldsComplete()) {
       Requests.createNewUser(newUser)
         .then(() => Requests.getSingleUser(username))
         .then(setCurrentUser);
@@ -50,9 +62,21 @@ export const SignUp = () => {
       navigate("home");
       setUsername("");
       setPassword("");
+      setHome("");
+      setOccupation("");
+      setBirthday(undefined);
       setConfirmation("");
     } else {
-      toast.error("Password and password confirmation must match");
+      if (password !== confirmation) {
+        toast.error("Password and confirmation must match", {
+          id: "passwords-match",
+        });
+      }
+      if (!allFieldsComplete()) {
+        toast.error("Please complete all input fields", {
+          id: "all-fields-complete",
+        });
+      }
     }
   };
 

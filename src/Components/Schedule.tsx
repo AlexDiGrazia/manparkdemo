@@ -30,6 +30,7 @@ export const Schedule = ({ profile }: TScheduleProps) => {
     "Saturday",
   ];
 
+  /* filters scheduleData into collections by day */
   const scheduleEachDayOfWeek = daysOfWeekNumbers.map((day) =>
     scheduleData.filter((obj) => obj.day === day)
   );
@@ -56,7 +57,7 @@ export const Schedule = ({ profile }: TScheduleProps) => {
         <thead>
           <tr>
             {dayOfWeekNames.map((day) => (
-              <th>{day}</th>
+              <th key={`day_of_the_week_header_${day}`}>{day}</th>
             ))}
           </tr>
         </thead>
@@ -64,6 +65,7 @@ export const Schedule = ({ profile }: TScheduleProps) => {
           <tr>
             {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
               <ScheduleTD
+                key={`day_of_the_week_day_${dayOfWeekIndex}`}
                 profile={profile}
                 day={day}
                 dayOfWeekIndex={dayOfWeekIndex}

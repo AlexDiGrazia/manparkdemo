@@ -33,7 +33,7 @@ export const Photos = () => {
             }, {})
         ).map((array) => {
           return (
-            <>
+            <div key="">
               <h2 style={{ textAlign: "center" }}>
                 {" "}
                 {new Date(array[0].date).toLocaleString("default", {
@@ -50,7 +50,7 @@ export const Photos = () => {
                   ></div>
                 ))}
               </div>
-            </>
+            </div>
           );
         })}
       </div>

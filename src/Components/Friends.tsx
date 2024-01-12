@@ -5,7 +5,7 @@ import { Profile } from "../Routes/Profile";
 import { useHomeContext } from "../Providers/HomeProvider";
 import { useUserContext } from "../Providers/UserProvider";
 import toast from "react-hot-toast";
-import { EditProfilePrompt } from "../Routes/editProfilePrompt";
+import { EditProfilePrompt } from "./EditProfilePrompt";
 
 export type TProfile = {
   user: string;

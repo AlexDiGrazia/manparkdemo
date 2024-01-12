@@ -77,14 +77,14 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               {profile.occupation}
             </span>
           </p>
-          <p>
+          <div>
             <span className="user_basic_info_span">Birthday:</span>{" "}
+            {/* Date picker if user is accessing their own profile to edit birthday */}
             {profile.user === currentUser.username && (
               <ReactDatePicker
                 className="profile_birthday_date_picker"
                 selected={birthday}
                 onChange={(birthday: Date) => {
-                  console.log(birthday);
                   setBirthday(birthday);
                   Requests.updateProfile(currentUser.id, {
                     birthday: new Date(birthday),
@@ -92,18 +92,19 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
                 }}
               />
             )}
+            {/* Span for all profiles not belonging to user so other's profiles can't be edited*/}
             {profile.user !== currentUser.username && (
               <span>
                 {profile.birthday /* makes sure birthday is defined */ &&
                   new Date(profile.birthday).toLocaleDateString("en-US")}
               </span>
             )}
-          </p>
+          </div>
           <p>
             <span className="user_basic_info_span">Age:</span>{" "}
             <span>
               {" "}
-              {/* Progammatic calculation of age - milliseconds from date of birth to today -> divided by milliseconds in one day */}
+              {/* Progammatic calculation of age - milliseconds from date of birth to today -> divided by milliseconds in one year */}
               {profile.birthday /* makes sure birthday is defined */ &&
                 Math.floor(
                   (Date.parse(new Date().toLocaleDateString("en-US")) -
