@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CommunityPosts } from "../Components/CommunityPosts";
 import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
@@ -31,6 +31,7 @@ export const Home = () => {
   } = useHomeContext();
 
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -39,6 +40,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
+    if (pathname !== "/home" && pathname !== "/") navigate("/home");
     const user = localStorage.getItem("user");
     if (user) {
       Requests.getSingleUser(user).then(setCurrentUser);
@@ -54,7 +56,9 @@ export const Home = () => {
     <>
       <Layout image="sunset">
         <div className="flex space-between">
-          <h2 className="welcome_user">{`Welcome, ${currentUser.username}!`}</h2>
+          <h2 className="welcome_user">{`Welcome, ${
+            currentUser.username || localStorage.getItem("user")
+          }!`}</h2>
           <div className="flex column center profile-buttons">
             <img
               className="profile-picture"
