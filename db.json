@@ -55,8 +55,8 @@
     {
       "user": "Alex DiGrazia",
       "picture": "assets/Alex.jpeg",
-      "bio": "My name is Alex.  I love to Surf and go out at least once a week with Danny boy. \nI'm also a college trained musician - although I never finished my degree. \nI did two years at University of Oregon and a small stint at Cuesta.  I loves cats and dogs so much",
-      "home": "Atascadero ",
+      "bio": "My name is Alex.  I love to Surf and go out at least once a week with Danny boy. I'm also a college trained musician - although I never finished my degree. I did two years at University of Oregon and a small stint at Cuesta.  I loves cats and dogs so much",
+      "home": "Atascadero",
       "occupation": "Massage Therapist",
       "birthday": "1993-07-24T07:00:00.000Z",
       "id": 1
@@ -73,7 +73,7 @@
     {
       "user": "Dan Canella",
       "picture": "assets/Dan.jpeg",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.  \n \n   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.    ",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.",
       "home": "SLO",
       "occupation": "Refusals Regional Manager",
       "birthday": "1996-08-30T00:00:00.000Z",
@@ -167,22 +167,22 @@
     {
       "user": "Matt Babb",
       "text": "comment from matt",
-      "id": 10
+      "id": 5
     },
     {
       "user": "Alex DiGrazia",
       "text": "This is my first comment ever now with the new and improved feature of having PROFILE PICTURES show up on the comment in accordance with whichever user account is making the comment~!! surfing rocks\n\nYay! 😃",
-      "id": 11
+      "id": 6
     },
     {
       "user": "Gurpreet Singh",
       "text": "Hey guys!! This is the first time I've used Gurpreet's profile to make a comment! Yaaay!!  Now that I have all the comments being populated with the correct user profile image, I'm excited to make comments from every body's account so I can see everybody's beautiful faces all in one place!!",
-      "id": 12
+      "id": 7
     },
     {
       "user": "Jimmie Spiegel",
       "text": "kuokoluliuhluj",
-      "id": 13
+      "id": 8
     }
   ],
   "schedules": [
@@ -213,7 +213,7 @@
     {
       "user": "Alex DiGrazia",
       "day": 5,
-      "event": "Surfing with Dan 8am ",
+      "event": "Surfing with Dan 8am",
       "id": 5
     },
     {
@@ -232,122 +232,121 @@
       "user": "Elliot Kwong",
       "day": 2,
       "event": "work 2-5pm",
-      "id": 16
+      "id": 8
     },
     {
       "user": "Alex DiGrazia",
       "day": 2,
       "event": "New event with all the amazing things going on, fuck yea!!!!",
-      "id": 18
+      "id": 9
     },
     {
       "user": "Alex DiGrazia",
       "day": 1,
       "event": "Updating comments is live",
-      "id": 19
+      "id": 10
     },
     {
       "user": "Alex DiGrazia",
       "day": 2,
       "event": "Toss it up baby boy let's go",
-      "id": 20
+      "id": 11
     },
     {
       "user": "Dan Canella",
       "day": 0,
       "event": "guitar",
-      "id": 58
+      "id": 12
     },
     {
       "user": "Dan Canella",
       "day": 6,
       "event": "dogs",
-      "id": 62
+      "id": 13
     },
     {
       "user": "Dan Canella",
       "day": 5,
       "event": "Surfing with Alex 8am",
-      "id": 64
+      "id": 14
     },
     {
       "user": "Dan Canella",
       "day": 3,
       "event": "surfing 3pm",
-      "id": 69
+      "id": 15
     },
     {
       "user": "Dan Canella",
       "day": 3,
       "event": "6pm more tacos",
-      "id": 73
+      "id": 16
     },
     {
       "user": "Matt Babb",
       "day": 3,
       "event": "asdfasdfasdfasdf",
-      "id": 74
+      "id": 17
     },
     {
       "user": "Dan Canella",
       "day": 2,
       "event": "buggy ass bullshit",
-      "id": 76
+      "id": 18
     },
-
     {
       "user": "Jimmie Spiegel",
       "day": 2,
       "event": "never knew what it was like dawg",
-      "id": 79
+      "id": 19
     },
     {
       "user": "Jimmie Spiegel",
       "day": 1,
       "event": "never knew I knew i KNew i",
-      "id": 81
+      "id": 20
     },
     {
       "user": "Jimmie Spiegel",
       "day": 1,
       "event": "asdfasdf",
-      "id": 82
+      "id": 21
     },
     {
       "user": "Jimmie Spiegel",
       "day": 2,
       "event": "now we're cooking baby",
-      "id": 83
+      "id": 22
     },
     {
       "user": "Jimmie Spiegel",
       "day": 2,
       "event": "New appointment",
-      "id": 84
+      "id": 23
     },
     {
       "user": "Jimmie Spiegel",
       "day": 1,
       "event": "Ok, fine, 'nother new appt.",
-      "id": 85
+      "id": 24
     },
     {
       "user": "Dan Canella",
       "day": 1,
       "event": "dogs 2pm",
-      "id": 86
+      "id": 25
     },
     {
       "user": "Dan Canella",
       "day": 4,
-      "event": "new apopintment with sarah 3pm",
-      "id": 87
+      "event": "new appointment with sarah 3pm",
+      "id": 26
     },
     {
       "user": "Dan Canella",
       "day": 0,
       "event": "Jazz 3pm",
-      "id": 88
+      "id": 27
     }
   ],
   "events": [
@@ -369,7 +368,7 @@
       "user": "Dan Canella",
       "date": "2023-12-13T22:08:04.000Z",
       "title": "Taco Tuesday",
-      "details": "blah blah blah. trying Again.  At least spaces work now though??",
+      "details": "blah blah blah. trying Again.  At least spaces work now though??",
       "id": 3
     },
     {
@@ -463,7 +462,6 @@
       "details": "gonna be lit AF yo",
       "id": 16
     },
-
     {
       "user": "Alex DiGrazia",
       "date": "2024-01-20T23:53:15.000Z",

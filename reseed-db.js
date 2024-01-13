@@ -48,6 +48,6 @@ const db = {
   })),
 };
 
-writeFileSync("data.json", JSON.stringify(db), {
+writeFileSync("db.json", JSON.stringify(db), {
   encoding: "utf-8",
 });
