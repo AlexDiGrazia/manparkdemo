@@ -77,7 +77,6 @@ export const Home = () => {
                   localStorage.removeItem("personal_profile");
                   setTab("friends-tab");
                   setFriendsListDisplay("profile");
-                  console.log(currentProfile.id);
                   navigate(`/home/user/${currentProfile.id}`);
                 }}
               >
