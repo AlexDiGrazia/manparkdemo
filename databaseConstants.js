@@ -1,0 +1,856 @@
+export const users = [
+  {
+    username: "Alex DiGrazia",
+    password: "assassins-creed-origins",
+    id: 1,
+  },
+  {
+    username: "Matt Babb",
+    password: "huberman-pod",
+    id: 2,
+  },
+  {
+    username: "Dan Canella",
+    password: "danny-boy",
+    id: 3,
+  },
+  {
+    username: "Elliot Kwong",
+    password: "Mee Hung Lo",
+    id: 4,
+  },
+  {
+    username: "Jake Wing",
+    password: "K-man",
+    id: 5,
+  },
+  {
+    username: "Jimmie Spiegel",
+    password: "backpacking-always",
+    id: 6,
+  },
+  {
+    username: "James Lester",
+    password: "DJ",
+    id: 7,
+  },
+  {
+    username: "John Bullock",
+    password: "Priyanca",
+    id: 8,
+  },
+  {
+    username: "Gurpreet Singh",
+    password: "Rugby-guy",
+    id: 9,
+  },
+  {
+    username: "Samurai Jack",
+    password: "katana",
+    id: 10,
+  },
+];
+
+export const profiles = [
+  {
+    user: "Alex DiGrazia",
+    picture: "assets/Alex.jpeg",
+    bio: "My name is Alex.  I love to Surf and go out at least once a week with Danny boy. I'm also a college trained musician - although I never finished my degree. I did two years at University of Oregon and a small stint at Cuesta.  I loves cats and dogs so much",
+    home: "Atascadero",
+    occupation: "Massage Therapist",
+    birthday: "1993-07-24T07:00:00.000Z",
+    id: 1,
+  },
+  {
+    user: "Matt Babb",
+    picture: "assets/Matt.jpeg",
+    bio: "User has not yet submitted a bio",
+    home: "SLO",
+    occupation: "Student - BA. Psychology",
+    birthday: "1996-08-30T00:00:00.000Z",
+    id: 2,
+  },
+  {
+    user: "Dan Canella",
+    picture: "assets/Dan.jpeg",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est lorem ipsum dolor sit amet consectetur adipiscing. Faucibus pulvinar elementum integer enim neque. Eu lobortis elementum nibh tellus molestie nunc non. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisl tincidunt eget nullam non nisi est sit amet. Aliquam purus sit amet luctus venenatis lectus. Mattis aliquam faucibus purus in massa tempor nec. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Orci phasellus egestas tellus rutrum. Molestie a iaculis at erat pellentesque. Id volutpat lacus laoreet non curabitur gravida arcu ac. Laoreet suspendisse interdum consectetur libero id faucibus nisl. Leo urna molestie at elementum eu facilisis sed odio. A condimentum vitae sapien pellentesque. In arcu cursus euismod quis viverra nibh cras. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.",
+    home: "SLO",
+    occupation: "Refusals Regional Manager",
+    birthday: "1996-08-30T00:00:00.000Z",
+    id: 3,
+  },
+  {
+    user: "Elliot Kwong",
+    picture: "assets/Elliot.jpeg",
+    bio: "",
+    home: "SLO",
+    occupation: "Assisted Living Care Giver",
+    birthday: "1996-01-18T00:00:00.000Z",
+    id: 4,
+  },
+  {
+    user: "Jake Wing",
+    picture: "assets/Jake.jpeg",
+    bio: "",
+    home: "SLO",
+    occupation: "Mattress Store Salesman",
+    birthday: "1991-04-14T00:00:00.000Z",
+    id: 5,
+  },
+  {
+    user: "Jimmie Spiegel",
+    picture: "assets/Jimmie.jpeg",
+    bio: "User has not yet submitted a bio",
+    home: "SLO",
+    occupation: "Solar Sales Representative",
+    birthday: "1997-04-02T00:00:00.000Z",
+    id: 6,
+  },
+  {
+    user: "James Lester",
+    picture: "assets/James.jpeg",
+    bio: "",
+    home: "SLO",
+    occupation: "Wedding Photographer",
+    birthday: "1993-11-30T00:00:00.000Z",
+    id: 7,
+  },
+  {
+    user: "John Bullock",
+    picture: "assets/Blank.webp",
+    bio: "",
+    home: "Arroy Grande",
+    occupation: "Parks and Rec Maintenance",
+    birthday: "1991-12-13T00:00:00.000Z",
+    id: 8,
+  },
+  {
+    user: "Gurpreet Singh",
+    picture: "assets/Gurpreet.jpeg",
+    bio: "",
+    home: "SLO",
+    occupation: "LMFT",
+    birthday: "1991-07-17T00:00:00.000Z",
+    id: 9,
+  },
+  {
+    user: "Samurai Jack",
+    picture: "assets/Blank.webp",
+    bio: "",
+    home: "Canto",
+    occupation: "Cuttin' people",
+    birthday: "2022-08-02T07:00:00.000Z",
+    id: 10,
+  },
+];
+
+export const community_posts = [
+  {
+    user: "James Lester",
+    text: "I love these bomb ass tacos so much",
+    id: 1,
+  },
+  {
+    user: "Jake Wing",
+    text: "Oh and Jenkins, apparently your mother died this morning. Nobody expects the Spanish Inquisition! Stwike him, Centuwion! Stwike him vewy wuffly! I told you to lay off the beans, you whore! What's wrong with a kiss, boy? Hmm? Why not start her off with a nice kiss? You don't have to go leaping straight for the clitoris like a bull at a gate. Give her a kiss, boy. Oh, oh, I see! Running away, eh? You yellow bastards! Come back here and take what's coming to you! I'll bite your legs off!",
+    id: 2,
+  },
+  {
+    user: "Dan Canella",
+    text: "Hegel is arguing that the reality is merely an a priori adjunct of non-naturalistic ethics, Kant via the categorical imperative is holding that ontologically it exists only in the imagination, and Marx claims it was offside.",
+    id: 3,
+  },
+  {
+    user: "Dan Canella",
+    text: "I'm Brian, and so's my wife! What is the capital of Assyria? Are you suggesting coconuts migrate? Oh, king eh? Very nice. And how'd you get that, eh? By exploiting the workers. By hanging on to outdated imperialist dogma which perpetuates the economic and social differences in our society. The Lady of the Lake, her arm clad in the purest shimmering samite held aloft Excalibur from the bosom of the water, signifying by divine providence that I, Arthur, was to carry Excalibur. THAT is why I am your king.",
+    id: 4,
+  },
+  {
+    user: "Matt Babb",
+    text: "comment from matt",
+    id: 10,
+  },
+  {
+    user: "Alex DiGrazia",
+    text: "This is my first comment ever now with the new and improved feature of having PROFILE PICTURES show up on the comment in accordance with whichever user account is making the comment~!! surfing rocks\n\nYay! 😃",
+    id: 11,
+  },
+  {
+    user: "Gurpreet Singh",
+    text: "Hey guys!! This is the first time I've used Gurpreet's profile to make a comment! Yaaay!!  Now that I have all the comments being populated with the correct user profile image, I'm excited to make comments from every body's account so I can see everybody's beautiful faces all in one place!!",
+    id: 12,
+  },
+  {
+    user: "Jimmie Spiegel",
+    text: "kuokoluliuhluj",
+    id: 13,
+  },
+];
+
+export const schedules = [
+  {
+    user: "Alex DiGrazia",
+    day: 1,
+    event: "work 9-5",
+    id: 1,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 2,
+    event: "work 9-5 naaah man",
+    id: 2,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 3,
+    event: "Nailed it dawg",
+    id: 3,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 4,
+    event: "work 9-5",
+    id: 4,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 5,
+    event: "Surfing with Dan 8am",
+    id: 5,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 6,
+    event: "Free Day",
+    id: 6,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 0,
+    event: "the Lords day yo",
+    id: 7,
+  },
+  {
+    user: "Elliot Kwong",
+    day: 2,
+    event: "work 2-5pm",
+    id: 16,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 2,
+    event: "New event with all the amazing things going on, fuck yea!!!!",
+    id: 18,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 1,
+    event: "Updating comments is live",
+    id: 19,
+  },
+  {
+    user: "Alex DiGrazia",
+    day: 2,
+    event: "Toss it up baby boy let's go",
+    id: 20,
+  },
+  {
+    user: "Dan Canella",
+    day: 0,
+    event: "guitar",
+    id: 58,
+  },
+  {
+    user: "Dan Canella",
+    day: 6,
+    event: "dogs",
+    id: 62,
+  },
+  {
+    user: "Dan Canella",
+    day: 5,
+    event: "Surfing with Alex 8am",
+    id: 64,
+  },
+  {
+    user: "Dan Canella",
+    day: 3,
+    event: "surfing 3pm",
+    id: 69,
+  },
+  {
+    user: "Dan Canella",
+    day: 3,
+    event: "6pm more tacos",
+    id: 73,
+  },
+  {
+    user: "Matt Babb",
+    day: 3,
+    event: "asdfasdfasdfasdf",
+    id: 74,
+  },
+  {
+    user: "Dan Canella",
+    day: 2,
+    event: "buggy ass bullshit",
+    id: 76,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 2,
+    event: "never knew what it was like dawg",
+    id: 79,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 1,
+    event: "never knew I knew i KNew i",
+    id: 81,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 1,
+    event: "asdfasdf",
+    id: 82,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 2,
+    event: "now we're cooking baby",
+    id: 83,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 2,
+    event: "New appointment",
+    id: 84,
+  },
+  {
+    user: "Jimmie Spiegel",
+    day: 1,
+    event: "Ok, fine, 'nother new appt.",
+    id: 85,
+  },
+  {
+    user: "Dan Canella",
+    day: 1,
+    event: "dogs 2pm",
+    id: 86,
+  },
+  {
+    user: "Dan Canella",
+    day: 4,
+    event: "new apopintment with sarah 3pm",
+    id: 87,
+  },
+  {
+    user: "Dan Canella",
+    day: 0,
+    event: "Jazz 3pm",
+    id: 88,
+  },
+];
+
+export const events = [
+  {
+    user: "Matt Babb",
+    date: "2024-01-01T00:36:49.000Z",
+    title: "bowling trip this Tuesday",
+    details: "none",
+    id: 1,
+  },
+  {
+    user: "Jake Wing",
+    date: "2023-11-10T00:33:27.127Z",
+    title: "hello World",
+    details: "Please come to my birthday party. now.",
+    id: 2,
+  },
+  {
+    user: "Dan Canella",
+    date: "2023-12-13T22:08:04.000Z",
+    title: "Taco Tuesday",
+    details: "blah blah blah. trying Again.  At least spaces work now though??",
+    id: 3,
+  },
+  {
+    user: "Elliot Kwong",
+    date: "2024-01-22T23:00:21.000Z",
+    title: "new event",
+    details: "never",
+    id: 4,
+  },
+  {
+    user: "Dan Canella",
+    date: "2023-10-11T22:01:43.000Z",
+    title: "oct 11, 2023",
+    details: "Finally a comment worth reading.\n\nspaces \n\nDueces",
+    id: 5,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2022-08-30T20:07:41.000Z",
+    title: "First Event of the Season Boys",
+    details:
+      "Now all new and improved, a completely wacky wild world that is sure to fill your world with goo filled dreams and slime covered seams.  Don't miss out on the fun gentlemen!",
+    id: 6,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-11-30T23:16:55.318Z",
+    title: "Hike Bishops Peak with the Girls from Spark",
+    details:
+      "\nEmbark on a transformative journey at the Radiant Yoga Event, where serenity meets strength. Join a vibrant community of individuals eager to embrace wellness and flexibility in a captivating atmosphere. Engage in rejuvenating yoga sessions guided by seasoned instrund the yoga mat.",
+    id: 7,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-12-08T00:16:47.000Z",
+    title: "Going to Portland",
+    details:
+      "Taking off at 1:23pm\n\nGate: 18C\n\nFlight 25332\n\nArrival: 3:14pm\n\nanasdf;lkasjdf;\n\nBring an umbrella, snacks, and a good playlist.",
+    id: 8,
+  },
+  {
+    user: "Matt Babb",
+    date: "2024-01-01T00:36:54.000Z",
+    title: "NYE Party",
+    details:
+      "Starting at Matt's house 7:30\n\nMaking our way to Bang the Drum around 9pm.\n\nMark is paying for everyone's drinks to make up for being a Nazi\n\nending with a special midnight float at Central Coast Floats 11:30pm\n\nAddress there is 1945 S Higuera, SLO.\n\nBe there or be square!!!",
+    id: 9,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-12-01T01:24:45.897Z",
+    title: "Please Come to my Birthday Party 😢",
+    details:
+      "My event is going to be soooo mother fucking cool I just absolutely cannot fucking wait to do this oh my god fuck yes lets goooooo!!!! yay :)",
+    id: 10,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-12-01T01:27:22.830Z",
+    title: "Add a new eventasd flaskdjfa;sldkfja;sdklkjsadflkj",
+    details: "asdflaskdjfal;sdjf",
+    id: 11,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-12-20T02:42:14.000Z",
+    title: "date",
+    details: "adfasdfasdf",
+    id: 12,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-11-02T01:44:09.000Z",
+    title: "past date",
+    details: "not on the list",
+    id: 13,
+  },
+  {
+    user: "Matt Babb",
+    date: "2023-12-01T02:44:23.000Z",
+    title: "today's date",
+    details: "will it show",
+    id: 14,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2023-12-04T19:33:01.723Z",
+    title: "asdf",
+    details: "asdf",
+    id: 15,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-01-01T00:12:43.000Z",
+    title: "NYE Party",
+    details: "gonna be lit AF yo",
+    id: 16,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-01-20T23:53:15.000Z",
+    title: "Concert with Dad",
+    details: "Going to see Julian Lage in San Francisco",
+    id: 17,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-02-06T23:53:42.000Z",
+    title: "Early Valentines Day",
+    details: "Just prep for all the lonely losers who don't have a date",
+    id: 18,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-03-19T22:54:06.000Z",
+    title: "March Madness",
+    details: "Football and Handball bitches",
+    id: 19,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-02-21T23:54:23.000Z",
+    title: "Rick and Morty Marathon",
+    details:
+      "All gonna get together and watch Rick and Morty at Matt's house on his big ass projector broh",
+    id: 20,
+  },
+  {
+    user: "Lizard King",
+    date: "2024-01-18T03:00:34.000Z",
+    title: "Garun Lagon",
+    details:
+      "7pm Regal Cinemas in Santa Maria\n$15\nBad ass Anime, my favorite of all time, showing one time only in theaters",
+    id: 21,
+  },
+  {
+    user: "Alex DiGrazia",
+    date: "2024-01-11T06:14:48.269Z",
+    title: "asfasf",
+    details: "asdfasdfsd",
+    id: 22,
+  },
+];
+
+export const photos = [
+  {
+    image: "public/assets/photo_album_compressed/alex_selfie_compressed.jpg",
+    date: "07/24/2022",
+    id: 1,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/alex_with_sadie_compressed.jpeg",
+    date: "07/24/2022",
+    id: 2,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_1_compressed.jpg",
+    date: "07/24/2022",
+    id: 3,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_2_compressed.jpg",
+    date: "07/24/2022",
+    id: 4,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_3_compressed.jpg",
+    date: "07/24/2022",
+    id: 5,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_4_compressed.jpg",
+    date: "07/24/2022",
+    id: 6,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_5_compressed.jpg",
+    date: "07/24/2022",
+    id: 7,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_6_compressed.jpg",
+    date: "07/24/2022",
+    id: 8,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_7_compressed.jpg",
+    date: "07/24/2022",
+    id: 9,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/bang_the_drum_8_compressed.jpg",
+    date: "07/24/2022",
+    id: 10,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_1_compressed.jpg",
+    date: "07/24/2022",
+    id: 11,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_2_compressed.jpg",
+    date: "08/24/2022",
+    id: 12,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_3_compressed.jpg",
+    date: "08/24/2022",
+    id: 13,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_4_compressed.jpg",
+    date: "08/24/2022",
+    id: 14,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_5_compressed.jpg",
+    date: "08/24/2022",
+    id: 15,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/benoit_ziplining_6_compressed.jpg",
+    date: "08/24/2022",
+    id: 16,
+  },
+  {
+    image: "public/assets/photo_album_compressed/benoit-1_compressed.jpg",
+    date: "08/24/2022",
+    id: 17,
+  },
+  {
+    image: "public/assets/photo_album_compressed/benoit-2_compressed.jpg",
+    date: "08/24/2022",
+    id: 18,
+  },
+  {
+    image: "public/assets/photo_album_compressed/benoit-3_compressed.jpg",
+    date: "08/24/2022",
+    id: 19,
+  },
+  {
+    image: "public/assets/photo_album_compressed/BishopsPeak_compressed.jpg",
+    date: "08/24/2022",
+    id: 20,
+  },
+  {
+    image: "public/assets/photo_album_compressed/Charlie_compressed.jpg",
+    date: "08/24/2022",
+    id: 21,
+  },
+  {
+    image: "public/assets/photo_album_compressed/dan_with_sadie_compressed.jpg",
+    date: "09/24/2022",
+    id: 22,
+  },
+  {
+    image: "public/assets/photo_album_compressed/dan_zipling_0_compressed.jpg",
+    date: "09/24/2022",
+    id: 23,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_1_compressed.jpg",
+    date: "09/24/2022",
+    id: 24,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_2_compressed.jpg",
+    date: "09/24/2022",
+    id: 25,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_3_compressed.jpg",
+    date: "09/24/2022",
+    id: 26,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_4_compressed.jpg",
+    date: "09/24/2022",
+    id: 27,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_5_compressed.jpg",
+    date: "09/24/2022",
+    id: 28,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/dan_ziplining_6_compressed.jpg",
+    date: "09/24/2022",
+    id: 29,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_1_compressed.jpg",
+    date: "09/24/2022",
+    id: 30,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_2_compressed.jpg",
+    date: "09/24/2022",
+    id: 31,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_3_compressed.jpg",
+    date: "10/24/2022",
+    id: 32,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_4_compressed.jpg",
+    date: "10/24/2022",
+    id: 33,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_5_compressed.jpg",
+    date: "10/24/2022",
+    id: 34,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_6_compressed.jpg",
+    date: "10/24/2022",
+    id: 35,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_7_compressed.jpg",
+    date: "10/24/2022",
+    id: 36,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/group_ziplining_8_compressed.jpg",
+    date: "10/24/2022",
+    id: 37,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_1_compressed.jpg",
+    date: "10/24/2022",
+    id: 38,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_2_compressed.jpg",
+    date: "10/24/2022",
+    id: 39,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_3_compressed.jpg",
+    date: "10/24/2022",
+    id: 40,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_4_compressed.jpg",
+    date: "10/24/2022",
+    id: 41,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_5_compressed.jpg",
+    date: "10/24/2022",
+    id: 42,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/mark_ziplining_6_compressed.jpg",
+    date: "10/24/2022",
+    id: 43,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_0_compressed.jpg",
+    date: "10/24/2022",
+    id: 44,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_1_compressed.jpg",
+    date: "10/24/2022",
+    id: 45,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_2_compressed.jpg",
+    date: "10/24/2022",
+    id: 46,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_3_compressed.jpg",
+    date: "10/24/2022",
+    id: 47,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_4_compressed.jpg",
+    date: "10/24/2022",
+    id: 48,
+  },
+  {
+    image:
+      "public/assets/photo_album_compressed/matt_ziplining_5_compressed.jpg",
+    date: "10/24/2022",
+    id: 49,
+  },
+  {
+    image: "public/assets/photo_album_compressed/scenery-1_compressed.jpg",
+    date: "10/24/2022",
+    id: 50,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-1_compressed.jpg",
+    date: "10/24/2022",
+    id: 51,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-2_compressed.jpg",
+    date: "11/24/2022",
+    id: 52,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-3_compressed.jpg",
+    date: "11/24/2022",
+    id: 53,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-4_compressed.jpg",
+    date: "11/24/2022",
+    id: 54,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-5_compressed.jpg",
+    date: "11/24/2022",
+    id: 55,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-6_compressed.jpg",
+    date: "11/24/2022",
+    id: 56,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-7_compressed.jpg",
+    date: "11/24/2022",
+    id: 57,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-8_compressed.jpg",
+    date: "11/24/2022",
+    id: 58,
+  },
+  {
+    image: "public/assets/photo_album_compressed/ziplining-9_compressed.jpg",
+    date: "11/24/2022",
+    id: 59,
+  },
+];
