@@ -683,7 +683,7 @@ div.event_title span {
   background: transparent;
   color: white;
   border: none;
-  font-size: 17px;
+  font-size: calc(15px + 0.390625vw);
 }
 
 .profile_back_btn {
