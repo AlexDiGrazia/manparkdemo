@@ -80,7 +80,7 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
 
 ## The future of this app
 
-- One idea for the future of this app is that it could be sourced out to any different organization wanting their own private social media platform, where an organization can have their own "pod" or gated virtual community. When an organization signs up for the app, they are given their own gate, and then all organization members get sorted into data groups associated with that gated community.
+- One idea for the future of this app is that it could be sourced out to any different organizations wanting their own private social media platform, where an organization can have their own "pod" or gated virtual community. When an organization signs up for the app, they are given their own gate, and then all organization members get sorted into data groups associated with that gated community.
 
 - In its current rendition, there is no means for uploading a user profile photo, so all new users get assigned the blank profile image. This is because `large data` storage, like data from photos and videos, usually requires some type of Server storage like an S3 bucket - which was beyond the scope of this project.
   Future possibilities include using a service like an AWS S3 SDK, or a 3rd party service like UploadThing, to allow users to upload their own photos and then query a database to retrieve those photos whenever the app is in use.
