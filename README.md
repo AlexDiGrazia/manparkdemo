@@ -43,7 +43,7 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
   ### Friends
 
   - All users on the app get displayed in a list of 'Friends' thumbnails, just like Facebook
-  - Each thumbnail <Links to=""> that user's profile using `React-Router`
+  - Each thumbnail `<Links to="">` that user's profile using `React-Router`
 
   ### Profiles
 
