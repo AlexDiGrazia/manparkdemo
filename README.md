@@ -95,5 +95,5 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
 - I struggled with deciding if the `Users` endpoint and `Profiles` endpoint should be lumped into one endpoint, as users often need to access all of the data contained in `Profiles`, and having these endpoints be separate often means multiple calls in the same event - for example, when creating a new account, calls to both `Users` and `Profiles` must be made to create a new data object for both a new `User` and a new `Profile` connected to the same new account.
   If all of the data in a `Profile` object was simply lumped into the `User` object, less HTTP calls could be made.
   The deciding factor for me was a gut feeling that `Profile` data should not have access to `authentication` (User) data.
-  In other words, when the app is making a call to `Profile` data to populate profile information on the screen, it should not have `authentication` data available as an intellisense option.
+  In other words, when the app is making a call to `Profile` data to populate profile information on the screen, it should not have `authentication` data available as an IntelliSense option.
   This safe-guards against any possibility of human error in future development of the code base.
