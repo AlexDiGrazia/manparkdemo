@@ -54,6 +54,7 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
     - Occupation
     - Birthday
     - Bio
+    - Schedule Appointments
   - Age is calculated from user's birthday
 
     _Schedule_
