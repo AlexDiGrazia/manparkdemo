@@ -75,8 +75,8 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
   - .reduced() into an object where
     - each key is a month
     - && each value is an array of photos for that month
-- that object gets fed into Object.values() to return an array of photo arrays grouped by month
-- the array of grouped photos gets mapped over to render photos to the screen sorted by month
+- that object gets fed into `Object.values()` to return an array of grouped-by-month photo arrays
+- the array of grouped-photo-arrays gets mapped over to render photos to the screen sorted by month
 
 ## The future of this app
 
