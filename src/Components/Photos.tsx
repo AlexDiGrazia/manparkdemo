@@ -31,9 +31,9 @@ export const Photos = () => {
               acc[month] = [...(acc[month] || []), obj];
               return acc;
             }, {})
-        ).map((array) => {
+        ).map((array, index) => {
           return (
-            <div key="">
+            <div key={`photo_month_collection_${index}`}>
               <h2 style={{ textAlign: "center" }}>
                 {" "}
                 {new Date(array[0].date).toLocaleString("default", {
