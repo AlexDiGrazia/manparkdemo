@@ -56,34 +56,6 @@ export const Home = () => {
         'Oops! Make sure "user" is being set in local storage upon login/signup'
       );
     }
-
-    // const promise1 = () => {
-    //   if (user) {
-    //     console.log("condition hit");
-    //     return Requests.loginUser({ username: user }).then((res) => {
-    //       console.log(res);
-    //       setCurrentUser(res);
-    //     });
-    //   }
-    // };
-
-    // const promise2 = ProfileRequests.getAllProfiles()
-    //   .then((res) => res.find((profile: TProfile) => profile.user === user))
-    //   .then((res) => {
-    //     setCurrentProfile(res);
-    //   });
-
-    // Promise.all([promise2]).then((res) => res);
-
-    // if (user) {
-    //   console.log("condition hit");
-    //   Requests.getSingleUser(user).then(setCurrentUser);
-    // }
-    // ProfileRequests.getAllProfiles()
-    //   .then((res) => res.find((profile: TProfile) => profile.user === user))
-    //   .then((res) => {
-    //     setCurrentProfile(res);
-    //   });
   }, []);
 
   return (
