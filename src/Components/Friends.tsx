@@ -28,6 +28,7 @@ export const Friends = () => {
 
   return (
     <>
+      {/* Window by default renders list of friends */}
       {friendsListDisplay === "friends-list" && (
         <div className="friends_list_container">
           {allProfiles.map((profile) => (
@@ -58,6 +59,7 @@ export const Friends = () => {
           ))}
         </div>
       )}
+      {/* Render profile if thumbnail clicked */}
       {friendsListDisplay === "profile" && (
         <Profile setFriendsListDisplay={setFriendsListDisplay} />
       )}

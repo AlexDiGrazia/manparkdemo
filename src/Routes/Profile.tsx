@@ -55,7 +55,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               contentEditable={profile.user === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
-                Requests.updateProfile(currentUser.id, {
+                Requests.updateProfile(profile.id, {
                   home: e.currentTarget.innerText,
                 })
               }
@@ -69,7 +69,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               contentEditable={profile.user === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
-                Requests.updateProfile(currentUser.id, {
+                Requests.updateProfile(profile.id, {
                   occupation: e.currentTarget.innerText,
                 })
               }
@@ -86,7 +86,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
                 selected={birthday}
                 onChange={(birthday: Date) => {
                   setBirthday(birthday);
-                  Requests.updateProfile(currentUser.id, {
+                  Requests.updateProfile(profile.id, {
                     birthday: new Date(birthday),
                   });
                 }}

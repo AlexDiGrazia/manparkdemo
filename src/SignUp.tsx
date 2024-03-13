@@ -53,9 +53,7 @@ export const SignUp = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === confirmation && allFieldsComplete()) {
-      Requests.createNewUser(newUser)
-        .then(() => Requests.getSingleUser(username))
-        .then(setCurrentUser);
+      Requests.createNewUser(newUser).then(setCurrentUser);
       localStorage.setItem("user", username);
       localStorage.setItem("personal_profile", "first_ever_visit");
       ProfileRequests.createNewProfile(newProfile);

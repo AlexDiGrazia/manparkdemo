@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect /* useState */ } from "react";
 import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
@@ -9,19 +9,26 @@ import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
 import { useHomeContext } from "../Providers/HomeProvider";
 import { EventSubmissionForm } from "../Components/EventSubmissionForm";
-import { Friends, TProfile } from "../Components/Friends";
+import { Friends /* TProfile  */, TProfile } from "../Components/Friends";
 import { Photos } from "../Components/Photos";
-import { Requests } from "../api/usersApi";
-import { Requests as ProfileRequests } from "../api/profilesApi";
+// import { Requests } from "../api/usersApi";
+// import { Requests as ProfileRequests } from "../api/profilesApi";
 import { TUserObject } from "../Components/UserLogin";
 import toast from "react-hot-toast";
 import { EditProfilePrompt } from "../Components/EditProfilePrompt";
 
 export const Home = () => {
-  const [currentProfile, setCurrentProfile] = useState<TProfile>(
-    {} as TProfile
-  );
-  const { currentUser, setCurrentUser } = useUserContext();
+  // const [currentProfile, setCurrentProfile] = useState<TProfile>(
+  //   {} as TProfile
+  // );
+  const {
+    currentUser,
+    setCurrentUser,
+    resetCurrentUser,
+    currentProfile,
+    setCurrentProfile,
+    resetCurrentProfile,
+  } = useUserContext();
   const {
     dialogVisible,
     eventSubmissionFormVisible,
@@ -36,20 +43,47 @@ export const Home = () => {
   const logout = () => {
     localStorage.removeItem("user");
     setCurrentUser({} as TUserObject);
+    setCurrentProfile({} as TProfile);
     navigate("/", { replace: true });
   };
 
   useEffect(() => {
     if (pathname !== "/home" && pathname !== "/") navigate("/home");
-    const user = localStorage.getItem("user");
-    if (user) {
-      Requests.getSingleUser(user).then(setCurrentUser);
+    if (localStorage.getItem("user")) {
+      Promise.all([resetCurrentUser(), resetCurrentProfile()]);
+    } else {
+      console.error(
+        'Oops! Make sure "user" is being set in local storage upon login/signup'
+      );
     }
-    ProfileRequests.getAllProfiles()
-      .then((res) => res.find((profile: TProfile) => profile.user === user))
-      .then((res) => {
-        setCurrentProfile(res);
-      });
+
+    // const promise1 = () => {
+    //   if (user) {
+    //     console.log("condition hit");
+    //     return Requests.loginUser({ username: user }).then((res) => {
+    //       console.log(res);
+    //       setCurrentUser(res);
+    //     });
+    //   }
+    // };
+
+    // const promise2 = ProfileRequests.getAllProfiles()
+    //   .then((res) => res.find((profile: TProfile) => profile.user === user))
+    //   .then((res) => {
+    //     setCurrentProfile(res);
+    //   });
+
+    // Promise.all([promise2]).then((res) => res);
+
+    // if (user) {
+    //   console.log("condition hit");
+    //   Requests.getSingleUser(user).then(setCurrentUser);
+    // }
+    // ProfileRequests.getAllProfiles()
+    //   .then((res) => res.find((profile: TProfile) => profile.user === user))
+    //   .then((res) => {
+    //     setCurrentProfile(res);
+    //   });
   }, []);
 
   return (
@@ -57,12 +91,14 @@ export const Home = () => {
       <Layout image="sunset">
         <div className="flex space-between">
           <h2 className="welcome_user">{`Welcome, ${
-            currentUser.username || localStorage.getItem("user")
+            (currentUser && currentUser.username) ||
+            localStorage.getItem("user") ||
+            "User Not Found"
           }!`}</h2>
           <div className="flex column center profile-buttons">
             <img
               className="profile-picture"
-              src={`public/${currentProfile.picture}`}
+              src={`public/${currentProfile && currentProfile.picture}`}
               alt="portrait of user"
             />
             <div className="flex side_by_side">
