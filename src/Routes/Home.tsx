@@ -18,16 +18,14 @@ import toast from "react-hot-toast";
 import { EditProfilePrompt } from "../Components/EditProfilePrompt";
 
 export const Home = () => {
-  // const [currentProfile, setCurrentProfile] = useState<TProfile>(
-  //   {} as TProfile
-  // );
   const {
     currentUser,
     setCurrentUser,
-    resetCurrentUser,
     currentProfile,
     setCurrentProfile,
-    resetCurrentProfile,
+    // onPageLoad_setCurrentUser,
+    // onPageLoad_setCurrentProfile,
+    getCurrentUser,
   } = useUserContext();
   const {
     dialogVisible,
@@ -50,7 +48,14 @@ export const Home = () => {
   useEffect(() => {
     if (pathname !== "/home" && pathname !== "/") navigate("/home");
     if (localStorage.getItem("user")) {
-      Promise.all([resetCurrentUser(), resetCurrentProfile()]);
+      const load = async () => {
+        const user = await getCurrentUser();
+        if (user) {
+          setCurrentUser(user);
+          setCurrentProfile(user.profile);
+        }
+      };
+      load();
     } else {
       console.error(
         'Oops! Make sure "user" is being set in local storage upon login/signup'

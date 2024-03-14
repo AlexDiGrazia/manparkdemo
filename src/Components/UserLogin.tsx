@@ -3,16 +3,24 @@ import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Requests } from "../api/usersApi";
-import { Requests as ProfileRequests } from "../api/profilesApi";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Providers/UserProvider";
-import { TProfile } from "./Friends";
 
 export type TUserObject = {
   username: string;
   password: string;
   id: number;
+  profile: {
+    username: string;
+    bio: string;
+    birthday: Date;
+    home: string;
+    occupation: string;
+    picture: string;
+    userId: number;
+    id: number;
+  };
 };
 
 export const UserLogin = () => {
@@ -22,7 +30,7 @@ export const UserLogin = () => {
   const [password, setPassword] = useState<string>("");
 
   const navigate = useNavigate();
-  const { setDisplay, setCurrentUser, setCurrentProfile } = useUserContext();
+  const { setDisplay } = useUserContext();
 
   const togglePassword = () => {
     const newType = inputType === "password" ? "text" : "password";
@@ -30,15 +38,6 @@ export const UserLogin = () => {
     setInputType(newType);
     setIcon(newIcon);
   };
-
-  const setUser = () => Requests.loginUser({ username }).then(setCurrentUser);
-
-  const setProfile = () =>
-    ProfileRequests.getAllProfiles()
-      .then((res) => res.find((profile: TProfile) => profile.user === username))
-      .then((res) => {
-        setCurrentProfile(res);
-      });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,8 +48,6 @@ export const UserLogin = () => {
           password
         ) {
           localStorage.setItem("user", username);
-          setUser();
-          setProfile();
           navigate("home");
           setUsername("");
           setPassword("");

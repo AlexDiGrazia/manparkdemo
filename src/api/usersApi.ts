@@ -12,7 +12,7 @@ export const Requests = {
   getSingleUser: (id: number) =>
     fetch(`${BASE_URL}/users/${id}`).then((res) => res.json()),
 
-  loginUser: ({ username }: { username: string }) =>
+  retrieveUserByName: ({ username }: { username: string }) =>
     fetch(`${BASE_URL}/login`, {
       method: "POST",
       headers: {

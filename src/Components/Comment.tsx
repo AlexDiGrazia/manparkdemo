@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Requests } from "../api/postsApi";
-import { Requests as ProfileRequests } from "../api/profilesApi";
+// import { Requests as ProfileRequests } from "../api/profilesApi";
+import { Requests as UserRequests } from "../api/usersApi";
 import { useUserContext } from "../Providers/UserProvider";
 import { Ellipsis } from "./Ellipsis";
 import { EditMenu } from "./EditMenu";
 import { useHomeContext } from "../Providers/HomeProvider";
-import { TProfile } from "./Friends";
+// import { TProfile } from "./Friends";
+import { TUserObject } from "./UserLogin";
 
 type TCommentProps = {
   commentText: string;
@@ -18,9 +20,11 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
   const [display, setDisplay] = useState<"text" | "editBox">("text");
   const [commentUpdate, setCommentUpdate] = useState<string>(commentText);
-  const [currentProfile, setCurrentProfile] = useState<TProfile>(
-    {} as TProfile
+  const [commentAuthor, setCommentAuthor] = useState<TUserObject>(
+    {} as TUserObject
   );
+  const { currentUser } = useUserContext();
+  const { refetchAllComments } = useHomeContext();
 
   const updateComment = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,13 +34,10 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
     });
   };
 
-  const { currentUser } = useUserContext();
-  const { refetchAllComments } = useHomeContext();
-
   useEffect(() => {
-    ProfileRequests.getAllProfiles()
-      .then((res) => res.find((profile: TProfile) => profile.user === user))
-      .then(setCurrentProfile);
+    UserRequests.retrieveUserByName({
+      username: user,
+    }).then(setCommentAuthor);
   }, []);
 
   return (
@@ -48,7 +49,7 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
       >
         <img
           className="comment_user_thumbnail"
-          src={currentProfile.picture}
+          src={commentAuthor.profile?.picture}
           alt="profile picture thumbnail"
         />
         <div className="comment_content">

@@ -8,13 +8,14 @@ import toast from "react-hot-toast";
 import { EditProfilePrompt } from "./EditProfilePrompt";
 
 export type TProfile = {
-  user: string;
-  picture: string;
   bio: string;
-  home: string;
-  occupation: string;
   birthday: Date | undefined;
+  home: string;
   id: number;
+  occupation: string;
+  picture: string;
+  userId: number;
+  username: string;
 };
 
 export const Friends = () => {
@@ -38,7 +39,7 @@ export const Friends = () => {
               className="react_router_link"
               onClick={() => {
                 setFriendsListDisplay("profile");
-                profile.user === currentUser.username &&
+                profile.username === currentUser.username &&
                   localStorage.getItem("personal_profile") ===
                     "first_ever_visit" &&
                   toast.custom((t) => <EditProfilePrompt t={t} />, {
@@ -53,7 +54,7 @@ export const Friends = () => {
                   className="friends_list_thumbnail_image"
                   style={{ backgroundImage: `url(${profile.picture})` }}
                 ></div>
-                <p>{profile.user}</p>
+                <p>{profile.username}</p>
               </div>
             </Link>
           ))}
