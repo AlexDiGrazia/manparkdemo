@@ -4,7 +4,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import toast from "react-hot-toast";
 import { Requests } from "./api/usersApi";
-import { Requests as ProfileRequests } from "./api/profilesApi";
+// import { Requests as ProfileRequests } from "./api/profilesApi";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "./Providers/UserProvider";
 import ReactDatePicker from "react-datepicker";
@@ -22,20 +22,21 @@ export const SignUp = () => {
   const [confirmationIcon, setConfirmationIcon] = useState<IconProp>(faEye);
 
   const navigate = useNavigate();
-  const { setCurrentUser, setDisplay } = useUserContext();
-
-  const newUser = {
-    username,
-    password,
-  };
+  const { setDisplay, setCurrentUser, setCurrentProfile } = useUserContext();
 
   const newProfile = {
-    user: username,
+    username,
     picture: "assets/Blank.webp",
     bio: "",
     home,
     occupation,
     birthday,
+  };
+
+  const newUser = {
+    username,
+    password,
+    profile: newProfile,
   };
 
   const allFieldsComplete = () => {
@@ -53,17 +54,20 @@ export const SignUp = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === confirmation && allFieldsComplete()) {
-      Requests.createNewUser(newUser).then(setCurrentUser);
-      localStorage.setItem("user", username);
-      localStorage.setItem("personal_profile", "first_ever_visit");
-      ProfileRequests.createNewProfile(newProfile);
-      navigate("home");
-      setUsername("");
-      setPassword("");
-      setHome("");
-      setOccupation("");
-      setBirthday(undefined);
-      setConfirmation("");
+      Requests.createNewUserAndAssociatedProfile(newUser).then((res) => {
+        setCurrentUser(res);
+        setCurrentProfile(res.profile);
+        localStorage.setItem("user", username);
+        localStorage.setItem("personal_profile", "first_ever_visit");
+        // ProfileRequests.createNewProfile(newProfile);
+        setUsername("");
+        setPassword("");
+        setHome("");
+        setOccupation("");
+        setBirthday(undefined);
+        setConfirmation("");
+        navigate("home");
+      });
     } else {
       if (password !== confirmation) {
         toast.error("Password and confirmation must match", {

@@ -18,9 +18,8 @@ type TUserContext = {
   setCurrentUser: Dispatch<SetStateAction<TUserObject>>;
   currentProfile: TProfile;
   setCurrentProfile: Dispatch<SetStateAction<TProfile>>;
-  onPageLoad_setCurrentUser: () => void;
-  onPageLoad_setCurrentProfile: () => void;
   getCurrentUser: () => Promise<TUserObject>;
+  reloadCurrentUserAndProfile: () => void;
 };
 
 const UserContext = createContext<TUserContext>({} as TUserContext);
@@ -36,17 +35,30 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     {} as TProfile
   );
 
-  const getCurrentUser = () =>
-    Requests.retrieveUserByName({
-      username: localStorage.getItem("user")!,
-    });
+  const getCurrentUser = async () => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      return await Requests.retrieveUserByName({
+        username: user,
+      });
+    } else {
+      console.error(
+        'Oops! Make sure "user" is being set in local storage upon login/signup'
+      );
+    }
+  };
 
-  //these two Functions will only be run inside an if statement verifying there IS a user in local storage
-  const onPageLoad_setCurrentUser = () =>
-    getCurrentUser(); /* .then(setCurrentUser); */
-
-  const onPageLoad_setCurrentProfile = () => getCurrentUser();
-  // .then((res) => setCurrentProfile(res.profile))
+  const reloadCurrentUserAndProfile = async () => {
+    const user = await getCurrentUser();
+    if (user) {
+      setCurrentUser(user);
+      setCurrentProfile(user.profile);
+    } else {
+      console.log(
+        "function reloadCurrentUserAndProfile() failed.  No user found."
+      );
+    }
+  };
 
   return (
     <>
@@ -58,9 +70,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
           setCurrentUser,
           currentProfile,
           setCurrentProfile,
-          onPageLoad_setCurrentUser,
-          onPageLoad_setCurrentProfile,
           getCurrentUser,
+          reloadCurrentUserAndProfile,
         }}
       >
         {children}

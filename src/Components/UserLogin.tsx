@@ -6,21 +6,13 @@ import { Requests } from "../api/usersApi";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Providers/UserProvider";
+import { TProfile } from "./Friends";
 
 export type TUserObject = {
   username: string;
   password: string;
   id: number;
-  profile: {
-    username: string;
-    bio: string;
-    birthday: Date;
-    home: string;
-    occupation: string;
-    picture: string;
-    userId: number;
-    id: number;
-  };
+  profile: TProfile;
 };
 
 export const UserLogin = () => {

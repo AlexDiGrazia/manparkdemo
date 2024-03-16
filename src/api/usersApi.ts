@@ -1,5 +1,5 @@
+import { TProfile } from "../Components/Friends";
 import { TUserObject } from "../Components/UserLogin";
-// import { TUsers } from "../types";
 
 const BASE_URL = "http://localhost:3000";
 
@@ -22,9 +22,17 @@ export const Requests = {
         vary: origin,
       },
       body: JSON.stringify({ username }),
-    }).then((res) => res.json()),
+    })
+      .then((res) => res.json())
+      .catch(() => console.log("oh no something went wrong!")),
 
-  createNewUser: (newUser: { username: string; password: string }) =>
+  //Backend EndPoint does a nested Create for User's Profile
+  //See Prisma Schema
+  createNewUserAndAssociatedProfile: (newUser: {
+    username: string;
+    password: string;
+    profile: Omit<TProfile, "id" | "userId">;
+  }) =>
     fetch(`${BASE_URL}/users`, {
       method: "POST",
       headers: {
@@ -33,11 +41,3 @@ export const Requests = {
       body: JSON.stringify(newUser),
     }).then((response): Promise<TUserObject> => response.json()),
 };
-
-// getSingleUser: async (user: string) =>
-//   await fetch(`${BASE_URL}/users`)
-//     .then((res) => res.json())
-//     .then((res) => {
-//       console.log(res.find((obj: TUserObject) => obj.username === user));
-//       return res.find((obj: TUserObject) => obj.username === user);
-//     }),

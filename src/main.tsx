@@ -11,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 import { Home } from "./Routes/Home";
 import { UserProvider } from "./Providers/UserProvider";
 import { HomeProvider } from "./Providers/HomeProvider";
+import { Layout } from "./Components/Layout";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,9 @@ const router = createBrowserRouter([
         path: "home",
         element: (
           <HomeProvider>
-            <Home />
+            <Layout image="sunset">
+              <Home />
+            </Layout>
           </HomeProvider>
         ),
       },

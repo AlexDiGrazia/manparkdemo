@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect /* useState */ } from "react";
-import { Layout } from "../Components/Layout";
+// import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -23,9 +23,7 @@ export const Home = () => {
     setCurrentUser,
     currentProfile,
     setCurrentProfile,
-    // onPageLoad_setCurrentUser,
-    // onPageLoad_setCurrentProfile,
-    getCurrentUser,
+    reloadCurrentUserAndProfile,
   } = useUserContext();
   const {
     dialogVisible,
@@ -45,74 +43,63 @@ export const Home = () => {
     navigate("/", { replace: true });
   };
 
+  const pageWasRefreshed = !currentUser.username && !currentProfile.username;
+
   useEffect(() => {
     if (pathname !== "/home" && pathname !== "/") navigate("/home");
-    if (localStorage.getItem("user")) {
-      const load = async () => {
-        const user = await getCurrentUser();
-        if (user) {
-          setCurrentUser(user);
-          setCurrentProfile(user.profile);
-        }
-      };
-      load();
-    } else {
-      console.error(
-        'Oops! Make sure "user" is being set in local storage upon login/signup'
-      );
+    if (pageWasRefreshed) {
+      reloadCurrentUserAndProfile();
     }
   }, []);
 
   return (
     <>
-      <Layout image="sunset">
-        <div className="flex space-between">
-          <h2 className="welcome_user">{`Welcome, ${
-            (currentUser && currentUser.username) ||
-            localStorage.getItem("user") ||
-            "User Not Found"
-          }!`}</h2>
-          <div className="flex column center profile-buttons">
-            <img
-              className="profile-picture"
-              src={`public/${currentProfile && currentProfile.picture}`}
-              alt="portrait of user"
-            />
-            <div className="flex side_by_side">
-              <span
-                onClick={() => {
-                  localStorage.getItem("personal_profile") ===
-                    "first_ever_visit" &&
-                    toast.custom((t) => <EditProfilePrompt t={t} />, {
-                      duration: Infinity,
-                      id: "editProfileToast",
-                    });
-                  localStorage.removeItem("personal_profile");
-                  setTab("friends-tab");
-                  setFriendsListDisplay("profile");
-                  navigate(`/home/user/${currentProfile.id}`);
-                }}
-              >
-                Profile
-              </span>
-              <span onClick={logout}>Logout</span>
-            </div>
+      <div className="flex space-between">
+        <h2 className="welcome_user">{`Welcome, ${
+          currentUser?.username ||
+          localStorage.getItem("user") ||
+          "User Not Found"
+        }!`}</h2>
+        <div className="flex column center profile-buttons">
+          <img
+            className="profile-picture"
+            src={`public/${currentProfile?.picture}`}
+            alt="portrait of user"
+          />
+          <div className="flex side_by_side">
+            <span
+              onClick={() => {
+                localStorage.getItem("personal_profile") ===
+                  "first_ever_visit" &&
+                  toast.custom((t) => <EditProfilePrompt t={t} />, {
+                    duration: Infinity,
+                    id: "editProfileToast",
+                  });
+                localStorage.removeItem("personal_profile");
+                setTab("friends-tab");
+                setFriendsListDisplay("profile");
+                navigate(`/home/user/${currentProfile.id}`);
+              }}
+            >
+              Profile
+            </span>
+            <span onClick={logout}>Logout</span>
           </div>
         </div>
-        <TabSlider />
-        <div className="content_layout">
-          <div className="confirmation_dialog_container">
-            {dialogVisible && <ConfirmationDialog />}
-            {eventSubmissionFormVisible && <EventSubmissionForm />}
-          </div>
-          <div className="home_content_container">
-            {tab === "posts-tab" && <CommunityPosts />}
-            {tab === "events-tab" && <EventsList />}
-            {tab === "friends-tab" && <Friends />}
-            {tab === "photos-tab" && <Photos />}
-          </div>
+      </div>
+      <TabSlider />
+      <div className="content_layout">
+        <div className="confirmation_dialog_container">
+          {dialogVisible && <ConfirmationDialog />}
+          {eventSubmissionFormVisible && <EventSubmissionForm />}
         </div>
-      </Layout>
+        <div className="home_content_container">
+          {tab === "posts-tab" && <CommunityPosts />}
+          {tab === "events-tab" && <EventsList />}
+          {tab === "friends-tab" && <Friends />}
+          {tab === "photos-tab" && <Photos />}
+        </div>
+      </div>
     </>
   );
 };
