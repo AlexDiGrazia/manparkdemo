@@ -22,7 +22,7 @@ export const UserLogin = () => {
   const [password, setPassword] = useState<string>("");
 
   const navigate = useNavigate();
-  const { setDisplay } = useUserContext();
+  const { setDisplay, setCurrentUser, setCurrentProfile } = useUserContext();
 
   const togglePassword = () => {
     const newType = inputType === "password" ? "text" : "password";
@@ -33,16 +33,15 @@ export const UserLogin = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    Requests.getAllUsers().then((res) => {
-      if (res.some((obj: TUserObject) => obj.username === username)) {
-        if (
-          res.find((obj: TUserObject) => obj.username === username).password ===
-          password
-        ) {
+    Requests.retrieveUserByName({ username }).then((response) => {
+      if (response) {
+        if (response.password === password) {
           localStorage.setItem("user", username);
-          navigate("home");
+          setCurrentUser(response);
+          setCurrentProfile(response.profile);
           setUsername("");
           setPassword("");
+          navigate("home");
         } else {
           toast.error("Username and Password must match");
         }
