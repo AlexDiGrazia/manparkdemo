@@ -97,3 +97,10 @@ Subsequent learning in Devslopes curriculum will oversee the implementation of a
   The deciding factor for me was a gut feeling that `Profile` data should not have access to `authentication` (User) data.
   In other words, when the app is making a call to `Profile` data to populate profile information on the screen, it should not have `authentication` data available as an IntelliSense option.
   This safe-guards against any possibility of human error in future development of the code base.
+
+---
+
+## Flow of state management for user upon login
+
+- Both <UserLogin/> and <SignUp/> set the state of currentUser and currentProfile upon form submission
+- the <Home/> component has a `pageWasRefreshed` condition that will detect if it is being loaded without already having currentUser and currentProfile, and then sets currentUsr and currentProfile based off the "user" in localStorage. This way, currentUser and currentProfile aren't set twice when coming directly from login or signup, but the currentUser and currentProfile _are_ set if the page is refreshed, and thus hasn't already received currentUser and currentProfile from the login or signUp page.
