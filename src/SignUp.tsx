@@ -59,7 +59,6 @@ export const SignUp = () => {
         setCurrentProfile(res.profile);
         localStorage.setItem("user", username);
         localStorage.setItem("personal_profile", "first_ever_visit");
-        // ProfileRequests.createNewProfile(newProfile);
         setUsername("");
         setPassword("");
         setHome("");
