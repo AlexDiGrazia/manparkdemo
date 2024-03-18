@@ -48,11 +48,11 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
           style={{ width: "200px", height: "200px", borderRadius: "20px" }}
         />
         <div className="profile_user_basic_info">
-          <h2>{profile.user}</h2>
+          <h2>{profile.username}</h2>
           <p>
             <span className="user_basic_info_span">Home:</span>{" "}
             <span
-              contentEditable={profile.user === currentUser.username}
+              contentEditable={profile.username === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
                 Requests.updateProfile(profile.id, {
@@ -66,7 +66,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
           <p>
             <span className="user_basic_info_span">Occupation:</span>{" "}
             <span
-              contentEditable={profile.user === currentUser.username}
+              contentEditable={profile.username === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
                 Requests.updateProfile(profile.id, {
@@ -80,7 +80,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
           <div>
             <span className="user_basic_info_span">Birthday:</span>{" "}
             {/* Date picker if user is accessing their own profile to edit birthday */}
-            {profile.user === currentUser.username && (
+            {profile.username === currentUser.username && (
               <ReactDatePicker
                 className="profile_birthday_date_picker"
                 selected={birthday}
@@ -93,7 +93,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               />
             )}
             {/* Span for all profiles not belonging to current user so other's profiles can't be edited*/}
-            {profile.user !== currentUser.username && (
+            {profile.username !== currentUser.username && (
               <span>
                 {profile.birthday /* makes sure birthday is defined */ &&
                   new Date(profile.birthday).toLocaleDateString("en-US")}
@@ -129,7 +129,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
       </span>
       <p
         className="profile_bio"
-        contentEditable={profile.user === currentUser.username}
+        contentEditable={profile.username === currentUser.username}
         suppressContentEditableWarning
         spellCheck={false}
         onBlur={(e) =>
