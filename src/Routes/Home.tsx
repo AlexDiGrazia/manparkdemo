@@ -11,8 +11,6 @@ import { useHomeContext } from "../Providers/HomeProvider";
 import { EventSubmissionForm } from "../Components/EventSubmissionForm";
 import { Friends /* TProfile  */, TProfile } from "../Components/Friends";
 import { Photos } from "../Components/Photos";
-// import { Requests } from "../api/usersApi";
-// import { Requests as ProfileRequests } from "../api/profilesApi";
 import { TUserObject } from "../Components/UserLogin";
 import toast from "react-hot-toast";
 import { EditProfilePrompt } from "../Components/EditProfilePrompt";
