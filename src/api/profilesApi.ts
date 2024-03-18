@@ -16,13 +16,4 @@ export const Requests = {
       },
       body: JSON.stringify(profile),
     }).then((res) => res.json()),
-
-  createNewProfile: (profile: Omit<TProfile, "id">) =>
-    fetch(`${BASE_URL}/profiles`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(profile),
-    }).then((res) => res.json()),
 };
