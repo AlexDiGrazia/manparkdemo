@@ -5,14 +5,12 @@ import {
   SetStateAction,
   createContext,
   useContext,
-  // useEffect,
   useState,
 } from "react";
 import { TEvent } from "../Components/EventsList";
 import { Requests as EventRequests } from "../api/eventsApi";
 import { Requests as PostRequests } from "../api/postsApi";
 import { TComment } from "../types";
-// import { useUserContext } from "./UserProvider";
 
 type THomeContext = {
   allEvents: TEvent[];
@@ -33,7 +31,6 @@ type THomeContext = {
   setEventSubmissionFormVisible: Dispatch<SetStateAction<boolean>>;
   friendsListDisplay: "friends-list" | "profile";
   setFriendsListDisplay: Dispatch<SetStateAction<"friends-list" | "profile">>;
-  // userIsLoaded: boolean;
 };
 
 const HomeContext = createContext({} as THomeContext);
@@ -50,9 +47,6 @@ export const HomeProvider = ({ children }: { children: ReactNode }) => {
   const [friendsListDisplay, setFriendsListDisplay] = useState<
     "friends-list" | "profile"
   >("friends-list");
-  // const [userIsLoaded, setUserIsLoaded] = useState<boolean>(false);
-
-  // const { getCurrentUser } = useUserContext();
 
   const refetchAllEvents = () => {
     EventRequests.getAllEvents().then(setAllEvents);
@@ -60,10 +54,6 @@ export const HomeProvider = ({ children }: { children: ReactNode }) => {
 
   const refetchAllComments = () =>
     PostRequests.getAllCommunityPosts().then(setAllComments);
-
-  // useEffect(() => {
-  //   getCurrentUser().then(() => setUserIsLoaded(true));
-  // }, []);
 
   return (
     <>
@@ -87,7 +77,6 @@ export const HomeProvider = ({ children }: { children: ReactNode }) => {
           setEventSubmissionFormVisible,
           friendsListDisplay,
           setFriendsListDisplay,
-          // userIsLoaded,
         }}
       >
         {children}
