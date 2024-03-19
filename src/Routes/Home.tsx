@@ -3,7 +3,7 @@ import { useEffect /* useState */ } from "react";
 // import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { /* useLocation, */ useNavigate } from "react-router-dom";
 import { CommunityPosts } from "../Components/CommunityPosts";
 import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
@@ -32,7 +32,7 @@ export const Home = () => {
   } = useHomeContext();
 
   const navigate = useNavigate();
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -44,7 +44,10 @@ export const Home = () => {
   const pageWasRefreshed = !currentUser.username && !currentProfile.username;
 
   useEffect(() => {
-    if (pathname !== "/home" && pathname !== "/") navigate("/home");
+    //TO_DO figure out why app is working without the pathname redirect, and what this was doing at all if the routing is working fine without it
+
+    // if (pathname !== "/home" && pathname !== "/") navigate("/home");
+
     if (pageWasRefreshed) {
       reloadCurrentUserAndProfile();
     }
@@ -61,7 +64,7 @@ export const Home = () => {
         <div className="flex column center profile-buttons">
           <img
             className="profile-picture"
-            src={`public/${currentProfile?.picture}`}
+            src={`/public/${currentProfile?.picture}`}
             alt="portrait of user"
           />
           <div className="flex side_by_side">
@@ -74,8 +77,8 @@ export const Home = () => {
                     id: "editProfileToast",
                   });
                 localStorage.removeItem("personal_profile");
-                setTab("friends-tab");
                 setFriendsListDisplay("profile");
+                setTab("friends-tab");
                 navigate(`/home/user/${currentProfile.id}`);
               }}
             >
