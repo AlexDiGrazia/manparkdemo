@@ -22,7 +22,7 @@ export const TabSlider = () => {
             id="radio-posts"
             name="tabs"
             onChange={() => handleTabChange("posts-tab")}
-            defaultChecked
+            checked={tab === "posts-tab"}
           />
           Posts
         </label>
@@ -32,6 +32,7 @@ export const TabSlider = () => {
             id="radio-events"
             name="tabs"
             onChange={() => handleTabChange("events-tab")}
+            checked={tab === "events-tab"}
           />
           Events
         </label>
@@ -41,6 +42,7 @@ export const TabSlider = () => {
             id="radio-friends"
             name="tabs"
             onChange={() => handleTabChange("friends-tab")}
+            checked={tab === "friends-tab"}
           />
           Friends
         </label>
@@ -50,6 +52,7 @@ export const TabSlider = () => {
             id="radio-photos"
             name="tabs"
             onChange={() => handleTabChange("photos-tab")}
+            checked={tab === "photos-tab"}
           />
           Photos
         </label>
