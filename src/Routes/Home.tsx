@@ -3,7 +3,7 @@ import { useEffect /* useState */ } from "react";
 // import { Layout } from "../Components/Layout";
 import { TabSlider } from "../Components/TabSlider";
 import { useUserContext } from "../Providers/UserProvider";
-import { /* useLocation, */ useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CommunityPosts } from "../Components/CommunityPosts";
 import { EventsList } from "../Components/EventsList";
 import { ConfirmationDialog } from "../Components/ConfirmationDialog";
@@ -32,7 +32,7 @@ export const Home = () => {
   } = useHomeContext();
 
   const navigate = useNavigate();
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   const logout = () => {
     localStorage.removeItem("user");
@@ -44,11 +44,11 @@ export const Home = () => {
   const pageWasRefreshed = !currentUser.username && !currentProfile.username;
 
   useEffect(() => {
-    //TO_DO figure out why app is working without the pathname redirect, and what this was doing at all if the routing is working fine without it
-
-    // if (pathname !== "/home" && pathname !== "/") navigate("/home");
-
     if (pageWasRefreshed) {
+      if (pathname !== "/home" && pathname !== "/")
+        navigate(
+          "/home"
+        ); /* if user is currently viewing /home/user/:userId, this will re-route /home upone page refresh */
       reloadCurrentUserAndProfile();
     }
   }, []);
