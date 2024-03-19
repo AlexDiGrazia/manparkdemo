@@ -42,13 +42,13 @@ export const Schedule = ({ profile }: TScheduleProps) => {
 
   useEffect(() => {
     ProfileRequests.getSingleProfile(Number(userId)).then((profileData) => {
-      fetchUserScheduleData(profileData.user);
+      fetchUserScheduleData(profileData.username);
     });
   }, []);
 
   useEffect(() => {
     ProfileRequests.getSingleProfile(Number(userId)).then((profileData) => {
-      fetchUserScheduleData(profileData.user);
+      fetchUserScheduleData(profileData.username);
     });
   }, [userId]);
 
