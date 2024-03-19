@@ -57,7 +57,7 @@ export const ScheduleTD = ({
         onMouseOver={() => tdHover && setTdButtonsVisible(true)}
         onMouseLeave={() => tdHover && setTdButtonsVisible(false)}
       >
-        {tdButtonsVisible && profile.user === currentUser.username && (
+        {tdButtonsVisible && profile.username === currentUser.username && (
           <>
             {/* Trashcan button */}
             {listItemView === "display" && (
@@ -108,7 +108,7 @@ export const ScheduleTD = ({
                     Requests.deleteScheduleAppointment(id)
                   )
                 ).then(() => {
-                  fetchUserScheduleData(profile.user);
+                  fetchUserScheduleData(profile.username);
                   setTdHover(true);
                   setListItemView("display");
                   deletionQueue = [];
@@ -127,7 +127,7 @@ export const ScheduleTD = ({
                     className="li_margin_bottom"
                     key={`day-${dayOfWeekIndex}-event-${eventIndex}`}
                     suppressContentEditableWarning
-                    contentEditable={profile.user === currentUser.username}
+                    contentEditable={profile.username === currentUser.username}
                     onBlur={(e) => {
                       Requests.updateScheduleAppointment(obj.id, {
                         event: e.currentTarget.innerText,
@@ -195,7 +195,7 @@ export const ScheduleTD = ({
                     onClick={() => {
                       Requests.postNewScheduleData(newScheduleData).then(() => {
                         setNewApptSaveButtonVisible(false);
-                        fetchUserScheduleData(profile.user);
+                        fetchUserScheduleData(profile.username);
                         setNewListItemContent("");
                         setNewListItemVisible(false);
                         setTdHover(true);
