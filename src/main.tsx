@@ -29,7 +29,9 @@ const router = createBrowserRouter([
         path: "home/user/:userId",
         element: (
           <HomeProvider>
-            <Home />
+            <Layout image="sunset">
+              <Home />
+            </Layout>
           </HomeProvider>
         ),
       },
