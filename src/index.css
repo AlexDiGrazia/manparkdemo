@@ -124,11 +124,11 @@ h2.welcome_user {
 }
 
 .helping-hand {
-  background-image: url("/public/assets/menscircle_1440x820.jpg");
+  background-image: url("/assets/menscircle_1440x820.jpg");
 }
 
 .sunset {
-  background-image: url("/public/assets/sunset.jpeg");
+  background-image: url("/assets/sunset.jpeg");
 }
 
 .profile-picture {

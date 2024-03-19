@@ -64,7 +64,7 @@ export const Home = () => {
         <div className="flex column center profile-buttons">
           <img
             className="profile-picture"
-            src={`/public/${currentProfile?.picture}`}
+            src={`/${currentProfile?.picture}`}
             alt="portrait of user"
           />
           <div className="flex side_by_side">
