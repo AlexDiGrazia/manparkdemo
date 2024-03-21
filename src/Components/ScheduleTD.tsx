@@ -103,11 +103,9 @@ export const ScheduleTD = ({
               type="button"
               value="Delete"
               onClick={async () =>
-                await Promise.all(
-                  deletionQueue.map((id: number) =>
-                    Requests.deleteScheduleAppointment(id)
-                  )
-                ).then(() => {
+                await Requests.deleteManyScheduleAppointments({
+                  deletionQueue,
+                }).then(() => {
                   fetchUserScheduleData(profile.username);
                   setTdHover(true);
                   setListItemView("display");
