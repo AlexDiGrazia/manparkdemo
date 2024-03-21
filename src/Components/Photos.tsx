@@ -57,3 +57,5 @@ export const Photos = () => {
     </>
   );
 };
+
+//TO_DO change DB photos to not have /public/ in url
