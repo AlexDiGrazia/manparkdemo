@@ -63,6 +63,7 @@ export const Schedule = ({ profile }: TScheduleProps) => {
         <table className="schedule">
           {scheduleEachDayOfWeek.map((day, dayOfWeekIndex) => (
             <tr>
+              {/* TO_DO schedule children need keys, check error when going to profile from profile button */}
               <th>{dayOfWeekNames[dayOfWeekIndex]}</th>
               <ScheduleTD
                 key={`day_of_the_week_day_${dayOfWeekIndex}`}
