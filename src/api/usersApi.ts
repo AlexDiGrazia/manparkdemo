@@ -4,13 +4,15 @@ import { TUserObject } from "../Components/UserLogin";
 const BASE_URL = "http://localhost:3000";
 
 export const Requests = {
-  getAllUsers: () =>
-    fetch(`${BASE_URL}/users`).then((res) => {
-      return res.json();
-    }),
+  // SCHEDULED FOR DELETION - NOT IN USE
+  // getAllUsers: () =>
+  //   fetch(`${BASE_URL}/users`).then((res) => {
+  //     return res.json();
+  //   }),
 
-  getSingleUser: (id: number) =>
-    fetch(`${BASE_URL}/users/${id}`).then((res) => res.json()),
+  //SCHEDULED FOR DELETION - NOT IN USE
+  // getSingleUser: (id: number) =>
+  //   fetch(`${BASE_URL}/users/${id}`).then((res) => res.json()),
 
   retrieveUserByName: ({ username }: { username: string }) =>
     fetch(`${BASE_URL}/login`, {
