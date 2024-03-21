@@ -4,18 +4,8 @@ import { TUserObject } from "../Components/UserLogin";
 const BASE_URL = "http://localhost:3000";
 
 export const Requests = {
-  // SCHEDULED FOR DELETION - NOT IN USE
-  // getAllUsers: () =>
-  //   fetch(`${BASE_URL}/users`).then((res) => {
-  //     return res.json();
-  //   }),
-
-  //SCHEDULED FOR DELETION - NOT IN USE
-  // getSingleUser: (id: number) =>
-  //   fetch(`${BASE_URL}/users/${id}`).then((res) => res.json()),
-
   retrieveUserByName: ({ username }: { username: string }) =>
-    fetch(`${BASE_URL}/login`, {
+    fetch(`${BASE_URL}/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
