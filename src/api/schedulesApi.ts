@@ -15,12 +15,15 @@ export const Requests = {
       body: JSON.stringify(newData),
     }).then((res) => res.json()),
 
-  deleteScheduleAppointment: (id: number) =>
-    fetch(`${BASE_URL}/schedules/${id}`, {
-      method: "DELETE",
+  deleteManyScheduleAppointments: (deletionQueue: {
+    deletionQueue: number[];
+  }) =>
+    fetch(`${BASE_URL}/schedules/delete`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(deletionQueue),
     }).then((res) => res.json()),
 
   updateScheduleAppointment: (
