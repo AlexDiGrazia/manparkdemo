@@ -17,9 +17,6 @@ export const Requests = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost5173",
-        url: "http://localhost5173",
-        vary: origin,
       },
       body: JSON.stringify({ username }),
     })
