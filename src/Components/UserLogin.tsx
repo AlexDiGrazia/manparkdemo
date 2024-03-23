@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Providers/UserProvider";
 import { TProfile } from "./Friends";
+import { authRequests } from "../api/authApi";
 
 export type TUserObject = {
   username: string;
@@ -22,7 +23,13 @@ export const UserLogin = () => {
   const [password, setPassword] = useState<string>("");
 
   const navigate = useNavigate();
-  const { setDisplay, setCurrentUser, setCurrentProfile } = useUserContext();
+  const {
+    setDisplay,
+    setCurrentUser,
+    setCurrentProfile,
+    jwtToken,
+    setJwtToken,
+  } = useUserContext();
 
   const togglePassword = () => {
     const newType = inputType === "password" ? "text" : "password";
@@ -33,22 +40,29 @@ export const UserLogin = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    Requests.retrieveUserByName({ username }).then((response) => {
-      if (response) {
-        if (response.password === password) {
-          localStorage.setItem("user", username);
-          setCurrentUser(response);
-          setCurrentProfile(response.profile);
-          setUsername("");
-          setPassword("");
-          navigate("home");
-        } else {
-          toast.error("Username and Password must match");
-        }
-      } else {
-        toast.error("This user does not exist");
-      }
-    });
+    authRequests
+      .getJwtToken({ username, password })
+      .then((res) => setJwtToken(res.token))
+      .then(() => {
+        Requests.retrieveUserByName({ username }).then((response) => {
+          if (response) {
+            if (jwtToken) {
+              console.log("yes jwt token");
+              localStorage.setItem("user", username);
+              setCurrentUser(response);
+              setCurrentProfile(response.profile);
+              setUsername("");
+              setPassword("");
+              navigate("home");
+            } else {
+              console.log("no jwt token");
+              toast.error("Username and Password must match");
+            }
+          } else {
+            toast.error("This user does not exist");
+          }
+        });
+      });
   };
 
   return (

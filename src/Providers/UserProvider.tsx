@@ -20,6 +20,8 @@ type TUserContext = {
   setCurrentProfile: Dispatch<SetStateAction<TProfile>>;
   getCurrentUser: () => Promise<TUserObject>;
   reloadCurrentUserAndProfile: () => void;
+  jwtToken: string;
+  setJwtToken: Dispatch<SetStateAction<string>>;
 };
 
 const UserContext = createContext<TUserContext>({} as TUserContext);
@@ -34,6 +36,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [currentProfile, setCurrentProfile] = useState<TProfile>(
     {} as TProfile
   );
+  const [jwtToken, setJwtToken] = useState<string>("");
 
   const getCurrentUser = async () => {
     const user = localStorage.getItem("user");
@@ -72,6 +75,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
           setCurrentProfile,
           getCurrentUser,
           reloadCurrentUserAndProfile,
+          jwtToken,
+          setJwtToken,
         }}
       >
         {children}
