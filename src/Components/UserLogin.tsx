@@ -23,13 +23,8 @@ export const UserLogin = () => {
   const [password, setPassword] = useState<string>("");
 
   const navigate = useNavigate();
-  const {
-    setDisplay,
-    setCurrentUser,
-    setCurrentProfile,
-    jwtToken,
-    setJwtToken,
-  } = useUserContext();
+  const { setDisplay, setCurrentUser, setCurrentProfile, setJwtToken } =
+    useUserContext();
 
   const togglePassword = () => {
     const newType = inputType === "password" ? "text" : "password";
@@ -40,29 +35,27 @@ export const UserLogin = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    authRequests
-      .getJwtToken({ username, password })
-      .then((res) => setJwtToken(res.token))
-      .then(() => {
-        Requests.retrieveUserByName({ username }).then((response) => {
-          if (response) {
-            if (jwtToken) {
-              console.log("yes jwt token");
-              localStorage.setItem("user", username);
-              setCurrentUser(response);
-              setCurrentProfile(response.profile);
-              setUsername("");
-              setPassword("");
-              navigate("home");
-            } else {
-              console.log("no jwt token");
-              toast.error("Username and Password must match");
-            }
+    authRequests.getJwtToken({ username, password }).then((res) => {
+      setJwtToken(res.token);
+      Requests.retrieveUserByName({ username }).then((response) => {
+        if (response) {
+          if (res.token) {
+            console.log("yes jwt token" + res.token);
+            localStorage.setItem("user", username);
+            setCurrentUser(response);
+            setCurrentProfile(response.profile);
+            setUsername("");
+            setPassword("");
+            navigate("home");
           } else {
-            toast.error("This user does not exist");
+            console.log("no jwt token");
+            toast.error("Username and Password must match");
           }
-        });
+        } else {
+          toast.error("This user does not exist");
+        }
       });
+    });
   };
 
   return (
