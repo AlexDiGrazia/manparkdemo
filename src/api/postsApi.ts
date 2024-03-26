@@ -6,23 +6,29 @@ export const Requests = {
   getAllCommunityPosts: () =>
     fetch(`${BASE_URL}/community_posts`).then((res) => res.json()),
 
-  postNewComment: (userInput: Omit<TComment, "id">): Promise<TComment> =>
+  postNewComment: (
+    userInput: Omit<TComment, "id" | "user">,
+    jwtToken: string
+  ): Promise<TComment> =>
     fetch(`${BASE_URL}/community_posts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
       body: JSON.stringify(userInput),
     }).then((response) => response.json()),
 
   updateComment: (
     id: number,
-    updatedComment: { text: string }
+    updatedComment: { text: string },
+    jwtToken: string
   ): Promise<TComment> =>
     fetch(`${BASE_URL}/community_posts/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
       body: JSON.stringify(updatedComment),
     }).then((response) => response.json()),
