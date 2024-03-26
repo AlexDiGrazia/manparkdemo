@@ -18,7 +18,9 @@ export const ConfirmationDialog = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (tab === "events-tab") {
-      EventRequests.deleteEvent(currentEvent).then(() => refetchAllEvents());
+      EventRequests.deleteEvent(currentEvent, jwtToken).then(() =>
+        refetchAllEvents()
+      );
     }
     if (tab === "posts-tab") {
       currentComment !== null &&
