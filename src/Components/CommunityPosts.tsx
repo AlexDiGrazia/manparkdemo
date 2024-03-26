@@ -8,18 +8,19 @@ import { useHomeContext } from "../Providers/HomeProvider";
 export const CommunityPosts = () => {
   const [commentInput, setCommentInput] = useState<string>("");
 
-  const { currentUser } = useUserContext();
+  const { jwtToken } = useUserContext();
   const { allComments, refetchAllComments } = useHomeContext();
 
-  const newComment = {
-    user: currentUser.username,
+  const newCommentText = {
     text: commentInput,
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (commentInput !== "") {
-      Requests.postNewComment(newComment).then(() => refetchAllComments());
+      Requests.postNewComment(newCommentText, jwtToken).then(() =>
+        refetchAllComments()
+      );
       setCommentInput("");
     }
   };
