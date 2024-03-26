@@ -2,7 +2,6 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Requests } from "../api/usersApi";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Providers/UserProvider";
@@ -11,7 +10,6 @@ import { authRequests } from "../api/authApi";
 
 export type TUserObject = {
   username: string;
-  password: string;
   id: number;
   profile: TProfile;
 };
@@ -36,25 +34,21 @@ export const UserLogin = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     authRequests.getJwtToken({ username, password }).then((res) => {
-      setJwtToken(res.token);
-      Requests.retrieveUserByName({ username }).then((response) => {
-        if (response) {
-          if (res.token) {
-            console.log("yes jwt token" + res.token);
-            localStorage.setItem("user", username);
-            setCurrentUser(response);
-            setCurrentProfile(response.profile);
-            setUsername("");
-            setPassword("");
-            navigate("home");
-          } else {
-            console.log("no jwt token");
-            toast.error("Username and Password must match");
-          }
+      if (res) {
+        if (res.token) {
+          localStorage.setItem("user", username);
+          setCurrentUser(res.userInformation);
+          setCurrentProfile(res.userInformation.profile);
+          setJwtToken(res.token);
+          setUsername("");
+          setPassword("");
+          navigate("home");
         } else {
-          toast.error("This user does not exist");
+          toast.error("Username and Password must match");
         }
-      });
+      } else {
+        toast.error("This user does not exist");
+      }
     });
   };
 
