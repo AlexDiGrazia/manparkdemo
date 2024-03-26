@@ -23,12 +23,12 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
   const [commentAuthor, setCommentAuthor] = useState<TUserObject>(
     {} as TUserObject
   );
-  const { currentUser } = useUserContext();
+  const { currentUser, jwtToken } = useUserContext();
   const { refetchAllComments } = useHomeContext();
 
   const updateComment = (e: React.FormEvent) => {
     e.preventDefault();
-    Requests.updateComment(id, { text: commentUpdate }).then(() => {
+    Requests.updateComment(id, { text: commentUpdate }, jwtToken).then(() => {
       setDisplay("text");
       refetchAllComments();
     });
