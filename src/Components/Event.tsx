@@ -15,7 +15,7 @@ export const Event = ({ user, date, title, details, id }: TEvent) => {
     setAccordionPosition(newPosition);
   };
 
-  const { currentUser } = useUserContext();
+  const { currentUser, jwtToken } = useUserContext();
   const { setDialogVisible, setCurrentEvent, refetchAllEvents } =
     useHomeContext();
 
@@ -27,12 +27,14 @@ export const Event = ({ user, date, title, details, id }: TEvent) => {
 
   const updateDetails = (e: React.FormEvent) => {
     e.preventDefault();
-    Requests.updateEventDetails(id, { details: detailsText.current }).then(
-      () => {
-        refetchAllEvents();
-        setDisplay("text");
-      }
-    );
+    Requests.updateEventDetails(
+      id,
+      { details: detailsText.current },
+      jwtToken
+    ).then(() => {
+      refetchAllEvents();
+      setDisplay("text");
+    });
   };
 
   return (
