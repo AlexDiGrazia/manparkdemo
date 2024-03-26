@@ -1,4 +1,5 @@
 import { useHomeContext } from "../Providers/HomeProvider";
+import { useUserContext } from "../Providers/UserProvider";
 import { Requests as EventRequests } from "../api/eventsApi";
 import { Requests as PostRequests } from "../api/postsApi";
 
@@ -12,6 +13,8 @@ export const ConfirmationDialog = () => {
     tab,
   } = useHomeContext();
 
+  const { jwtToken } = useUserContext();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (tab === "events-tab") {
@@ -19,7 +22,7 @@ export const ConfirmationDialog = () => {
     }
     if (tab === "posts-tab") {
       currentComment !== null &&
-        PostRequests.deleteComment(currentComment).then(() =>
+        PostRequests.deleteComment(currentComment, jwtToken).then(() =>
           refetchAllComments()
         );
     }
