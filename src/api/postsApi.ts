@@ -33,11 +33,12 @@ export const Requests = {
       body: JSON.stringify(updatedComment),
     }).then((response) => response.json()),
 
-  deleteComment: (id: number) =>
+  deleteComment: (id: number, jwtToken: string) =>
     fetch(`${BASE_URL}/community_posts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
     }).then((res) => res.json()),
 };
