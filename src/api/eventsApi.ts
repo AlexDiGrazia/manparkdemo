@@ -20,21 +20,25 @@ export const Requests = {
 
   updateEventDetails: (
     id: number,
-    updatedDetails: { details: string }
+    updatedDetails: { details: string },
+    jwtToken: string
   ): Promise<TEvent> =>
     fetch(`${BASE_URL}/events/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
       body: JSON.stringify(updatedDetails),
     }).then((res) => res.json()),
 
-  deleteEvent: (id: number | null) =>
+  //TO_DO why is id number | null???
+  deleteEvent: (id: number | null, jwtToken: string) =>
     fetch(`${BASE_URL}/events/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
     }).then((res) => res.json()),
 };
