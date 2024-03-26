@@ -21,11 +21,8 @@ export const EventSubmissionForm = () => {
   const [titleCharLimit, setTitleCharLimit] = useState<number>(50);
 
   const { refetchAllEvents, setEventSubmissionFormVisible } = useHomeContext();
-
-  const { currentUser } = useUserContext();
-
+  const { jwtToken } = useUserContext();
   const newEvent = {
-    user: currentUser.username,
     date,
     title,
     details,
@@ -36,7 +33,7 @@ export const EventSubmissionForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newEvent.title !== "" && newEvent.details !== "") {
-      Requests.postNewEvent(newEvent).then(refetchAllEvents);
+      Requests.postNewEvent(newEvent, jwtToken).then(refetchAllEvents);
       setDate(new Date());
       setTitle("");
       setDetails("");
