@@ -22,6 +22,7 @@ export const Home = () => {
     currentProfile,
     setCurrentProfile,
     reloadCurrentUserAndProfile,
+    setJwtToken,
   } = useUserContext();
   const {
     dialogVisible,
@@ -45,11 +46,20 @@ export const Home = () => {
 
   useEffect(() => {
     if (pageWasRefreshed) {
+      const jwtTokenFromStorage = localStorage.getItem("jwtToken");
+
+      if (jwtTokenFromStorage) {
+        setJwtToken(jwtTokenFromStorage);
+        reloadCurrentUserAndProfile(jwtTokenFromStorage);
+      } else {
+        console.error(
+          "Oops! Make sure JWT Token is being set in local storage upon login/signup."
+        );
+      }
       if (pathname !== "/home" && pathname !== "/")
         navigate(
           "/home"
         ); /* if user is currently viewing /home/user/:userId, this will re-route /home upone page refresh */
-      reloadCurrentUserAndProfile();
     }
   }, []);
 
