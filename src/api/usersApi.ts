@@ -5,7 +5,7 @@ const BASE_URL = "http://localhost:3000";
 
 export const Requests = {
   retrieveUserByName: ({ username }: { username: string }, jwtToken: string) =>
-    fetch(`${BASE_URL}/users/login`, {
+    fetch(`${BASE_URL}/users/retrieve_by_name`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,11 +23,14 @@ export const Requests = {
     password: string;
     profile: Omit<TProfile, "id" | "userId">;
   }) =>
-    fetch(`${BASE_URL}/users`, {
+    fetch(`${BASE_URL}/users/sign-up`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newUser),
-    }).then((response): Promise<TUserObject> => response.json()),
+    }).then(
+      (response): Promise<{ token: string; userInformation: TUserObject }> =>
+        response.json()
+    ),
 };
