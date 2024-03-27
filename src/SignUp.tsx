@@ -22,7 +22,8 @@ export const SignUp = () => {
   const [confirmationIcon, setConfirmationIcon] = useState<IconProp>(faEye);
 
   const navigate = useNavigate();
-  const { setDisplay, setCurrentUser, setCurrentProfile } = useUserContext();
+  const { setDisplay, setCurrentUser, setCurrentProfile, setJwtToken } =
+    useUserContext();
 
   const newProfile = {
     username,
@@ -55,10 +56,12 @@ export const SignUp = () => {
     e.preventDefault();
     if (password === confirmation && allFieldsComplete()) {
       Requests.createNewUserAndAssociatedProfile(newUser).then((res) => {
-        setCurrentUser(res);
-        setCurrentProfile(res.profile);
         localStorage.setItem("user", username);
         localStorage.setItem("personal_profile", "first_ever_visit");
+        localStorage.setItem("jwtToken", res.token);
+        setCurrentUser(res.userInformation);
+        setCurrentProfile(res.userInformation.profile);
+        setJwtToken(res.token);
         setUsername("");
         setPassword("");
         setHome("");
