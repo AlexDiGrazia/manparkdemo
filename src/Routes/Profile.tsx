@@ -24,7 +24,7 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
   const { userId } = useParams();
   const navigate = useNavigate();
   const photo = import.meta.env.BASE_URL + profile.picture;
-  const { currentUser } = useUserContext();
+  const { currentUser, jwtToken } = useUserContext();
 
   useEffect(() => {
     Requests.getSingleProfile(Number(userId)).then((res) => {
@@ -55,9 +55,13 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               contentEditable={profile.username === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
-                Requests.updateProfile(profile.id, {
-                  home: e.currentTarget.innerText,
-                })
+                Requests.updateProfile(
+                  profile.id,
+                  {
+                    home: e.currentTarget.innerText,
+                  },
+                  jwtToken
+                )
               }
             >
               {profile.home}
@@ -69,9 +73,13 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
               contentEditable={profile.username === currentUser.username}
               suppressContentEditableWarning
               onBlur={(e) =>
-                Requests.updateProfile(profile.id, {
-                  occupation: e.currentTarget.innerText,
-                })
+                Requests.updateProfile(
+                  profile.id,
+                  {
+                    occupation: e.currentTarget.innerText,
+                  },
+                  jwtToken
+                )
               }
             >
               {profile.occupation}
@@ -86,9 +94,13 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
                 selected={birthday}
                 onChange={(birthday: Date) => {
                   setBirthday(birthday);
-                  Requests.updateProfile(profile.id, {
-                    birthday: new Date(birthday),
-                  });
+                  Requests.updateProfile(
+                    profile.id,
+                    {
+                      birthday: new Date(birthday),
+                    },
+                    jwtToken
+                  );
                 }}
               />
             )}
@@ -133,9 +145,13 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
         suppressContentEditableWarning
         spellCheck={false}
         onBlur={(e) =>
-          Requests.updateProfile(profile.id, {
-            bio: e.currentTarget.innerText,
-          })
+          Requests.updateProfile(
+            profile.id,
+            {
+              bio: e.currentTarget.innerText,
+            },
+            jwtToken
+          )
         }
       >
         {profile.bio ? profile.bio : "User has not yet submitted a bio"}
