@@ -41,9 +41,12 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const getCurrentUser = async () => {
     const user = localStorage.getItem("user");
     if (user) {
-      return await Requests.retrieveUserByName({
-        username: user,
-      });
+      return await Requests.retrieveUserByName(
+        {
+          username: user,
+        },
+        jwtToken
+      );
     } else {
       console.error(
         'Oops! Make sure "user" is being set in local storage upon login/signup'
