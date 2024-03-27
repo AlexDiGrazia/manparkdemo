@@ -18,8 +18,8 @@ type TUserContext = {
   setCurrentUser: Dispatch<SetStateAction<TUserObject>>;
   currentProfile: TProfile;
   setCurrentProfile: Dispatch<SetStateAction<TProfile>>;
-  getCurrentUser: () => Promise<TUserObject>;
-  reloadCurrentUserAndProfile: () => void;
+  getCurrentUser: (jwtToken: string) => Promise<TUserObject>;
+  reloadCurrentUserAndProfile: (jwtToken: string) => void;
   jwtToken: string;
   setJwtToken: Dispatch<SetStateAction<string>>;
 };
@@ -38,14 +38,14 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   );
   const [jwtToken, setJwtToken] = useState<string>("");
 
-  const getCurrentUser = async () => {
+  const getCurrentUser = async (jwtTokenFromStorge: string) => {
     const user = localStorage.getItem("user");
     if (user) {
       return await Requests.retrieveUserByName(
         {
           username: user,
         },
-        jwtToken
+        jwtTokenFromStorge
       );
     } else {
       console.error(
@@ -54,8 +54,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const reloadCurrentUserAndProfile = async () => {
-    const user = await getCurrentUser();
+  const reloadCurrentUserAndProfile = async (jwtTokenFromStorage: string) => {
+    const user = await getCurrentUser(jwtTokenFromStorage);
     if (user) {
       setCurrentUser(user);
       setCurrentProfile(user.profile);
