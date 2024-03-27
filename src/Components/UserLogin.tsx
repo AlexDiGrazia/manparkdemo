@@ -37,6 +37,7 @@ export const UserLogin = () => {
       if (res) {
         if (res.token) {
           localStorage.setItem("user", username);
+          localStorage.setItem("jwtToken", res.token);
           setCurrentUser(res.userInformation);
           setCurrentProfile(res.userInformation.profile);
           setJwtToken(res.token);
