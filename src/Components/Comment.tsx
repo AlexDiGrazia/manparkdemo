@@ -35,9 +35,12 @@ export const Comment = ({ commentText, user, id }: TCommentProps) => {
   };
 
   useEffect(() => {
-    UserRequests.retrieveUserByName({
-      username: user,
-    }).then(setCommentAuthor);
+    UserRequests.retrieveUserByName(
+      {
+        username: user,
+      },
+      jwtToken
+    ).then(setCommentAuthor);
   }, []);
 
   return (
