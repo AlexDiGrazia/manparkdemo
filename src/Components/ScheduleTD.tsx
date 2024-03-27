@@ -30,10 +30,9 @@ export const ScheduleTD = ({
   );
   const [tdHover, setTdHover] = useState<boolean>(true);
 
-  const { currentUser } = useUserContext();
+  const { currentUser, jwtToken } = useUserContext();
 
   const newScheduleData = {
-    user: currentUser.username,
     day: dayOfWeekIndex,
     event: newListItemContent,
   };
@@ -103,9 +102,12 @@ export const ScheduleTD = ({
               type="button"
               value="Delete"
               onClick={async () =>
-                await Requests.deleteManyScheduleAppointments({
-                  deletionQueue,
-                }).then(() => {
+                await Requests.deleteManyScheduleAppointments(
+                  {
+                    deletionQueue,
+                  },
+                  jwtToken
+                ).then(() => {
                   fetchUserScheduleData(profile.username);
                   setTdHover(true);
                   setListItemView("display");
@@ -127,9 +129,13 @@ export const ScheduleTD = ({
                     suppressContentEditableWarning
                     contentEditable={profile.username === currentUser.username}
                     onBlur={(e) => {
-                      Requests.updateScheduleAppointment(obj.id, {
-                        event: e.currentTarget.innerText,
-                      });
+                      Requests.updateScheduleAppointment(
+                        obj.id,
+                        {
+                          event: e.currentTarget.innerText,
+                        },
+                        jwtToken
+                      );
                     }}
                   >
                     {obj.event}
@@ -191,7 +197,10 @@ export const ScheduleTD = ({
                     value="save"
                     className="new_schedule_item_save_btn"
                     onClick={() => {
-                      Requests.postNewScheduleData(newScheduleData).then(() => {
+                      Requests.postNewScheduleData(
+                        newScheduleData,
+                        jwtToken
+                      ).then(() => {
                         setNewApptSaveButtonVisible(false);
                         fetchUserScheduleData(profile.username);
                         setNewListItemContent("");
