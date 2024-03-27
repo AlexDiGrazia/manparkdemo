@@ -37,6 +37,7 @@ export const Home = () => {
 
   const logout = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("jwtToken");
     setCurrentUser({} as TUserObject);
     setCurrentProfile({} as TProfile);
     navigate("/", { replace: true });
