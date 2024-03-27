@@ -4,11 +4,12 @@ import { TUserObject } from "../Components/UserLogin";
 const BASE_URL = "http://localhost:3000";
 
 export const Requests = {
-  retrieveUserByName: ({ username }: { username: string }) =>
+  retrieveUserByName: ({ username }: { username: string }, jwtToken: string) =>
     fetch(`${BASE_URL}/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + jwtToken,
       },
       body: JSON.stringify({ username }),
     })
