@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Requests } from "../api/photosApi";
+import { UploadWidget } from "./UploadWidget";
 
 type TPhoto = {
   image: string;
@@ -13,12 +14,15 @@ interface PhotosByMonth {
 export const Photos = () => {
   const [allPhotos, setAllPhotos] = useState<TPhoto[]>([]);
 
+  const refetchAllPhotos = () => Requests.getAllPhotos().then(setAllPhotos);
+
   useEffect(() => {
-    Requests.getAllPhotos().then(setAllPhotos);
+    refetchAllPhotos();
   }, []);
 
   return (
     <>
+      <UploadWidget refetchAllPhotos={refetchAllPhotos} />
       <div>
         {Object.values(
           allPhotos
