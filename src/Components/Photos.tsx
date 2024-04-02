@@ -9,7 +9,7 @@ type TPhoto = {
 };
 
 interface PhotosByMonth {
-  [month: number]: TPhoto[];
+  [month: string]: TPhoto[];
 }
 export const Photos = () => {
   const [allPhotos, setAllPhotos] = useState<TPhoto[]>([]);
@@ -28,11 +28,11 @@ export const Photos = () => {
           allPhotos
             .toSorted(
               (a: { date: Date }, b: { date: Date }) =>
-                new Date(a.date).getTime() - new Date(b.date).getTime()
+                new Date(b.date).getTime() - new Date(a.date).getTime()
             )
             .reduce((acc: PhotosByMonth, obj) => {
-              const month = new Date(obj.date).getMonth();
-              acc[month] = [...(acc[month] || []), obj];
+              const collection = new Date(obj.date).toLocaleDateString("en-US");
+              acc[collection] = [...(acc[collection] || []), obj];
               return acc;
             }, {})
         ).map((array, index) => {
