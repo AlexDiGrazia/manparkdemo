@@ -33,7 +33,6 @@ export const Photos = () => {
             .reduce((acc: PhotosByMonth, obj) => {
               const collection = new Date(obj.date).toLocaleDateString("en-US");
               acc[collection] = [...(acc[collection] || []), obj];
-              console.log(Object.values(acc));
               return acc;
             }, {})
         ).map((array, index) => {
