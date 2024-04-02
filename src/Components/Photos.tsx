@@ -31,7 +31,13 @@ export const Photos = () => {
                 new Date(b.date).getTime() - new Date(a.date).getTime()
             )
             .reduce((acc: PhotosByMonth, obj) => {
-              const collection = new Date(obj.date).toLocaleDateString("en-US");
+              const collection = new Date(obj.date).toLocaleDateString(
+                "en-US",
+                {
+                  month: "numeric",
+                  year: "numeric",
+                }
+              );
               acc[collection] = [...(acc[collection] || []), obj];
               return acc;
             }, {})
