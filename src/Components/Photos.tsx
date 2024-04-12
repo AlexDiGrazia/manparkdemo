@@ -26,6 +26,7 @@ export const Photos = () => {
           refetchAllPhotos: () => refetchAllPhotos(),
           multiple: true,
           callback: "gallery",
+          cropping: false,
         }}
       >
         {" "}
