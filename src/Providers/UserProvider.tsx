@@ -13,7 +13,9 @@ import { Requests } from "../api/usersApi";
 
 type TUserContext = {
   display: string;
-  setDisplay: Dispatch<SetStateAction<"SignUp" | "LoginGate" | "UserLogin">>;
+  setDisplay: Dispatch<
+    SetStateAction<"SignUp" | "LoginGate" | "UserLogin" | "">
+  >;
   currentUser: TUserObject;
   setCurrentUser: Dispatch<SetStateAction<TUserObject>>;
   currentProfile: TProfile;
@@ -27,9 +29,9 @@ type TUserContext = {
 const UserContext = createContext<TUserContext>({} as TUserContext);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [display, setDisplay] = useState<"SignUp" | "LoginGate" | "UserLogin">(
-    "LoginGate"
-  );
+  const [display, setDisplay] = useState<
+    "SignUp" | "LoginGate" | "UserLogin" | ""
+  >("LoginGate");
   const [currentUser, setCurrentUser] = useState<TUserObject>(
     {} as TUserObject
   );
