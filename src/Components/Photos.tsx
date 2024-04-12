@@ -15,14 +15,22 @@ export const Photos = () => {
   const [allPhotos, setAllPhotos] = useState<TPhoto[]>([]);
 
   const refetchAllPhotos = () => Requests.getAllPhotos().then(setAllPhotos);
-
   useEffect(() => {
     refetchAllPhotos();
   }, []);
 
   return (
     <>
-      <UploadWidget refetchAllPhotos={refetchAllPhotos} />
+      <UploadWidget
+        dynamicPropsObject={{
+          refetchAllPhotos: () => refetchAllPhotos(),
+          multiple: true,
+          callback: "gallery",
+        }}
+      >
+        {" "}
+        Upload
+      </UploadWidget>
       <div>
         {Object.values(
           allPhotos
@@ -67,5 +75,3 @@ export const Photos = () => {
     </>
   );
 };
-
-//TO_DO change DB photos to not have /public/ in url
