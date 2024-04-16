@@ -75,7 +75,7 @@ export const Home = () => {
         <div className="flex column center profile-buttons">
           <img
             className="profile-picture"
-            src={`${currentProfile?.picture}`}
+            src={`${currentUser.profile?.picture}`}
             alt="portrait of user"
           />
           <div className="flex side_by_side">
@@ -90,7 +90,7 @@ export const Home = () => {
                 localStorage.removeItem("personal_profile");
                 setFriendsListDisplay("profile");
                 setTab("friends-tab");
-                navigate(`/home/user/${currentProfile.id}`);
+                navigate(`/home/user/${currentUser.profile.id}`);
               }}
             >
               Profile
