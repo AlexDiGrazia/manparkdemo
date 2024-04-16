@@ -7,6 +7,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Schedule } from "../Components/Schedule";
 import { useUserContext } from "../Providers/UserProvider";
 import ReactDatePicker from "react-datepicker";
+import { UploadWidget } from "../Components/UploadWidget";
 
 type TProfileProps = {
   setFriendsListDisplay: Dispatch<SetStateAction<"friends-list" | "profile">>;
@@ -23,14 +24,16 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
   const [birthday, setBirthday] = useState<Date>(new Date());
   const { userId } = useParams();
   const navigate = useNavigate();
-  const photo = import.meta.env.BASE_URL + profile.picture;
   const { currentUser, jwtToken } = useUserContext();
 
-  useEffect(() => {
+  const refetchProfileInformation = () =>
     Requests.getSingleProfile(Number(userId)).then((res) => {
       setProfile(res);
       setBirthday(new Date(res.birthday));
     });
+
+  useEffect(() => {
+    refetchProfileInformation();
   }, []);
 
   useEffect(() => {
@@ -43,10 +46,32 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
   return (
     <div style={{ color: "white" }}>
       <div className="profile_img_container">
-        <img
-          src={photo}
-          style={{ width: "200px", height: "200px", borderRadius: "20px" }}
-        />
+        {profile.username !== currentUser.username && (
+          <img
+            src={profile.picture}
+            style={{
+              width: "200px",
+              height: "200px",
+              borderRadius: "20px",
+            }}
+          />
+        )}
+        {profile.username === currentUser.username && (
+          <>
+            <UploadWidget
+              dynamicPropsObject={{
+                refetchProfileInformation,
+                multiple: false,
+                callback: "patch-profile-pic",
+                picture: profile.picture,
+                cropping: true,
+                uploadPreset: import.meta.env
+                  .VITE_CLOUDINARY_PROFILE_THUMBNAIL_UPLOAD_PRESET,
+              }}
+            />
+          </>
+        )}
+
         <div className="profile_user_basic_info">
           <h2>{profile.username}</h2>
           <p>
