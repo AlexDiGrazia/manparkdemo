@@ -27,11 +27,10 @@ export const Photos = () => {
           multiple: true,
           callback: "gallery",
           cropping: false,
+          uploadPreset: import.meta.env.VITE_CLOUDINARY_GALLERY_UPLOAD_PRESET,
         }}
-      >
-        {" "}
-        Upload
-      </UploadWidget>
+      />
+
       <div>
         {Object.values(
           allPhotos
@@ -61,7 +60,7 @@ export const Photos = () => {
                 })}
               </h2>
               <div className="photos_container">
-                {array.map((obj: TPhoto) => (
+                {array.reverse().map((obj: TPhoto) => (
                   <div
                     key={`photo_album_image_${obj.id}`}
                     className="photo_album_image"
