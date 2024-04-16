@@ -76,6 +76,35 @@ h2.welcome_user {
   top: 100px;
 }
 
+.profile_pic_upload_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-image-url-input {
+  background: black;
+  height: 32px;
+  color: white;
+  box-shadow: 0 0 36px -11px white;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.profile-image-url-input::placeholder {
+  background: black;
+  height: 29px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 2px;
+}
+
+.profile-image-url-input:focus {
+  outline: none;
+}
+
 .text_inputs {
   width: 250px;
   height: 34px;
@@ -116,6 +145,64 @@ h2.welcome_user {
   background: black;
   color: white;
   cursor: pointer;
+  box-shadow: 0 0 36px -11px white;
+}
+
+.profile_photo_submit_btn {
+  font-size: 20px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  width: 38%;
+  height: 34px;
+  box-shadow: 0 0 36px -11px white;
+}
+
+.patch_profile_btn {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+}
+
+span.profile_pic_edit_btn {
+  text-decoration: underline;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  line-height: 1px;
+  text-underline-offset: 3px;
+}
+span.profile_pic_edit_btn:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.patch_profile_btn:hover {
+  cursor: pointer;
+}
+
+.profile-pic-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(149 136 136 / 60%);
+  backdrop-filter: blur(1px);
+  box-sizing: border-box;
+  opacity: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faPenToSquare {
+  color: rgb(64 65 74);
+  font-size: calc(22px + 0.390625vw);
+}
+
+.profile-pic-overlay:hover {
+  opacity: 1;
 }
 
 .bkg_img_properties {
@@ -608,10 +695,17 @@ div.event_title span {
   flex-direction: column;
   align-items: center;
 }
-
 .profile_thumbnail p {
   text-align: center;
   margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow-x: scroll;
+  max-width: 94%;
+}
+
+.profile_thumbnail p::-webkit-scrollbar {
+  display: none;
 }
 
 .edit_profile_toast {
@@ -707,6 +801,11 @@ div.event_title span {
 .profile_img_container {
   display: flex;
   gap: 15px;
+}
+
+.image-upload-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .profile_bio {
