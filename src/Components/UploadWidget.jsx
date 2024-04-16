@@ -6,7 +6,7 @@ import { useHomeContext } from "../Providers/HomeProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
-export const UploadWidget = ({ dynamicPropsObject, children }) => {
+export const UploadWidget = ({ dynamicPropsObject }) => {
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
 
@@ -21,6 +21,7 @@ export const UploadWidget = ({ dynamicPropsObject, children }) => {
     refetchProfileInformation,
     picture,
     cropping,
+    uploadPreset,
   } = dynamicPropsObject;
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export const UploadWidget = ({ dynamicPropsObject, children }) => {
     widgetRef.current = cloudinaryRef.current.createUploadWidget(
       {
         cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD,
-        uploadPreset: import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET,
+        uploadPreset,
         multiple,
         cropping,
       },
@@ -49,8 +50,6 @@ export const UploadWidget = ({ dynamicPropsObject, children }) => {
             }).then(() => refetchAllPhotos());
           }
           if (callback === "patch-profile-pic") {
-            console.log("correct callback");
-            console.log(result.info.url);
             ProfileRequests.updateProfile(
               currentProfile.id,
               { picture: result.info.url },
@@ -72,7 +71,7 @@ export const UploadWidget = ({ dynamicPropsObject, children }) => {
           type="button"
           onClick={() => widgetRef.current.open()}
         >
-          {children}
+          Upload
         </button>
       )}
 
@@ -86,8 +85,6 @@ export const UploadWidget = ({ dynamicPropsObject, children }) => {
             <div className="profile-pic-overlay">
               <FontAwesomeIcon className="faPenToSquare" icon={faPenToSquare} />
             </div>
-
-            {/* {children} */}
           </div>
           <span
             className="profile_pic_edit_btn"
