@@ -4,10 +4,10 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import toast from "react-hot-toast";
 import { Requests } from "./api/usersApi";
-// import { Requests as ProfileRequests } from "./api/profilesApi";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "./Providers/UserProvider";
 import ReactDatePicker from "react-datepicker";
+import { UploadWidget } from "./Components/UploadWidget";
 
 export const SignUp = () => {
   const [username, setUsername] = useState<string>("");
@@ -20,6 +20,7 @@ export const SignUp = () => {
   const [icon, setIcon] = useState<IconProp>(faEye);
   const [confirmationType, setConfirmationType] = useState<string>("password");
   const [confirmationIcon, setConfirmationIcon] = useState<IconProp>(faEye);
+  const [profilePicture, setProfilePicture] = useState<string>("");
 
   const navigate = useNavigate();
   const { setDisplay, setCurrentUser, setCurrentProfile, setJwtToken } =
@@ -27,7 +28,7 @@ export const SignUp = () => {
 
   const newProfile = {
     username,
-    picture: "assets/Blank.webp",
+    picture: profilePicture,
     bio: "",
     home,
     occupation,
@@ -42,13 +43,17 @@ export const SignUp = () => {
 
   const allFieldsComplete = () => {
     let allFieldsComplete = true;
-    [username, home, occupation, birthday, password, confirmation].forEach(
-      (field) => {
-        field !== "" && field !== undefined
-          ? null
-          : (allFieldsComplete = false);
-      }
-    );
+    [
+      username,
+      home,
+      occupation,
+      birthday,
+      password,
+      confirmation,
+      profilePicture,
+    ].forEach((field) => {
+      field !== "" && field !== undefined ? null : (allFieldsComplete = false);
+    });
     return allFieldsComplete;
   };
 
@@ -64,6 +69,7 @@ export const SignUp = () => {
         setJwtToken(res.token);
         setUsername("");
         setPassword("");
+        setDisplay("");
         setHome("");
         setOccupation("");
         setBirthday(undefined);
@@ -175,6 +181,28 @@ export const SignUp = () => {
             onClick={() => toggleConfirmation()}
           />
         </div>
+
+        <div className="profile_pic_upload_container">
+          <UploadWidget
+            dynamicPropsObject={{
+              callback: "profile-picture",
+              multiple: false,
+              setProfilePicture,
+              cropping: true,
+              uploadPreset: import.meta.env
+                .VITE_CLOUDINARY_PROFILE_THUMBNAIL_UPLOAD_PRESET,
+            }}
+          />
+
+          <label htmlFor="profile-image-url"></label>
+          <input
+            className="profile-image-url-input"
+            placeholder="Profile Picture"
+            type="text"
+            value={profilePicture}
+          />
+        </div>
+
         <div className="flex column align_items_start">
           <input
             className="enter_btn margin-bottom"
