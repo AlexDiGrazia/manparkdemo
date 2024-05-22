@@ -22,12 +22,12 @@ export type TSchedules = {
 export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
   const [profile, setProfile] = useState<TProfile>({} as TProfile);
   const [birthday, setBirthday] = useState<Date>(new Date());
-  const { userId } = useParams();
+  const { profileId } = useParams();
   const navigate = useNavigate();
   const { currentUser, jwtToken } = useUserContext();
 
   const refetchProfileInformation = () =>
-    Requests.getSingleProfile(Number(userId)).then((res) => {
+    Requests.getSingleProfile(Number(profileId)).then((res) => {
       setProfile(res);
       setBirthday(new Date(res.birthday));
     });
@@ -37,11 +37,8 @@ export const Profile = ({ setFriendsListDisplay }: TProfileProps) => {
   }, []);
 
   useEffect(() => {
-    Requests.getSingleProfile(Number(userId)).then((res) => {
-      setProfile(res);
-      setBirthday(new Date(res.birthday));
-    });
-  }, [userId]);
+    refetchProfileInformation();
+  }, [profileId]);
 
   return (
     <div style={{ color: "white" }}>
