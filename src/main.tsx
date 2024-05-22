@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "home/user/:userId",
+        path: "home/user/:profileId",
         element: (
           <HomeProvider>
             <Layout image="sunset">
