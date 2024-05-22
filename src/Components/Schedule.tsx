@@ -19,7 +19,7 @@ type TScheduleProps = {
 export const Schedule = ({ profile }: TScheduleProps) => {
   const [scheduleData, setScheduleData] = useState<TSchedules[]>([]);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  const { userId } = useParams();
+  const { profileId } = useParams();
   const daysOfWeekNumbers = [0, 1, 2, 3, 4, 5, 6];
   const dayOfWeekNames = [
     "Sunday",
@@ -41,16 +41,16 @@ export const Schedule = ({ profile }: TScheduleProps) => {
   };
 
   useEffect(() => {
-    ProfileRequests.getSingleProfile(Number(userId)).then((profileData) => {
+    ProfileRequests.getSingleProfile(Number(profileId)).then((profileData) => {
       fetchUserScheduleData(profileData.username);
     });
   }, []);
 
   useEffect(() => {
-    ProfileRequests.getSingleProfile(Number(userId)).then((profileData) => {
+    ProfileRequests.getSingleProfile(Number(profileId)).then((profileData) => {
       fetchUserScheduleData(profileData.username);
     });
-  }, [userId]);
+  }, [profileId]);
 
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
