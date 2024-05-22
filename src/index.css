@@ -211,11 +211,11 @@ span.profile_pic_edit_btn:hover {
 }
 
 .helping-hand {
-  background-image: url("/assets/menscircle_1440x820.jpg");
+  background-image: url("/assets/menscircle_background-image");
 }
 
 .sunset {
-  background-image: url("/assets/sunset.jpeg");
+  background-image: url("/assets/sunsetBackground.jpeg");
 }
 
 .profile-picture {
