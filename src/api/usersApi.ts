@@ -1,7 +1,7 @@
 import { TProfile } from "../Components/Friends";
 import { TUserObject } from "../Components/UserLogin";
 
-const BASE_URL = "http://localhost:3000";
+export const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const Requests = {
   retrieveUserByName: ({ username }: { username: string }, jwtToken: string) =>
